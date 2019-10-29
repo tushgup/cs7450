@@ -1,0 +1,1405 @@
+,displayName,tags,major_tags
+0,Samsung Electronics,"['conglomerates', 'consumer goods', 'electronics', 'artificial intelligence', 'Manufacturing & Industrial', 'consumer electronics', 'medical devices', 'machine learning', 'art', 'telecommunications', 'imaging', 'Technology', 'medical imaging', 'internet of things']","['Manufacturing & Industrial', 'Technology']"
+1,The Walt Disney Company,"['media', 'consumer goods', 'magazine', 'hotels', 'resorts', 'video content', 'Media & Entertainment', 'golf', 'music', 'television', 'video', 'hotel', 'publishing']",['Media & Entertainment']
+2,Macy's,"['consumer goods', 'ecommerce', 'clothing', 'art', 'Retail', 'department stores', 'fashion', 'mobile app', 'footwear', 'furniture']",['Retail']
+3,Etsy,"['consumer goods', 'ecommerce', 'Retail', 'used goods', 'marketplace']",['Retail']
+4,Tesco,"['groceries', 'consumer goods', 'telecommunications', 'insurance', 'Financial Services', 'supermarkets', 'Retail']","['Financial Services', 'Retail']"
+5,Ocado,"['Food & Beverage', 'groceries', 'consumer goods', 'health & beauty', 'delivery', 'pets', 'ecommerce', 'Retail']","['Food & Beverage', 'Retail']"
+6,Gap,"['consumer goods', 'sport', 'accessories', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+7,Target,"['consumer goods', 'electronics', 'toys', 'ecommerce', 'clothing', 'art', 'Retail', 'department stores', 'furniture']",['Retail']
+8,Starbucks,"['Food & Beverage', 'consumer goods', 'hospitality', 'restaurant', 'Retail']","['Food & Beverage', 'Retail']"
+9,Amazon,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'platform', 'Technology', 'Retail', 'cloud', 'marketplace']","['Technology', 'Retail']"
+10,Reckitt Benckiser,"['consumer goods', 'health & beauty', 'pharmacy', 'pharma', 'Healthcare', 'home care', 'Retail', 'nutrition']","['Healthcare', 'Retail']"
+11,Costco,"['groceries', 'consumer goods', 'electronics', 'ecommerce', 'appliances', 'clothing', 'Retail']",['Retail']
+12,Walmart,"['consumer goods', 'electronics', 'consumer products & services', 'ecommerce', 'art', 'supermarkets', 'Retail', 'department stores']",['Retail']
+13,Kroger,"['Food & Beverage', 'groceries', 'consumer goods', 'jewellery', 'art', 'supermarkets', 'Retail', 'department stores']","['Food & Beverage', 'Retail']"
+14,Marks & Spencer,"['groceries', 'consumer goods', 'health & beauty', 'luxury', 'home & garden', 'ecommerce', 'clothing', 'art', 'kids', 'Retail', 'department stores', 'footwear']",['Retail']
+15,Procter & Gamble,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'consumer chemistry', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+16,Wayfair,"['consumer goods', 'home & garden', 'ecommerce', 'Retail', 'furniture']",['Retail']
+17,Sainsbury's,"['groceries', 'consumer goods', 'Investment', 'mortgages', 'ecommerce', 'clothing', 'Financial Services', 'supermarkets', 'property management', 'Retail']","['Investment', 'Financial Services', 'Retail']"
+18,Caseys General Stores,"['tobacco', 'Food & Beverage', 'consumer goods', 'health & beauty', 'beverages', 'Retail']","['Food & Beverage', 'Retail']"
+19,Sysco,"['Food & Beverage', 'groceries', 'consumer goods', 'distribution', 'Retail', 'supply chain']","['Food & Beverage', 'Retail']"
+20,Tiffany & Co.,"['consumer goods', 'accessories', 'luxury', 'watches', 'jewellery', 'Retail']",['Retail']
+21,Nike,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+22,3D Systems,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'Technology', 'advanced materials', '3d printing']","['Manufacturing & Industrial', 'Technology']"
+23,Cintas,"['consumer goods', 'Manufacturing & Industrial', 'Business Products & Services', 'compliance', 'facilities management', 'rental']","['Manufacturing & Industrial', 'Business Products & Services']"
+24,Colgate Palmolive,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'dental', 'consumer chemistry', 'nutrition']",['Manufacturing & Industrial']
+25,Coca-Cola European Partners,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+26,Clorox,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'home care', 'chemicals']","['Food & Beverage', 'Manufacturing & Industrial']"
+27,Burlington Stores,"['consumer goods', 'home improvement', 'accessories', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+28,Johnson & Johnson,"['conglomerates', 'consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'medical devices', 'consumer chemistry', 'pharma', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+29,Best Buy,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'Retail']",['Retail']
+30,Dollar General,"['Food & Beverage', 'consumer goods', 'health & beauty', 'clothing', 'Retail']","['Food & Beverage', 'Retail']"
+31,Debenhams,"['consumer goods', 'electronics', 'health & beauty', 'accessories', 'ecommerce', 'clothing', 'Retail']",['Retail']
+32,Conn's,"['mattress', 'consumer goods', 'electronics', 'consumer electronics', 'appliances', 'Retail', 'furniture']",['Retail']
+33,Office Depot,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'Retail', 'furniture']",['Retail']
+34,British American Tobacco,"['tobacco', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+35,Big 5 Sporting Goods,"['consumer goods', 'sport', 'accessories', 'clothing', 'fitness & wellness', 'Retail', 'footwear']",['Retail']
+36,TravelCenters of America,"['car services', 'consumer goods', 'sport', 'Automotive & Transportation', 'restaurant', 'auto repairs', 'Retail']","['Automotive & Transportation', 'Retail']"
+37,Big Lots,"['groceries', 'consumer goods', 'home & garden', 'Retail', 'furniture']",['Retail']
+38,Five Below,"['consumer goods', 'accessories', 'holding company', 'jewellery', 'clothing', 'Retail']",['Retail']
+39,DICK’S Sporting Goods,"['consumer goods', 'sport', 'ecommerce', 'clothing', 'Retail', 'used goods', 'footwear']",['Retail']
+40,The Goodyear Tire & Rubber Company,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'auto parts', 'Automotive & Transportation', 'art']","['Manufacturing & Industrial', 'Automotive & Transportation']"
+41,Sears Hometown and Outlet Stores,"['mattress', 'sport', 'home improvement', 'ecommerce', 'appliances', 'clothing', 'Retail']",['Retail']
+42,Dollar Tree,"['consumer goods', 'consumer products & services', 'ecommerce', 'supermarkets', 'Retail']",['Retail']
+43,Boohoo,"['consumer goods', 'health & beauty', 'accessories', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+44,Kingfisher,"['consumer goods', 'home improvement', 'home & garden', 'ecommerce', 'interior design', 'Retail']",['Retail']
+45,Essendant,"['consumer goods', 'distribution', 'Retail', 'furniture']",['Retail']
+46,Eastman Kodak Company,"['printing', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'photography', 'consumer electronics', 'video content', 'Media & Entertainment', 'imaging', 'Technology', 'video']","['Manufacturing & Industrial', 'Media & Entertainment', 'Technology']"
+47,Bosch,"['conglomerates', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'auto parts', 'engineering', 'art', 'Technology', 'self driving', 'internet of things', 'Energy & Utilities', 'cloud']","['Manufacturing & Industrial', 'Technology', 'Energy & Utilities']"
+48,Bed Bath & Beyond,"['consumer goods', 'home improvement', 'distribution', 'home & garden', 'gifts', 'Retail', 'furniture']",['Retail']
+49,Arcadia,"['consumer goods', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+50,Whirlpool,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'home & garden', 'appliances']",['Manufacturing & Industrial']
+51,Murphy USA,"['consumer goods', 'oil', 'oil & gas', 'petroleum', 'Retail', 'Energy & Utilities']","['Retail', 'Energy & Utilities']"
+52,Walgreens Boots Alliance,"['consumer products & services', 'pharma', 'Healthcare', 'supplements', 'distribution', 'ecommerce', 'fitness & wellness', 'Retail']","['Healthcare', 'Retail']"
+53,RPM International,"['coatings', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'building materials', 'distribution', 'holding company', 'advanced materials', 'chemicals']",['Manufacturing & Industrial']
+54,Kimberly-Clark,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'Healthcare', 'packaging']","['Manufacturing & Industrial', 'Healthcare']"
+55,Sleep Number,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'accessories', 'home & garden', 'ecommerce', 'interior design', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+56,Herman Miller,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'textiles', 'home improvement', 'home & garden', 'Real Estate & Construction', 'ecommerce', 'interior design', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Real Estate & Construction', 'Retail']"
+57,Lush,"['consumer goods', 'health & beauty', 'cosmetics', 'distribution', 'Retail']",['Retail']
+58,J.M. Smucker,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'packaging']","['Food & Beverage', 'Manufacturing & Industrial']"
+59,Mattel,"['consumer goods', 'Manufacturing & Industrial', 'magazine', 'accessories', 'leisure', 'toys', 'games', 'distribution', 'ecommerce', 'kids', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+60,Mohawk Industries,"['flooring', 'commercial real estate', 'consumer goods', 'Manufacturing & Industrial', 'textiles', 'home improvement', 'building materials', 'Real Estate & Construction']","['Manufacturing & Industrial', 'Real Estate & Construction']"
+61,Newell Brands,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'accessories', 'manufacturing equipment', 'distribution', 'home & garden']",['Manufacturing & Industrial']
+62,Philip Morris,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+63,Domtar,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'packaging']",['Manufacturing & Industrial']
+64,Reynolds American,"['tobacco', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+65,L'Oreal,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'distribution', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+66,Staples,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'Retail', 'supply chain', 'furniture']",['Retail']
+67,Kate Spade,"['consumer goods', 'clothing', 'Retail', 'fashion', 'marketplace']",['Retail']
+68,RTW Retailwinds,"['consumer goods', 'health & beauty', 'jewellery', 'clothing', 'Retail', 'fashion']",['Retail']
+69,Williams-Sonoma,"['consumer goods', 'home improvement', 'accessories', 'distribution', 'home & garden', 'ecommerce', 'interior design', 'lighting', 'Retail', 'furniture']",['Retail']
+70,Mothercare,"['consumer goods', 'toys', 'ecommerce', 'clothing', 'kids', 'Retail']",['Retail']
+71,Tapestry,"['consumer goods', 'distribution', 'luxury', 'watches', 'jewellery', 'gifts', 'Retail', 'fashion', 'footwear']",['Retail']
+72,Vista Outdoor,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'leisure', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+73,Advance Auto Parts,"['car services', 'consumer goods', 'sport', 'batteries', 'auto parts', 'Automotive & Transportation', 'distribution', 'ecommerce', 'art', 'auto repairs', 'Retail', 'engines', 'chemicals']","['Automotive & Transportation', 'Retail']"
+74,Electrolux,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+75,Party City Holdco,"['consumer goods', 'Manufacturing & Industrial', 'holding company', 'clothing', 'interior design', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+76,The Container Store,"['consumer goods', 'home improvement', 'home & garden', 'interior design', 'Retail']",['Retail']
+77,Tuesday Morning,"['groceries', 'consumer goods', 'toys', 'art', 'gifts', 'Retail', 'department stores', 'fashion']",['Retail']
+78,Sportsman's Warehouse,"['consumer goods', 'sport', 'fishery', 'clothing', 'lifestyle', 'Retail', 'Agriculture', 'footwear']","['Retail', 'Agriculture']"
+79,Cabela's,"['consumer goods', 'ecommerce', 'firearms', 'clothing', 'Retail', 'footwear']",['Retail']
+80,Dunelm Group,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+81,PriceSmart,"['groceries', 'consumer goods', 'sport', 'appliances', 'clothing', 'supermarkets', 'Retail']",['Retail']
+82,Unilever,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'cosmetics', 'home care']","['Food & Beverage', 'Manufacturing & Industrial']"
+83,Fred's,"['groceries', 'consumer goods', 'pharmacy', 'pharma', 'Healthcare', 'supermarkets', 'Retail']","['Healthcare', 'Retail']"
+84,Travis Perkins,"['pipelines', 'consumer goods', 'home improvement', 'building materials', 'home & garden', 'mechanical components', 'hvac', 'Retail']",['Retail']
+85,A.O. Smith,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'water', 'engineering', 'hvac']",['Manufacturing & Industrial']
+86,Hasbro,"['media', 'consumer goods', 'Manufacturing & Industrial', 'leisure', 'toys', 'games', 'Media & Entertainment', 'kids', 'Retail', 'television']","['Manufacturing & Industrial', 'Media & Entertainment', 'Retail']"
+87,Wish,"['consumer goods', 'electronics', 'accessories', 'ecommerce', 'clothing', 'Retail']",['Retail']
+88,Ikea,"['consumer goods', 'Manufacturing & Industrial', 'appliances', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+89,Ingles Markets,"['Food & Beverage', 'consumer goods', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+90,Smart & Final,"['Food & Beverage', 'paper and packaging', 'groceries', 'consumer goods', 'distribution', 'packaging', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+91,CST Brands,"['Food & Beverage', 'car services', 'consumer goods', 'petroleum', 'Retail']","['Food & Beverage', 'Retail']"
+92,John Lewis,"['groceries', 'consumer goods', 'ecommerce', 'clothing', 'insurance', 'Financial Services', 'Retail', 'fashion', 'furniture']","['Financial Services', 'Retail']"
+93,Multi-Color Corporation,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'packaging']",['Manufacturing & Industrial']
+94,Stein Mart,"['consumer goods', 'home & garden', 'Retail', 'fashion']",['Retail']
+95,Primo Water,"['Food & Beverage', 'consumer goods', 'water', 'appliances']",['Food & Beverage']
+96,Publix,"['Food & Beverage', 'groceries', 'consumer goods', 'health & beauty', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+97,CTI Industries,"['consumer goods', 'Manufacturing & Industrial', 'toys', 'distribution', 'packaging']",['Manufacturing & Industrial']
+98,Tootsie Roll Industries,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+99,Altria,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'holding company', 'Retail', 'wine']","['Manufacturing & Industrial', 'Retail']"
+100,Kimball International,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'interior design', 'furniture']",['Manufacturing & Industrial']
+101,Imperial Brands,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+102,Knoll,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+103,Morrisons,"['Food & Beverage', 'groceries', 'consumer goods', 'ecommerce', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+104,The Scotts Miracle-Gro,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+105,Secret Sales,"['consumer goods', 'ecommerce', 'jewellery', 'Retail', 'fashion']",['Retail']
+106,Gear4music,"['consumer goods', 'ecommerce', 'Media & Entertainment', 'music', 'Retail']","['Media & Entertainment', 'Retail']"
+107,Crystal Rock Holdings,"['consumer goods', 'consumer products & services', 'distribution', 'Retail']",['Retail']
+108,Topshop Topman,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'art', 'Retail', 'department stores', 'fashion', 'footwear']",['Retail']
+109,Tupperware Brands,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'home improvement', 'luxury', 'jewellery', 'interior design', 'fitness & wellness', 'lifestyle', 'Retail', 'nutrition']","['Manufacturing & Industrial', 'Retail']"
+110,Hanesbrands,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'accessories', 'ecommerce', 'clothing', 'lifestyle', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+111,Libbey,"['consumer goods', 'Manufacturing & Industrial', 'home improvement']",['Manufacturing & Industrial']
+112,Mattress Firm,"['mattress', 'consumer goods', 'ecommerce', 'Retail']",['Retail']
+113,Toronto-Dominion Bank (TD),"['investment management', 'Investment', 'mortgages', 'insurance', 'Financial Services', 'banks']","['Investment', 'Financial Services']"
+114,JAKKS Pacific,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'toys', 'kids']",['Manufacturing & Industrial']
+115,HB Fuller,"['coatings', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'chemicals']",['Manufacturing & Industrial']
+116,Macfarlane Group,"['self storage', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+117,Sugarmade,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'packaging', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+118,Leggett & Platt,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'wood product', 'engineering', 'interior design', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+119,Tandy Leather Factory,"['consumer goods', 'distribution', 'Retail']",['Retail']
+120,Lifetime Brands,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'interior design', 'lifestyle']",['Manufacturing & Industrial']
+121,Prestige Brands Holdings,"['consumer goods', 'Manufacturing & Industrial', 'healthtech', 'biotech', 'pharma', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+122,Packaging Corporation of America,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+123,Synergy CHC,"['consumer goods', 'Healthcare', 'fitness & wellness']",['Healthcare']
+124,Gordmans Stores,"['consumer goods', 'art', 'Retail', 'department stores', 'fashion']",['Retail']
+125,Compass Minerals,"['mining', 'consumer goods', 'Manufacturing & Industrial', 'chemicals', 'agritech', 'nutrition']",['Manufacturing & Industrial']
+126,The Hut Group,"['consumer goods', 'electronics', 'consumer electronics', 'health & beauty', 'ecommerce', 'gifts', 'Retail']",['Retail']
+127,Bonmarche,"['consumer goods', 'accessories', 'clothing', 'Retail', 'fashion']",['Retail']
+128,Nasdaq,"['fintech', 'market research', 'financial data', 'exchange', 'Financial Services', 'brokerage', 'search']",['Financial Services']
+129,Tennant,"['coatings', 'consumer goods', 'safety', 'Manufacturing & Industrial', 'machinery', 'home care', 'cleantech', 'chemicals']",['Manufacturing & Industrial']
+130,Berry Global,"['coatings', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'plastic', 'Healthcare', 'packaging', 'engineering']","['Manufacturing & Industrial', 'Healthcare']"
+131,Summer Infant,"['consumer goods', 'ecommerce', 'kids', 'Retail', 'marketplace']",['Retail']
+132,Rocky Brands,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+133,SunOpta,"['agriculture materials', 'Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'packaging', 'beverages', 'Technology', 'chemicals', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial', 'Technology']"
+134,AeroGrow International,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+135,Panasonic,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances', 'electronic components']",['Manufacturing & Industrial']
+136,Decora Blind Systems,"['consumer goods', 'home & garden', 'Retail']",['Retail']
+137,Brunswick,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'fitness & wellness', 'marine']",['Manufacturing & Industrial']
+138,Casper,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'home improvement', 'pets', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+139,Turning Point Brands,"['tobacco', 'consumer goods', 'electronics', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+140,CSS Industries,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution', 'gifts']",['Manufacturing & Industrial']
+141,N Brown Group,"['consumer goods', 'clothing', 'interior design', 'Retail', 'fashion', 'used goods', 'footwear']",['Retail']
+142,Leatt,"['consumer goods', 'Manufacturing & Industrial', 'sport']",['Manufacturing & Industrial']
+143,Central Garden & Pet Co,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'supplements', 'distribution', 'pets', 'lifestyle', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+144,Youngevity International,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'fitness & wellness', 'Retail', 'nutrition']","['Manufacturing & Industrial', 'Retail']"
+145,Alkaline Water,"['consumer goods', 'Manufacturing & Industrial', 'water']",['Manufacturing & Industrial']
+146,Scott's Liquid Gold,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+147,Duluth Trading Company,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+148,Ourpets,"['consumer goods', 'Manufacturing & Industrial', 'pets', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+149,Gilla,"['e-cigarettes', 'tobacco', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+150,CV Sciences,"['consumer goods', 'Healthcare', 'cannabis', 'drug development']",['Healthcare']
+151,Sealskinz,"['consumer goods', 'clothing', 'Retail']",['Retail']
+152,Gilbertson & Page,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'pets', 'beverages']","['Food & Beverage', 'Manufacturing & Industrial']"
+153,Helen of Troy,"['consumer goods', 'Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+154,Dollar Shave Club,"['consumer goods', 'health & beauty', 'ecommerce', 'Retail']",['Retail']
+155,Studio,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+156,Poundland,"['consumer goods', 'Retail']",['Retail']
+157,Sequential Brands Group,"['consumer goods', 'Retail']",['Retail']
+158,Regal Entertainment Group,"['movies', 'Media & Entertainment']",['Media & Entertainment']
+159,Schweitzer-Mauduit International,"['tobacco', 'paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging', 'renewables']",['Manufacturing & Industrial']
+160,Indiegogo,"['consumer goods', 'fintech', 'Financial Services', 'platform', 'Technology', 'crowdfunding']","['Financial Services', 'Technology']"
+161,Lazada,"['groceries', 'consumer goods', 'electronics', 'consumer electronics', 'distribution', 'ecommerce', 'clothing', 'Retail', 'fashion', 'marketplace']",['Retail']
+162,Sugru,"['consumer goods', 'Manufacturing & Industrial', 'polymers', 'chemicals']",['Manufacturing & Industrial']
+163,Flipkart,"['consumer goods', 'electronics', 'consumer products & services', 'consumer electronics', 'ecommerce', 'platform', 'Technology', 'Retail', 'marketplace']","['Technology', 'Retail']"
+164,Escalade,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'distribution', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+165,Johnson Outdoors,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'accessories', 'leisure', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+166,Motocaddy,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'automation', 'robotics', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+167,The Natural Wood Floor,"['consumer goods', 'Manufacturing & Industrial', 'wood product', 'home improvement', 'building materials', 'interior design']",['Manufacturing & Industrial']
+168,Nova Lifestyle,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'lifestyle', 'furniture']",['Manufacturing & Industrial']
+169,MyOptique Group,"['consumer goods', 'ecommerce', 'Retail', 'eyewear']",['Retail']
+170,House of Fraser,"['consumer goods', 'ecommerce', 'clothing', 'art', 'interior design', 'Retail', 'department stores', 'furniture']",['Retail']
+171,Myntra,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'platform', 'Retail', 'fashion', 'footwear', 'marketplace']",['Retail']
+172,Oil-Dri Corporation Of America,"['mining', 'consumer goods', 'Manufacturing & Industrial', 'oil', 'chemicals']",['Manufacturing & Industrial']
+173,Church & Dwight,"['consumer goods', 'Manufacturing & Industrial', 'Retail', 'chemicals']","['Manufacturing & Industrial', 'Retail']"
+174,Momentive,"['consumer goods', 'Manufacturing & Industrial', 'advanced materials', 'chemicals']",['Manufacturing & Industrial']
+175,The Hut Group,"['consumer goods', 'electronics', 'consumer electronics', 'health & beauty', 'ecommerce', 'gifts', 'Retail']",['Retail']
+176,Henkel,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'home care', 'Retail', 'chemicals']","['Manufacturing & Industrial', 'Retail']"
+177,Funko,"['consumer goods', 'toys', 'Media & Entertainment', 'Retail']","['Media & Entertainment', 'Retail']"
+178,Howden Joinery,"['consumer goods', 'Manufacturing & Industrial', 'home & garden']",['Manufacturing & Industrial']
+179,Euro Garages,"['consumer goods', 'Retail']",['Retail']
+180,Boxed,"['Food & Beverage', 'groceries', 'consumer goods', 'delivery', 'ecommerce']",['Food & Beverage']
+181,Watsco,"['consumer goods', 'electronics', 'consumer electronics', 'building materials', 'distribution', 'hvac', 'Retail']",['Retail']
+182,Glossier,"['consumer goods', 'health & beauty', 'cosmetics', 'luxury', 'ecommerce', 'Retail', 'fashion']",['Retail']
+183,Pz Cussons,"['groceries', 'consumer goods', 'Retail']",['Retail']
+184,The Licensing Company,"['consumer goods', 'Marketing']",['Marketing']
+185,Snapdeal,"['consumer goods', 'distribution', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+186,BNSF Railway,"['consumer goods', 'sport', 'Travel & Leisure', 'rail', 'transportation']",['Travel & Leisure']
+187,Allbirds,"['consumer goods', 'Manufacturing & Industrial', 'sustainability', 'bcorp', 'footwear']",['Manufacturing & Industrial']
+188,Cyanotech,"['consumer goods', 'Manufacturing & Industrial', 'biotech', 'Healthcare', 'supplements', 'nutrition']","['Manufacturing & Industrial', 'Healthcare']"
+189,Synutra International,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'chemicals', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+190,YETI,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'leisure']",['Manufacturing & Industrial']
+191,Groupe SEB,"['consumer goods', 'home care', 'appliances', 'Retail']",['Retail']
+192,Crown Imperial,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'interior design', 'furniture']",['Manufacturing & Industrial']
+193,Crown Crafts,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'kids']",['Manufacturing & Industrial']
+194,Delta Global Source,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'luxury', 'packaging']",['Manufacturing & Industrial']
+195,John Lewis Partnership,"['consumer goods', 'health & beauty', 'home & garden', 'ecommerce', 'art', 'insurance', 'Financial Services', 'gifts', 'Retail', 'department stores']","['Financial Services', 'Retail']"
+196,Iceland Foods,"['Food & Beverage', 'groceries', 'consumer goods', 'Retail']","['Food & Beverage', 'Retail']"
+197,Charlie's Holdings,"['e-cigarettes', 'consumer goods', 'Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+198,Edgewell Personal Care,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'distribution', 'holding company', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+199,Xcel Brands,"['consumer goods', 'Marketing', 'jewellery', 'clothing', 'Retail', 'fashion', 'footwear']","['Marketing', 'Retail']"
+200,Victoria Plum,"['luxury', 'ecommerce', 'Retail', 'furniture']",['Retail']
+201,L.L.Bean,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'sport', 'accessories', 'ecommerce', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+202,HomeAway,"['travel agency', 'booking', 'hospitality', 'Travel & Leisure', 'vacation rental', 'platform', 'hotel', 'rental', 'marketplace']",['Travel & Leisure']
+203,CFAO,"['consumer goods', 'Manufacturing & Industrial', 'pharma', 'Healthcare', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Healthcare', 'Retail']"
+204,EFT Holdings,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'beverages', 'Retail', 'nutrition']","['Manufacturing & Industrial', 'Retail']"
+205,JRjr33,"['consumer goods', 'holding company', 'Retail']",['Retail']
+206,Cca Industries,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty']",['Manufacturing & Industrial']
+207,Seen on Screen TV,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+208,Swallowfield,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'Marketing', 'home care', 'fitness & wellness']","['Manufacturing & Industrial', 'Marketing']"
+209,Trident Brands,"['consumer goods', 'Manufacturing & Industrial', 'supplements', 'holding company', 'Retail', 'nutrition']","['Manufacturing & Industrial', 'Retail']"
+210,Universal Corporation,"['e-cigarettes', 'tobacco', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+211,Acme United,"['consumer goods', 'Retail']",['Retail']
+212,Servotronics,"['consumer goods', 'Manufacturing & Industrial', 'mechanical components']",['Manufacturing & Industrial']
+213,Walker & Company Brands,"['consumer goods', 'health & beauty', 'ecommerce', 'Retail']",['Retail']
+214,PurpleBricks,"['application software', 'Real Estate & Construction', 'platform', 'property management', 'Technology']","['Real Estate & Construction', 'Technology']"
+215,Rahim Brothers,"['groceries', 'consumer goods', 'Retail']",['Retail']
+216,Conair,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'health & beauty', 'appliances']",['Manufacturing & Industrial']
+217,Hammock Boutique,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+218,Able Industrial Products,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+219,Ayurshakha,"['consumer goods', 'health & beauty', 'pharma', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+220,Holiday Companies,"['Food & Beverage', 'consumer goods', 'petroleum', 'Retail', 'Energy & Utilities']","['Food & Beverage', 'Retail', 'Energy & Utilities']"
+221,einhorn,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+222,GrillSymbol,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+223,Olympic Arms,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'firearms']",['Manufacturing & Industrial']
+224,BEFORE Brands,"['consumer goods', 'Healthcare', 'supplements', 'Retail']","['Healthcare', 'Retail']"
+225,gDiapers,"['consumer goods', 'kids', 'Retail', 'bcorp']",['Retail']
+226,Beach Camera,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+227,Goxip,"['consumer goods', 'distribution', 'ecommerce', 'platform', 'Retail', 'fashion', 'marketplace']",['Retail']
+228,Japan Tobacco,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+229,Seychelle Environmental Technologies,"['consumer goods', 'Manufacturing & Industrial', 'water']",['Manufacturing & Industrial']
+230,Metro Bank,"['fintech', 'mortgages', 'Financial Services', 'banks']",['Financial Services']
+231,Jet.com,"['consumer goods', 'electronics', 'consumer electronics', 'accessories', 'ecommerce', 'clothing', 'Technology', 'Retail', 'footwear']","['Technology', 'Retail']"
+232,Harry's,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty']",['Manufacturing & Industrial']
+233,Pax Labs,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+234,Ssense,"['consumer goods', 'luxury', 'ecommerce', 'Retail', 'fashion']",['Retail']
+235,Bigbasket,"['Food & Beverage', 'groceries', 'consumer goods', 'delivery', 'ecommerce', 'Retail']","['Food & Beverage', 'Retail']"
+236,Walgreens Boots Alliance,"['consumer products & services', 'pharma', 'Healthcare', 'supplements', 'distribution', 'ecommerce', 'fitness & wellness', 'Retail']","['Healthcare', 'Retail']"
+237,StockX,"['consumer goods', 'ecommerce', 'Technology', 'Retail', 'footwear', 'marketplace']","['Technology', 'Retail']"
+238,IndiaMART,"['consumer goods', 'ecommerce', 'platform', 'Retail', 'marketplace']",['Retail']
+239,Astro Lighting,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'home improvement', 'interior design', 'lighting', 'Energy & Utilities']","['Manufacturing & Industrial', 'Energy & Utilities']"
+240,Oasis Fashions,"['consumer goods', 'textiles', 'accessories', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+241,Cotopaxi,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+242,Yunji,"['consumer goods', 'ecommerce', 'platform', 'Retail']",['Retail']
+243,Toymail,"['consumer goods', 'toys', 'kids', 'Technology', 'mobile app', 'internet of things']",['Technology']
+244,LOLA,"[""women's health"", 'consumer goods', 'health & beauty', 'Retail']",['Retail']
+245,Carrefour,"['Food & Beverage', 'consumer goods', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+246,Grofers,"['consumer goods', 'delivery', 'ecommerce', 'Technology', 'consumer software', 'mobile app']",['Technology']
+247,Shoes of Prey,"['consumer goods', 'ecommerce', 'Retail', 'footwear']",['Retail']
+248,Svenska Cellulosa,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty']",['Manufacturing & Industrial']
+249,Plantain,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+250,Food52,"['Food & Beverage', 'media', 'consumer goods', 'Media & Entertainment', 'Retail']","['Food & Beverage', 'Media & Entertainment', 'Retail']"
+251,LACOSTE,"['consumer goods', 'textiles', 'accessories', 'watches', 'clothing', 'Retail', 'fashion', 'eyewear', 'footwear']",['Retail']
+252,Carlsberg,"['beer', 'consumer goods', 'Manufacturing & Industrial', 'beverages', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+253,Living Proof,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'biotech']",['Manufacturing & Industrial']
+254,Guitar Center,"['consumer goods', 'accessories', 'distribution', 'music', 'Retail']",['Retail']
+255,Maisons du Monde,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+256,Husqvarna,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'home & garden']",['Manufacturing & Industrial']
+257,Trendyol,"['consumer goods', 'ecommerce', 'Retail', 'fashion', 'marketplace']",['Retail']
+258,Evolis,"['consumer goods', 'Manufacturing & Industrial', 'project management']",['Manufacturing & Industrial']
+259,Juul Labs,"['e-cigarettes', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+260,Rubicon Project,"['Marketing', 'adtech', 'enterprise software', 'platform', 'advertising', 'Technology', 'cloud']","['Marketing', 'Technology']"
+261,Mitra Adiperkasa,"['consumer goods', 'ecommerce', 'art', 'lifestyle', 'Retail', 'department stores', 'fashion']",['Retail']
+262,SoapBox Soaps,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+263,DUNI,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'accessories', 'packaging']","['Food & Beverage', 'Manufacturing & Industrial']"
+264,BeON Home,"['consumer goods', 'Manufacturing & Industrial', 'security', 'art', 'smart home', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+265,Argos Therapeutics,"['oncology', 'healthtech', 'Healthcare']",['Healthcare']
+266,Barrett Firearms,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'firearms', 'defense', 'aerospace']",['Manufacturing & Industrial']
+267,Lovesac,"['consumer goods', 'accessories', 'Retail', 'furniture']",['Retail']
+268,Coca-Cola Femsa,"['Food & Beverage', 'beverages', 'Media & Entertainment']","['Food & Beverage', 'Media & Entertainment']"
+269,Jack Wills,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+270,smartphoto,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+271,Tanga,"['consumer goods', 'ecommerce', 'platform', 'Retail', 'marketplace']",['Retail']
+272,Welch & Tidy,"['consumer goods', 'Retail']",['Retail']
+273,Churchill China,"['consumer goods', 'Manufacturing & Industrial', 'hospitality', 'restaurant', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+274,firstSTREET for Boomers & Beyond,"['consumer goods', 'direct marketing', 'Marketing', 'ecommerce', 'Retail']","['Marketing', 'Retail']"
+275,Fenwick,"['consumer goods', 'art', 'Retail', 'department stores']",['Retail']
+276,iPrice,"['consumer goods', 'electronics', 'games', 'ecommerce', 'jewellery', 'clothing', 'coupons', 'Retail', 'footwear']",['Retail']
+277,ArmaLite,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'firearms', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+278,Oriflame,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+279,4moms,"['consumer goods', 'robotics', 'kids', 'Technology']",['Technology']
+280,SodaStream,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'beverages', 'appliances']","['Food & Beverage', 'Manufacturing & Industrial']"
+281,Amway,"['consumer goods', 'health & beauty', 'ecommerce', 'Retail']",['Retail']
+282,EcoZoom,"['consumer goods', 'sustainability', 'Retail', 'bcorp']",['Retail']
+283,Dufry,"['tobacco', 'Food & Beverage', 'consumer goods', 'cosmetics', 'accessories', 'watches', 'Travel & Leisure', 'jewellery', 'clothing', 'Retail', 'fashion']","['Food & Beverage', 'Travel & Leisure', 'Retail']"
+284,Vista Alegre,"['consumer goods', 'Manufacturing & Industrial', 'holding company', 'appliances', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+285,Perdue,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'farming', 'Agriculture', 'agritech']","['Food & Beverage', 'Manufacturing & Industrial', 'Agriculture']"
+286,Valora Holding,"['tobacco', 'Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'Retail']","['Food & Beverage', 'Manufacturing & Industrial', 'Retail']"
+287,Stag Arms,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'sport', 'accessories']",['Manufacturing & Industrial']
+288,Baby.com.br,"['consumer goods', 'ecommerce', 'kids', 'Retail', 'marketplace']",['Retail']
+289,Kum & Go,"['Food & Beverage', 'consumer goods', 'petroleum', 'Retail', 'Energy & Utilities']","['Food & Beverage', 'Retail', 'Energy & Utilities']"
+290,DHgate,"['consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+291,Thrive Market,"['consumer goods', 'health & beauty', 'Retail']",['Retail']
+292,IG Design Group,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'holding company', 'packaging', 'gifts']",['Manufacturing & Industrial']
+293,UncommonGoods,"['consumer goods', 'accessories', 'home & garden', 'ecommerce', 'gifts', 'Retail', 'bcorp']",['Retail']
+294,Sig Sauer,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'professional education', 'firearms', 'defense']",['Manufacturing & Industrial']
+295,Adore Me,"['consumer goods', 'ecommerce', 'clothing', 'Retail', 'fashion']",['Retail']
+296,Boux Avenue,"['consumer goods', 'textiles', 'clothing', 'Retail']",['Retail']
+297,The Range,"['consumer goods', 'home & garden', 'Retail']",['Retail']
+298,BodyGuardz,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'protective equipment', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+299,EO Products,"['consumer goods', 'health & beauty', 'cosmetics', 'ecommerce', 'Retail']",['Retail']
+300,CURiO,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'leisure', 'lifestyle']",['Manufacturing & Industrial']
+301,Arcelik,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+302,Parfex,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+303,Decathlon,"['consumer goods', 'sport', 'ecommerce', 'clothing', 'Retail']",['Retail']
+304,Fishing Republic,"['consumer goods', 'Retail']",['Retail']
+305,The One Brand,"['consumer goods', 'Manufacturing & Industrial', 'water', 'Non-Profit', 'bcorp']","['Manufacturing & Industrial', 'Non-Profit']"
+306,MND Group,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+307,Leica Camera,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'photography', 'optics']",['Manufacturing & Industrial']
+308,Devialet,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'audio', 'music']",['Manufacturing & Industrial']
+309,New Matter,"['application software', 'printing', 'consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Technology', '3d printing', 'marketplace']","['Manufacturing & Industrial', 'Technology']"
+310,Marico,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'fitness & wellness']",['Manufacturing & Industrial']
+311,Eco Lips,"['consumer goods', 'health & beauty', 'cosmetics', 'Retail', 'bcorp']",['Retail']
+312,Eco-Bags Products,"['consumer goods', 'ecommerce', 'Retail', 'bcorp']",['Retail']
+313,caseable,"['printing', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+314,Nossa Familia Coffee,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'beverages', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+315,Feetz,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'wearables', 'fashion', '3d printing', 'footwear']",['Manufacturing & Industrial']
+316,EcoLogic Solutions,"['consumer goods', 'Manufacturing & Industrial', 'sustainability', 'bcorp']",['Manufacturing & Industrial']
+317,Grosche International,"['consumer goods', 'Manufacturing & Industrial', 'appliances', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+318,Purplle.com,"['consumer goods', 'health & beauty', 'cosmetics', 'ecommerce', 'Retail']",['Retail']
+319,Einhell Germany,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'home & garden', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+320,SC Johnson,"['consumer goods', 'Manufacturing & Industrial', 'consumer chemistry', 'chemicals']",['Manufacturing & Industrial']
+321,Rimowa,"['consumer goods', 'Manufacturing & Industrial', 'luxury', 'Travel & Leisure']","['Manufacturing & Industrial', 'Travel & Leisure']"
+322,LovePop,"['gift cards', 'printing', 'consumer goods', 'Retail']",['Retail']
+323,Skinjay,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'fitness & wellness']",['Manufacturing & Industrial']
+324,Leesa Sleep,"['mattress', 'consumer goods', 'luxury', 'ecommerce', 'Retail', 'bcorp']",['Retail']
+325,KeepCup,"['consumer goods', 'Manufacturing & Industrial', 'recycling', 'beverages', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+326,Thermador Groupe,"['consumer goods', 'accessories', 'Retail']",['Retail']
+327,Love Bottle,"['consumer goods', 'Manufacturing & Industrial', 'Healthcare', 'renewables', 'fitness & wellness', 'Retail', 'bcorp', 'Energy & Utilities']","['Manufacturing & Industrial', 'Healthcare', 'Retail', 'Energy & Utilities']"
+328,Badger Balm,"['consumer goods', 'health & beauty', 'Retail', 'bcorp']",['Retail']
+329,Elefant.ro,"['consumer goods', 'home & garden', 'ecommerce', 'kids', 'fitness & wellness', 'Retail']",['Retail']
+330,Carousell,"['application software', 'consumer goods', 'ecommerce', 'platform', 'Retail', 'mobile app', 'marketplace']",['Retail']
+331,Eleven James,"['consumer goods', 'luxury', 'watches', 'Retail', 'fashion']",['Retail']
+332,Wilko,"['consumer goods', 'home improvement', 'Retail']",['Retail']
+333,FabFitFun,"['consumer goods', 'health & beauty', 'ecommerce', 'Retail']",['Retail']
+334,Superdrug,"['consumer goods', 'health & beauty', 'cosmetics', 'pharmacy', 'pharma', 'Retail']",['Retail']
+335,Thorntons,"['Food & Beverage', 'consumer goods', 'petroleum', 'Retail', 'Energy & Utilities']","['Food & Beverage', 'Retail', 'Energy & Utilities']"
+336,Wastequip,"['consumer goods', 'Manufacturing & Industrial', 'recycling', 'waste management']",['Manufacturing & Industrial']
+337,Pelikan,"['printing', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+338,Meijer,"['Food & Beverage', 'consumer goods', 'pharma', 'ecommerce', 'clothing', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+339,Troc.com,"['consumer goods', 'ecommerce', 'Retail', 'used goods', 'furniture']",['Retail']
+340,mNectar,"['streaming', 'Technology', 'consumer software', 'mobile app']",['Technology']
+341,Seventh Generation,"[""women's health"", 'consumer goods', 'Manufacturing & Industrial', 'home care', 'kids', 'chemicals']",['Manufacturing & Industrial']
+342,Aspire Beverage,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'Healthcare', 'fitness & wellness', 'nutrition']","['Manufacturing & Industrial', 'Healthcare']"
+343,Meyer Sound,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'audio']",['Manufacturing & Industrial']
+344,Takealot,"['consumer goods', 'electronics', 'consumer electronics', 'home & garden', 'ecommerce', 'Retail', 'fashion']",['Retail']
+345,Everything But The House,"['auction', 'consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+346,BumBoosa,"['consumer goods', 'Manufacturing & Industrial', 'renewables', 'kids', 'bcorp']",['Manufacturing & Industrial']
+347,Coop Group,"['Food & Beverage', 'groceries', 'consumer goods', 'textiles', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+348,Dapple,"['consumer goods', 'Manufacturing & Industrial', 'home care', 'kids']",['Manufacturing & Industrial']
+349,Goddess Garden,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'Healthcare', 'bcorp']","['Manufacturing & Industrial', 'Healthcare']"
+350,NurturMe,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+351,Prosperity Candle,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'interior design', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+352,e.l.f. Cosmetics,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'pharmacy', 'pharma', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+353,Good Clean Love,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'Healthcare', 'bcorp']","['Manufacturing & Industrial', 'Healthcare']"
+354,Slyde Handboards,"['consumer goods', 'sport', 'ecommerce', 'Retail']",['Retail']
+355,Keen Home,"['consumer goods', 'artificial intelligence', 'Manufacturing & Industrial', 'automation', 'art', 'smart home', 'internet of things']",['Manufacturing & Industrial']
+356,Fred Water,"['consumer goods', 'Manufacturing & Industrial', 'water']",['Manufacturing & Industrial']
+357,H-E-B,"['groceries', 'consumer goods', 'Marketing', 'ecommerce', 'clothing', 'platform', 'marketplace']",['Marketing']
+358,Lafes,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+359,Razorpay,"['Financial Services', 'banks', 'payments']",['Financial Services']
+360,Smyths Toys,"['consumer goods', 'games', 'Retail']",['Retail']
+361,Nutrabolt,"['consumer goods', 'Manufacturing & Industrial', 'Healthcare', 'fitness & wellness']","['Manufacturing & Industrial', 'Healthcare']"
+362,Pacific Radio,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'radio']",['Manufacturing & Industrial']
+363,Murphy's Naturals,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+364,LetsTango.com,"['consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+365,Ahold Delhaize,"['Food & Beverage', 'groceries', 'consumer goods', 'spirits', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+366,Bose,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'sport', 'Automotive & Transportation', 'audio', 'appliances', 'it services']","['Manufacturing & Industrial', 'Automotive & Transportation']"
+367,Swisher,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'consumer chemistry', 'distribution', 'packaging']",['Manufacturing & Industrial']
+368,Eyecam (eyeHand),"['consumer goods', 'Technology', 'wearables']",['Technology']
+369,Sunglass Hut,"['consumer goods', 'ecommerce', 'Retail', 'fashion']",['Retail']
+370,Alltricks,"['consumer goods', 'sport', 'ecommerce', 'Retail']",['Retail']
+371,Tog+Porter,"['consumer goods', 'clothing', 'Retail', 'fashion']",['Retail']
+372,Haier,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances', 'hvac']",['Manufacturing & Industrial']
+373,ManoMano,"['consumer goods', 'home improvement', 'home & garden', 'ecommerce', 'platform', 'Retail', 'marketplace']",['Retail']
+374,Squatty Potty,"['consumer goods', 'Manufacturing & Industrial', 'healthtech', 'fitness & wellness']",['Manufacturing & Industrial']
+375,Rifle Paper Co.,"['paper and packaging', 'consumer goods', 'packaging', 'ecommerce', 'interior design', 'Retail']",['Retail']
+376,Yamibuy,"['consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+377,Bragi,"['consumer goods', 'Manufacturing & Industrial', 'audio', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+378,Surya,"['consumer goods', 'Manufacturing & Industrial', 'interior design', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+379,Balsam Hill,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+380,Kaufmann Mercantile,"['consumer goods', 'accessories', 'distribution', 'home & garden', 'ecommerce', 'Retail', 'furniture']",['Retail']
+381,Quality Logo Products,"['consumer goods', 'Marketing', 'advertising']",['Marketing']
+382,Plum Organics,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'Healthcare', 'kids', 'bcorp', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial', 'Healthcare']"
+383,Vector Watch,"['consumer goods', 'Technology', 'wearables', 'mobile app']",['Technology']
+384,Higher Grounds,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'beverages', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+385,Erbaviva,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'kids', 'bcorp']",['Manufacturing & Industrial']
+386,Leon Speakers,"['consumer goods', 'electronics', 'distribution', 'audio', 'Retail']",['Retail']
+387,BRANDLESS,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'ecommerce', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+388,Fabletics,"['consumer goods', 'sport', 'ecommerce', 'clothing', 'lifestyle', 'Retail', 'footwear']",['Retail']
+389,Honey-Can-Do International,"['consumer goods', 'interior design', 'Retail']",['Retail']
+390,Shopfully Group,"['Technology', 'Retail', 'app development']","['Technology', 'Retail']"
+391,Give Something Back,"['consumer goods', 'Business Products & Services', 'Retail', 'bcorp']","['Business Products & Services', 'Retail']"
+392,ClickStop,"['consumer goods', 'ecommerce', 'lighting', 'Retail']",['Retail']
+393,Stitch Fix,"['accessories', 'delivery', 'ecommerce', 'clothing', 'platform', 'Technology', 'Retail', 'fashion']","['Technology', 'Retail']"
+394,Helloprint,"['printing', 'consumer goods', 'ecommerce', 'platform', 'Retail']",['Retail']
+395,Lollicup USA,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'plastic', 'packaging']","['Food & Beverage', 'Manufacturing & Industrial']"
+396,Simba Sleep,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+397,Max Mara,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail', 'fashion', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+398,Mid-Atlantic ProTel,"['consumer goods', 'wireless', 'Retail', 'used goods', 'mobile app']",['Retail']
+399,Altyor,"['consumer goods', 'Manufacturing & Industrial', 'supply chain management', 'holding company', 'supply chain']",['Manufacturing & Industrial']
+400,Bulletin,"['consumer goods', 'ecommerce', 'Retail', 'sharing economy', 'marketplace']",['Retail']
+401,My 1st Years,"['consumer goods', 'toys', 'ecommerce', 'kids', 'gifts', 'Retail']",['Retail']
+402,Brasserie New Deal Brewing Co.,"['beer', 'consumer goods', 'Manufacturing & Industrial', 'bcorp']",['Manufacturing & Industrial']
+403,Foxtail Coffee,"['Food & Beverage', 'consumer goods', 'ecommerce', 'Retail']","['Food & Beverage', 'Retail']"
+404,Seiko Epson,"['printing', 'electronics', 'Manufacturing & Industrial', 'watches', 'wearables']",['Manufacturing & Industrial']
+405,ecobee,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'energy services', 'home improvement', 'wireless', 'sustainability', 'internet of things', 'Energy & Utilities']","['Manufacturing & Industrial', 'Energy & Utilities']"
+406,WMF Group,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'home & garden', 'appliances']","['Food & Beverage', 'Manufacturing & Industrial']"
+407,Cuppow,"['consumer goods', 'Manufacturing & Industrial', 'fitness & wellness', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+408,Love Child Organics,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'kids', 'bcorp', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+409,Chuck & Don's,"['consumer goods', 'pets', 'Retail', 'nutrition']",['Retail']
+410,Bureo,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+411,Lakeland Financial,"['investment management', 'mortgages', 'holding company', 'insurance', 'Financial Services', 'brokerage', 'commercial banks', 'banks']",['Financial Services']
+412,Parker's,"['consumer goods', 'supermarkets', 'Retail']",['Retail']
+413,Shopsurya,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+414,Teatulia Organic Teas,"['Food & Beverage', 'consumer goods', 'Retail', 'bcorp']","['Food & Beverage', 'Retail']"
+415,Preserve,"['consumer goods', 'recycling', 'Retail', 'bcorp']",['Retail']
+416,LWRC International,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'accessories', 'firearms', 'defense', 'aerospace']",['Manufacturing & Industrial']
+417,LiveChat,"['consumer goods', 'consumer products & services', 'ecommerce', 'marketplace']",[]
+418,Shanghai Industrial Holdings,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+419,BlueAvocado,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+420,U Konserve,"['consumer goods', 'Manufacturing & Industrial', 'bcorp']",['Manufacturing & Industrial']
+421,Looptworks,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'clothing', 'Retail', 'fashion', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+422,Simply Gum,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+423,Yellow Leaf Hammocks,"['consumer goods', 'Manufacturing & Industrial', 'bcorp']",['Manufacturing & Industrial']
+424,Dolphin Blue,"['paper and packaging', 'consumer goods', 'recycling', 'packaging', 'ecommerce', 'Retail', 'bcorp']",['Retail']
+425,L&M Fleet Supply,"['consumer goods', 'home improvement', 'toys', 'distribution', 'home & garden', 'ecommerce', 'clothing', 'Retail']",['Retail']
+426,Schnuck,"['consumer goods', 'pharmacy', 'pharma', 'supermarkets', 'Retail']",['Retail']
+427,Wallaroo,"['consumer goods', 'clothing', 'Retail', 'fashion', 'bcorp']",['Retail']
+428,Cupanion,"['consumer goods', 'Manufacturing & Industrial', 'bcorp']",['Manufacturing & Industrial']
+429,Aygaz,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'electricity', 'oil', 'oil & gas', 'petroleum', 'transportation', 'Retail', 'Energy & Utilities']","['Manufacturing & Industrial', 'Retail', 'Energy & Utilities']"
+430,Tricae,"['consumer goods', 'toys', 'kids', 'Retail', 'fashion']",['Retail']
+431,New Leaf Paper,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'packaging']",['Manufacturing & Industrial']
+432,Beraca,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+433,Silego Technology,"['Manufacturing & Industrial', 'semiconductors', 'Technology', 'electronic components']","['Manufacturing & Industrial', 'Technology']"
+434,Mary Kay,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+435,Hobby Lobby,"['consumer goods', 'distribution', 'ecommerce', 'jewellery', 'interior design', 'Retail', 'wearables']",['Retail']
+436,Dispatchr,"['traveltech', 'Travel & Leisure', 'platform']",['Travel & Leisure']
+437,1-800 Contacts,"['consumer goods', 'optics', 'ecommerce', 'Retail']",['Retail']
+438,STRATACACHE,"['content advertising', 'Marketing', 'display advertising', 'advertising', 'Technology', 'video', 'mobile app']","['Marketing', 'Technology']"
+439,Eby-Brown,"['tobacco', 'Food & Beverage', 'consumer goods', 'distribution', 'Retail']","['Food & Beverage', 'Retail']"
+440,Equip Outdoor Technologies,"['Manufacturing & Industrial', 'sport', 'accessories']",['Manufacturing & Industrial']
+441,Parachute Home,"['consumer goods', 'interior design', 'Retail', 'furniture']",['Retail']
+442,Mamava,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+443,Energy Recovery,"['Manufacturing & Industrial', 'energy services', 'Energy & Utilities']","['Manufacturing & Industrial', 'Energy & Utilities']"
+444,Narragansett Brewing Company,"['beer', 'consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+445,Greenlight Planet,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'renewables', 'solar']",['Manufacturing & Industrial']
+446,PackIt,"['consumer goods', 'Retail']",['Retail']
+447,Babo Botanicals,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'bcorp']",['Manufacturing & Industrial']
+448,Sealy Corporation,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'home improvement', 'home & garden']",['Manufacturing & Industrial']
+449,Memebox,"['consumer goods', 'health & beauty', 'cosmetics', 'ecommerce', 'Retail']",['Retail']
+450,Ajinomoto,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'pharmacy', 'pharma', 'Healthcare', 'chemicals', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial', 'Healthcare']"
+451,Eurocash,"['Food & Beverage', 'consumer goods', 'consumer products & services', 'distribution', 'Financial Services', 'logistics']","['Food & Beverage', 'Financial Services']"
+452,Phydeaux,"['consumer goods', 'pets', 'Retail', 'nutrition']",['Retail']
+453,Better Way Imports,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'Retail', 'bcorp']",['Retail']
+454,Ritual,"['consumer goods', 'Healthcare', 'supplements', 'ecommerce']",['Healthcare']
+455,Kraftly,"['consumer goods', 'ecommerce', 'Technology', 'Retail', 'marketplace']","['Technology', 'Retail']"
+456,Susty Party,"['consumer goods', 'Manufacturing & Industrial', 'recycling', 'renewables', 'bcorp']",['Manufacturing & Industrial']
+457,Andes Mountain Water,"['consumer goods', 'Manufacturing & Industrial', 'water', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+458,RPI (Reischling Press),"['printing', 'consumer goods', 'Manufacturing & Industrial', 'photography']",['Manufacturing & Industrial']
+459,Grohe,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'home improvement', 'home & garden']",['Manufacturing & Industrial']
+460,Jollibee Foods,"['Food & Beverage', 'consumer goods', 'restaurant']",['Food & Beverage']
+461,Bed Bandits,"['mattress', 'consumer goods', 'ecommerce', 'Retail', 'bcorp']",['Retail']
+462,RageOn,"['printing', 'consumer goods', 'ecommerce', 'clothing', 'Retail', 'marketplace']",['Retail']
+463,Brooklinen,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'interior design', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+464,Souq.com,"['consumer goods', 'distribution', 'ecommerce', 'clothing', 'Retail']",['Retail']
+465,Jewett-Cameron Company,"['consumer goods', 'Manufacturing & Industrial', 'delivery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+466,P.L.A.Y.,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'pets', 'bcorp']",['Manufacturing & Industrial']
+467,Boll & Branch,"['consumer goods', 'textiles', 'home & garden', 'ecommerce', 'Retail']",['Retail']
+468,BabyEarth,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+469,Sir Kensington’s,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+470,WakaWaka,"['consumer goods', 'electronics', 'consumer electronics', 'Technology', 'bcorp']",['Technology']
+471,QKL Stores,"['consumer goods', 'art', 'supermarkets', 'Retail', 'department stores']",['Retail']
+472,Clarus Corporation,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'engineering']",['Manufacturing & Industrial']
+473,Eczacıbası,"['mining', 'conglomerates', 'consumer goods', 'Business Products & Services', 'building materials', 'pharma', 'Healthcare', 'Real Estate & Construction', 'it services', 'property management']","['Business Products & Services', 'Healthcare', 'Real Estate & Construction']"
+474,Snowe,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+475,Chumbak,"['consumer goods', 'accessories', 'home & garden', 'ecommerce', 'Retail', 'fashion']",['Retail']
+476,Artel Video Systems,"['consumer goods', 'electronics', 'satellite', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'telecommunications']",['Manufacturing & Industrial']
+477,Lofelt,"['consumer goods', 'electronics', 'Technology']",['Technology']
+478,Micro Center,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail', 'electronic components']",['Retail']
+479,Steinhoff International,"['consumer goods', 'holding company', 'clothing', 'vehicles', 'Retail', 'furniture']",['Retail']
+480,Ettitude,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+481,Beats Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'wireless', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+482,Conair,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'health & beauty', 'appliances']",['Manufacturing & Industrial']
+483,B&Q,"['flooring', 'consumer goods', 'home improvement', 'home & garden', 'ecommerce', 'Retail', 'furniture']",['Retail']
+484,Hammock Boutique,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+485,Able Industrial Products,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+486,Ayurshakha,"['consumer goods', 'health & beauty', 'pharma', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+487,HandyHome,"['consumer goods', 'Real Estate & Construction', 'it services', 'Technology']","['Real Estate & Construction', 'Technology']"
+488,Holiday Companies,"['Food & Beverage', 'consumer goods', 'petroleum', 'Retail', 'Energy & Utilities']","['Food & Beverage', 'Retail', 'Energy & Utilities']"
+489,einhorn,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+490,GrillSymbol,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+491,Olympic Arms,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'firearms']",['Manufacturing & Industrial']
+492,BEFORE Brands,"['consumer goods', 'Healthcare', 'supplements', 'Retail']","['Healthcare', 'Retail']"
+493,gDiapers,"['consumer goods', 'kids', 'Retail', 'bcorp']",['Retail']
+494,Beach Camera,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+495,Goxip,"['consumer goods', 'distribution', 'ecommerce', 'platform', 'Retail', 'fashion', 'marketplace']",['Retail']
+496,The Avedis Zildjian Company,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'music']",['Manufacturing & Industrial']
+497,Glatt Stove,"['consumer goods', 'Manufacturing & Industrial', 'energy services', 'Healthcare', 'distribution', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Healthcare', 'Retail']"
+498,Fiskars,"['consumer goods', 'Manufacturing & Industrial', 'home & garden']",['Manufacturing & Industrial']
+499,KitchenAid,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'home & garden', 'appliances']",['Manufacturing & Industrial']
+500,VESTEL,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'appliances', 'lighting']",['Manufacturing & Industrial']
+501,Naya Health,"[""women's health"", 'consumer goods', 'healthtech', 'Healthcare']",['Healthcare']
+502,Wuestenrot or Wuerttembergische (W&W),"['financial management', 'Financial Services']",['Financial Services']
+503,Friction Free Shaving,"['consumer goods', 'health & beauty', 'ecommerce', 'Retail']",['Retail']
+504,Chesapeake Bay Candle,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+505,Manpacks,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+506,Banvit,"['Food & Beverage', 'consumer goods', 'distribution']",['Food & Beverage']
+507,Selk'bag USA,"['consumer goods', 'Manufacturing & Industrial', 'clothing']",['Manufacturing & Industrial']
+508,Amica,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'distribution', 'appliances']",['Manufacturing & Industrial']
+509,Classic Specs,"['consumer goods', 'ecommerce', 'Retail', 'fashion', 'eyewear']",['Retail']
+510,KOKUYO,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'accessories', 'packaging', 'furniture']",['Manufacturing & Industrial']
+511,AKDY Imports,"['consumer goods', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+512,Wilson Combat,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'firearms']",['Manufacturing & Industrial']
+513,Mobovida,"['consumer goods', 'Retail', 'mobile app']",['Retail']
+514,Card Isle,"['gift cards', 'consumer goods', 'Media & Entertainment']",['Media & Entertainment']
+515,Ekornes,"['consumer goods', 'luxury', 'Retail', 'home building', 'furniture']",['Retail']
+516,Copia,"['consumer goods', 'delivery', 'ecommerce', 'Retail']",['Retail']
+517,Amplify Snack Brands,"['Food & Beverage', 'consumer goods', 'packaging', 'Retail', 'nutrition']","['Food & Beverage', 'Retail']"
+518,Innox Trading,"['consumer goods', 'pharmacy', 'pharma', 'ecommerce', 'Retail']",['Retail']
+519,Best Products,"['consumer goods', 'social networks', 'Media & Entertainment', 'platform', 'Technology']","['Media & Entertainment', 'Technology']"
+520,Wadi,"['consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+521,Jamo,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'sound', 'audio']",['Manufacturing & Industrial']
+522,Bespoke Post,"['consumer goods', 'lifestyle', 'Retail']",['Retail']
+523,Mommy's Bliss,"['consumer goods', 'Healthcare', 'fitness & wellness']",['Healthcare']
+524,Combat Gent,"['consumer goods', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+525,Balsam Brands,"['consumer goods', 'interior design', 'Retail']",['Retail']
+526,FANCHEST,"['consumer goods', 'ecommerce', 'gifts', 'Retail']",['Retail']
+527,Bellroy,"['consumer goods', 'Manufacturing & Industrial', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+528,Dazadi,"['consumer goods', 'toys', 'games', 'ecommerce', 'fitness & wellness', 'Retail', 'furniture']",['Retail']
+529,check24,"['consumer goods', 'Technology', 'Retail', 'marketplace']","['Technology', 'Retail']"
+530,Motherlove Herbal Company,"['consumer goods', 'health & beauty', 'Retail', 'bcorp']",['Retail']
+531,Papier,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+532,Mejuri,"['consumer goods', 'luxury', 'ecommerce', 'jewellery', 'lifestyle', 'Retail', 'fashion']",['Retail']
+533,Horizn Studios,"['consumer goods', 'Manufacturing & Industrial', 'Travel & Leisure', 'Retail']","['Manufacturing & Industrial', 'Travel & Leisure', 'Retail']"
+534,Studio Calico,"['consumer goods', 'Retail']",['Retail']
+535,Migros Ticaret,"['Food & Beverage', 'consumer goods']",['Food & Beverage']
+536,ConsumerSearch,"['media', 'consumer goods', 'Business Products & Services']",['Business Products & Services']
+537,Bixbee,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+538,Starkey Hearing Technologies,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'medical devices', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+539,GladRags,"[""women's health"", 'consumer goods', 'Healthcare', 'bcorp']",['Healthcare']
+540,Simmons First National,"['mortgages', 'Financial Services', 'commercial banks', 'banks']",['Financial Services']
+541,Full Circle Home,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+542,HealthKart,"['consumer goods', 'consumer products & services', 'sport', 'Healthcare', 'ecommerce', 'fitness & wellness', 'Retail']","['Healthcare', 'Retail']"
+543,EZPrints,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'photography']",['Manufacturing & Industrial']
+544,Greca,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+545,Gristedes,"['Food & Beverage', 'groceries', 'consumer goods', 'supermarkets', 'Retail']","['Food & Beverage', 'Retail']"
+546,Godrej,"['consumer goods', 'Manufacturing & Industrial', 'Real Estate & Construction', 'appliances', 'agritech']","['Manufacturing & Industrial', 'Real Estate & Construction']"
+547,SmokingPipes.com,"['consumer goods', 'Retail']",['Retail']
+548,Cafe Coffee Day,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'hospitality', 'delivery', 'restaurant', 'beverages', 'Retail', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial', 'Retail']"
+549,Merchandize Liquidators,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+550,Beam Technologies,"['consumer goods', 'healthtech', 'dental', 'insurance', 'Technology']",['Technology']
+551,Kesko,"['Food & Beverage', 'conglomerates', 'groceries', 'consumer goods', 'sport', 'machinery', 'home improvement', 'Automotive & Transportation', 'home & garden', 'Real Estate & Construction', 'Retail']","['Food & Beverage', 'Automotive & Transportation', 'Real Estate & Construction', 'Retail']"
+552,Kit Tech,"['consumer goods', 'Technology', 'search']",['Technology']
+553,Good Cloth,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'interior design', 'Retail', 'fashion', 'bcorp']",['Retail']
+554,Farm Dog Naturals,"['consumer goods', 'Manufacturing & Industrial', 'supplements', 'bcorp', 'nutrition']",['Manufacturing & Industrial']
+555,All Across Africa,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+556,FGS&Co.,"['consumer goods', 'accessories', 'distribution', 'clothing', 'Retail', 'bcorp']",['Retail']
+557,BigBuy,"['consumer goods', 'ecommerce', 'Retail', 'shipping']",['Retail']
+558,Manutan International,"['consumer goods', 'distribution', 'Retail']",['Retail']
+559,Meliora Cleaning Products,"['consumer goods', 'Retail', 'bcorp']",['Retail']
+560,Purely Lush,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'luxury', 'ecommerce', 'Retail', 'fashion', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+561,Upworthy,"['news', 'video content', 'Media & Entertainment', 'platform', 'video', 'publishing']",['Media & Entertainment']
+562,Skylar,"['consumer goods', 'cosmetics', 'ecommerce', 'Retail']",['Retail']
+563,Water Pik,"['consumer goods', 'Manufacturing & Industrial', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+564,Manicube,"['consumer goods', 'Business Products & Services']",['Business Products & Services']
+565,FloBeds,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail', 'bcorp']","['Manufacturing & Industrial', 'Retail']"
+566,Colorescience,"['consumer goods', 'health & beauty', 'cosmetics', 'distribution', 'Retail']",['Retail']
+567,IdeaStream Consumer Products,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+568,L'OCCITANE,"['consumer goods', 'health & beauty', 'cosmetics', 'Retail']",['Retail']
+569,Pittards,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+570,Phlur,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+571,Rolex,"['consumer goods', 'Manufacturing & Industrial', 'watches', 'jewellery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+572,Maya Network,"['consumer goods', 'Retail', 'electronic components']",['Retail']
+573,Atlanta Light Bulbs,"['consumer goods', 'Manufacturing & Industrial', 'project management', 'distribution', 'recycling', 'lighting']",['Manufacturing & Industrial']
+574,LoveHoney,"['consumer goods', 'accessories', 'clothing', 'Retail']",['Retail']
+575,Thomas Pink,"['consumer goods', 'clothing', 'Retail']",['Retail']
+576,Ditto Sustainable Brand Solutions,"['consumer goods', 'Retail']",['Retail']
+577,Supr Daily,"['Food & Beverage', 'consumer goods', 'Travel & Leisure', 'delivery']","['Food & Beverage', 'Travel & Leisure']"
+578,BJ's Wholesale Club,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+579,Adolfo Dominguez,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+580,Pacific Market International,"['consumer goods', 'Retail']",['Retail']
+581,Flambeau Rivers Papers,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+582,NYX Professional Makeup,"['consumer goods', 'Manufacturing & Industrial', 'cosmetics']",['Manufacturing & Industrial']
+583,Peavey,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+584,SkinCeuticals,"['consumer goods', 'health & beauty', 'Healthcare', 'ecommerce', 'Retail']","['Healthcare', 'Retail']"
+585,Farver True Value Hardware,"['consumer goods', 'distribution', 'Retail', 'rental']",['Retail']
+586,Planet Ayurveda,"['consumer goods', 'Manufacturing & Industrial', 'nutrition']",['Manufacturing & Industrial']
+587,Red Wing Shoe,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'accessories', 'footwear']",['Manufacturing & Industrial']
+588,Alexander Mcqueen,"['consumer goods', 'ecommerce', 'jewellery', 'clothing', 'Retail', 'fashion']",['Retail']
+589,Dolium Bodega Subterranea,"['Food & Beverage', 'Manufacturing & Industrial', 'wine', 'bcorp']","['Food & Beverage', 'Manufacturing & Industrial']"
+590,ChargeTech,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'batteries', 'energy storage']",['Manufacturing & Industrial']
+591,IWC Schaffhausen,"['consumer goods', 'Manufacturing & Industrial', 'watches', 'jewellery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+592,Incipio,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'cables', 'audio']",['Manufacturing & Industrial']
+593,Florismart,"['consumer goods', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+594,Wausau Paper,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+595,Rallye,"['Food & Beverage', 'consumer goods', 'sport', 'distribution', 'holding company', 'ecommerce', 'Retail']","['Food & Beverage', 'Retail']"
+596,Goorin Bros.,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'distribution', 'clothing', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+597,Ten One Design,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electronic components']",['Manufacturing & Industrial']
+598,Love Culture,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+599,The Office Dealer,"['consumer goods', 'distribution', 'Retail', 'furniture']",['Retail']
+600,Allied Telesis Holdings,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'security', 'Technology', 'web hosting']","['Manufacturing & Industrial', 'Technology']"
+601,ProClip USA,"['consumer goods', 'electronics', 'consumer electronics', 'accessories', 'distribution', 'ecommerce', 'Retail']",['Retail']
+602,CAIG Laboratories,"['consumer goods', 'Manufacturing & Industrial', 'lubricants', 'chemicals']",['Manufacturing & Industrial']
+603,BSH,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'holding company', 'appliances']",['Manufacturing & Industrial']
+604,BRANDLESS,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'ecommerce', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+605,Milliken & Company,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing', 'chemicals']",['Manufacturing & Industrial']
+606,Davis Instruments,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+607,Elkay,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'building materials']",['Manufacturing & Industrial']
+608,Bodet,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'it consulting', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+609,Tallan,"['consumer goods', 'artificial intelligence', 'Healthcare', 'machine learning', 'mortgages', 'ecommerce', 'art', 'data management', 'insurance', 'platform', 'Technology', 'Retail', 'cloud']","['Healthcare', 'Technology', 'Retail']"
+610,Writey,"['consumer goods', 'interior design', 'Retail', 'advanced materials']",['Retail']
+611,BorderX Lab,"['consumer goods', 'health & beauty', 'ecommerce', 'platform', 'Technology', 'lifestyle', 'fashion', 'mobile app']",['Technology']
+612,1908 Brands,"['brand creation', 'consumer goods', 'Manufacturing & Industrial', 'Marketing', 'cleantech', 'bcorp']","['Manufacturing & Industrial', 'Marketing']"
+613,Smilo,"['consumer goods', 'Manufacturing & Industrial', 'Healthcare', 'kids', 'fitness & wellness']","['Manufacturing & Industrial', 'Healthcare']"
+614,Sam's Club,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'Retail']",['Retail']
+615,B&M European Value Retail,"['Food & Beverage', 'consumer goods', 'accessories', 'toys', 'home & garden', 'clothing', 'Retail', 'footwear']","['Food & Beverage', 'Retail']"
+616,Beauty By Design,"['application software', 'consumer goods', 'health & beauty', 'platform', 'Technology', 'Retail']","['Technology', 'Retail']"
+617,Evertz,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Mobile & Telecommunications', 'telecommunications']","['Manufacturing & Industrial', 'Mobile & Telecommunications']"
+618,Instacart,"['Food & Beverage', 'groceries', 'delivery', 'ecommerce', 'Technology', 'consumer software']","['Food & Beverage', 'Technology']"
+619,Crowe Soberman,"['accounting', 'Business Products & Services', 'tax', 'Financial Services']","['Business Products & Services', 'Financial Services']"
+620,Bugaboo,"['consumer goods', 'ecommerce', 'Retail']",['Retail']
+621,Amazing Magnets,"['printing', 'consumer goods', 'metal products', 'Manufacturing & Industrial', 'accessories', '3d printing']",['Manufacturing & Industrial']
+622,Bras N Things,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'Retail', 'fashion']",['Retail']
+623,This is L.,"[""women's health"", 'consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'Healthcare', 'bcorp']","['Manufacturing & Industrial', 'Healthcare']"
+624,Hindustan Unilever,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'beverages', 'Retail']","['Food & Beverage', 'Manufacturing & Industrial', 'Retail']"
+625,S&S Industrial Equipment and Supply,"['consumer goods', 'consumer chemistry', 'distribution', 'Retail', 'welding', 'chemicals']",['Retail']
+626,The Sharper Image,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+627,SomaLogic,"['medical diagnostics', 'life sciences', 'biotech', 'medical devices', 'Healthcare', 'drug development']",['Healthcare']
+628,Geox,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'distribution', 'clothing', 'lifestyle', 'Retail', 'fashion', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+629,Britannia,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+630,Guerlain,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+631,mytheresa.com,"['consumer goods', 'accessories', 'distribution', 'luxury', 'ecommerce', 'jewellery', 'clothing', 'Retail', 'fashion']",['Retail']
+632,Huskie Tools,"['consumer goods', 'Manufacturing & Industrial', 'Energy & Utilities']","['Manufacturing & Industrial', 'Energy & Utilities']"
+633,Kester Black,"['consumer goods', 'health & beauty', 'cosmetics', 'Retail', 'bcorp']",['Retail']
+634,Dorothy Perkins,"['accessories', 'clothing', 'Retail', 'fashion']",['Retail']
+635,Tieline Technology,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'audio', 'telecommunications']",['Manufacturing & Industrial']
+636,Harper Wilde,"['consumer goods', 'ecommerce', 'Retail', 'fashion']",['Retail']
+637,Bjorn Borg,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'sport', 'accessories', 'clothing', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+638,RESILUX,"['consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+639,Rust-Oleum,"['coatings', 'consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+640,De'Longhi,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances', 'hvac']",['Manufacturing & Industrial']
+641,First Pacific,"['mining', 'Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'Mobile & Telecommunications', 'holding company', 'infrastructure', 'oil', 'oil & gas']","['Food & Beverage', 'Manufacturing & Industrial', 'Mobile & Telecommunications']"
+642,Green Home,"['paper and packaging', 'consumer goods', 'consumer chemistry', 'packaging', 'ecommerce', 'Retail', 'bcorp', 'furniture']",['Retail']
+643,Marcus Corporation,"['commercial real estate', 'hotels', 'resorts', 'Real Estate & Construction', 'Media & Entertainment', 'hotel']","['Real Estate & Construction', 'Media & Entertainment']"
+644,Armani,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'health & beauty', 'cosmetics', 'luxury', 'jewellery', 'clothing', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+645,Preppi,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'fashion']",['Manufacturing & Industrial']
+646,The Proactiv Company,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+647,Snap Source,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+648,Sixto Packaging,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'packaging']","['Food & Beverage', 'Manufacturing & Industrial']"
+649,CoverGirl,"['consumer goods', 'health & beauty', 'cosmetics', 'distribution', 'Retail']",['Retail']
+650,Ecoflora Cares,"['consumer goods', 'Manufacturing & Industrial', 'biotech', 'chemicals', 'bcorp']",['Manufacturing & Industrial']
+651,Dometic Group,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'sustainability', 'vehicles']",['Manufacturing & Industrial']
+652,Stepjockey,"['Healthcare', 'mobile app']",['Healthcare']
+653,Kras,"['Food & Beverage', 'consumer goods', 'distribution']",['Food & Beverage']
+654,Helly Hansen,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+655,Le Petit Vapoteur,"['e-cigarettes', 'consumer goods', 'accessories', 'ecommerce', 'Retail']",['Retail']
+656,Bois Blanc Supply,"['consumer goods', 'sport', 'Retail']",['Retail']
+657,Orora,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+658,Nilfisk,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer products & services']",['Manufacturing & Industrial']
+659,LEDvance,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+660,ThreeSixty Group,"['consumer goods', 'distribution', 'Retail']",['Retail']
+661,Retrevo,"['consumer goods', 'electronics', 'consumer electronics', 'ecommerce', 'platform', 'Retail']",['Retail']
+662,Extron Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+663,The Flex Company,"[""women's health"", 'consumer goods', 'Healthcare', 'ecommerce', 'Retail']","['Healthcare', 'Retail']"
+664,Waitrose & Partners,"['groceries', 'consumer goods', 'supermarkets', 'Retail']",['Retail']
+665,Slate Rock Safety,"['consumer goods', 'safety', 'textiles', 'distribution', 'clothing', 'Retail']",['Retail']
+666,MSA Safety,"['safety', 'Manufacturing & Industrial', 'monitoring', 'protective equipment']",['Manufacturing & Industrial']
+667,MoreDesign,"['consumer goods', 'ecommerce', 'interior design', 'Retail']",['Retail']
+668,Sun Innovations,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+669,Twiggle,"['artificial intelligence', 'machine learning', 'ecommerce', 'art', 'Technology', 'search']",['Technology']
+670,Space NK,"['consumer goods', 'health & beauty', 'cosmetics', 'home improvement', 'ecommerce', 'Retail']",['Retail']
+671,Del Toro Shoes,"['consumer goods', 'Manufacturing & Industrial', 'luxury', 'clothing', 'lifestyle', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+672,Elevenia,"['consumer goods', 'ecommerce', 'platform', 'Technology', 'fashion', 'marketplace']",['Technology']
+673,SimplyCook,"['restaurant', 'Media & Entertainment']",['Media & Entertainment']
+674,Carpetright,"['mattress', 'flooring', 'Retail', 'furniture']",['Retail']
+675,Orchard Mile,"['consumer goods', 'health & beauty', 'accessories', 'luxury', 'ecommerce', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+676,FrieslandCampina,"['Food & Beverage', 'consumer goods', 'distribution', 'beverages']",['Food & Beverage']
+677,Carroll Cuisine,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'packaging', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+678,Ansaldo NES,"['Manufacturing & Industrial', 'nuclear', 'mechanical components', 'defense']",['Manufacturing & Industrial']
+679,Indigo Paints,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'home & garden']",['Manufacturing & Industrial']
+680,The Hillman Group,"['consumer goods', 'Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+681,Smiggle,"['consumer goods', 'accessories', 'Retail']",['Retail']
+682,Unitron Global,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'medical devices']",['Manufacturing & Industrial']
+683,S.W. Basics,"['Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'bcorp']",['Manufacturing & Industrial']
+684,American & Efird,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'textiles', 'clothing']",['Manufacturing & Industrial']
+685,The Gro Company,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'Retail']",['Retail']
+686,YG-1,"['consumer goods', 'Manufacturing & Industrial', 'drilling', 'mechanical components', 'engineering']",['Manufacturing & Industrial']
+687,Annapolis Performance Sailing,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'clothing', 'Retail', 'footwear']",['Retail']
+688,Home Bargains,"['consumer goods', 'health & beauty', 'home improvement', 'ecommerce', 'clothing', 'Retail']",['Retail']
+689,Eversound,"['senior care', 'consumer goods', 'Manufacturing & Industrial', 'healthtech', 'medical devices', 'Healthcare', 'audio']","['Manufacturing & Industrial', 'Healthcare']"
+690,BuyGoodeals,"['consumer goods', 'electronics', 'consumer electronics', 'clothing', 'interior design', 'Retail', 'footwear']",['Retail']
+691,Escort,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer products & services', 'consumer electronics', 'appliances', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+692,Light Bulbs Etc,"['consumer goods', 'distribution', 'lighting', 'Retail']",['Retail']
+693,Loli Beauty,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'ecommerce']",['Manufacturing & Industrial']
+694,Lorna Jane,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'sport', 'accessories', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+695,Rebbl,"['Food & Beverage', 'consumer goods', 'fitness & wellness', 'nutrition']",['Food & Beverage']
+696,Dripkit,"['Food & Beverage', 'consumer goods']",['Food & Beverage']
+697,Hydrofarm,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+698,Peacock Alley,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'distribution', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+699,Cowarobot,"['consumer goods', 'artificial intelligence', 'robotics', 'art', 'Technology', 'self driving']",['Technology']
+700,Glaze Trading,"['consumer goods', 'Retail']",['Retail']
+701,Sipef,"['consumer goods', 'Manufacturing & Industrial', 'agritech']",['Manufacturing & Industrial']
+702,InContext Solutions,"['virtual reality', 'Technology', 'simulation']",['Technology']
+703,Duracell,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'batteries', 'Energy & Utilities']","['Manufacturing & Industrial', 'Energy & Utilities']"
+704,Zando,"['consumer goods', 'accessories', 'ecommerce', 'clothing', 'Retail', 'footwear']",['Retail']
+705,Kapsch TrafficCom,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'sport', 'it consulting', 'telecommunications', 'transportation', 'Technology', 'app development']","['Manufacturing & Industrial', 'Technology']"
+706,Techtronic Industries,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'cleantech']",['Manufacturing & Industrial']
+707,Simplus,"['it services', 'platform', 'Technology', 'cloud']",['Technology']
+708,Safariland,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'protective equipment', 'firearms', 'security']",['Manufacturing & Industrial']
+709,Arctic Glacier,"['consumer goods', 'Manufacturing & Industrial', 'leasing', 'water', 'distribution', 'packaging']",['Manufacturing & Industrial']
+710,BIM Birlesik Magazalar,"['groceries', 'consumer goods', 'Retail']",['Retail']
+711,Spiral Binding,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'manufacturing equipment', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+712,Oars + Alps,"['consumer goods', 'Manufacturing & Industrial', 'cosmetics', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+713,TK Maxx,"['consumer goods', 'clothing', 'Retail']",['Retail']
+714,Pieno Zvaigzdes,"['Food & Beverage', 'consumer goods']",['Food & Beverage']
+715,Li & Fung,"['consumer goods', 'Investment', 'Travel & Leisure', 'holding company', 'Financial Services', 'Retail', 'logistics']","['Investment', 'Travel & Leisure', 'Financial Services', 'Retail']"
+716,Accrol Papers,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+717,Colefax Group,"['consumer goods', 'distribution', 'luxury', 'Retail']",['Retail']
+718,Glunz & Jensen,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment']",['Manufacturing & Industrial']
+719,Wolford,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'ecommerce', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+720,Revionics,"['Business Products & Services', 'Marketing', 'enterprise software', 'cloud']","['Business Products & Services', 'Marketing']"
+721,Balta Group,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'home improvement']",['Manufacturing & Industrial']
+722,Amrod,"['printing', 'consumer goods', 'accessories', 'ecommerce', 'clothing', 'gifts', 'Retail', 'mobile app']",['Retail']
+723,Brintons,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'home improvement']",['Manufacturing & Industrial']
+724,Galeo Concept,"['consumer goods', 'Manufacturing & Industrial', 'fitness & wellness']",['Manufacturing & Industrial']
+725,Pro Stock Hockey,"['consumer goods', 'sport', 'ecommerce', 'Retail']",['Retail']
+726,Lucky Line,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution']",['Manufacturing & Industrial']
+727,Bron Tapes,"['consumer goods', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+728,Aleratec,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'distribution']",['Manufacturing & Industrial']
+729,World Backpacker,"['consumer goods', 'sport', 'ecommerce', 'Retail']",['Retail']
+730,Maude,"['consumer goods', 'ecommerce', 'Retail', 'shipping']",['Retail']
+731,milkful,"['consumer goods', 'ecommerce', 'Retail', 'nutrition']",['Retail']
+732,Atlantic Stainless,"['mining', 'pipelines', 'consumer goods', 'metal products', 'Manufacturing & Industrial', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+733,Arlington Camera,"['consumer goods', 'electronics', 'consumer products & services', 'photography', 'consumer electronics', 'Retail']",['Retail']
+734,FACT Goods,"['consumer goods', 'fintech', 'clothing', 'Retail', 'fashion', 'charity']",['Retail']
+735,Beauty Base,"['consumer goods', 'health & beauty', 'e-learning', 'Retail']",['Retail']
+736,Wingreens Farms,"['Food & Beverage', 'groceries', 'consumer goods', 'Manufacturing & Industrial', 'farming', 'Agriculture', 'agritech', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial', 'Agriculture']"
+737,A Plus Warehouse,"['consumer goods', 'metal products', 'machinery', 'manufacturing equipment', 'Retail']",['Retail']
+738,Alchemy 43,"['consumer goods', 'health & beauty', 'cosmetics', 'Retail']",['Retail']
+739,VitaMedica,"['consumer goods', 'health & beauty', 'pharma', 'Healthcare', 'distribution', 'fitness & wellness', 'nutrition']",['Healthcare']
+740,Superior Washer and Gasket,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+741,Newhaven Display,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'developer tools', 'displays']",['Manufacturing & Industrial']
+742,UpSpring Baby,"['consumer goods', 'Healthcare', 'fitness & wellness', 'Retail']","['Healthcare', 'Retail']"
+743,EM Research,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'wireless', 'signal processing']",['Manufacturing & Industrial']
+744,Fender Musical Instruments,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'ecommerce', 'music', 'content curriculum']",['Manufacturing & Industrial']
+745,Green Tank Technologies,"['consumer goods', 'Manufacturing & Industrial', 'cannabis']",['Manufacturing & Industrial']
+746,Andrew James,"['consumer goods', 'home & garden', 'ecommerce', 'Retail']",['Retail']
+747,Misen,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+748,Kishlay Foods,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+749,Oliver Cabell,"['consumer goods', 'accessories', 'lifestyle', 'Retail', 'fashion']",['Retail']
+750,Thrace Group,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'distribution', 'packaging']",['Manufacturing & Industrial']
+751,XXL ASA,"['consumer goods', 'sport', 'ecommerce', 'Retail']",['Retail']
+752,Sarantis,"['consumer goods', 'Manufacturing & Industrial', 'cosmetics', 'consumer chemistry']",['Manufacturing & Industrial']
+753,Centrotec,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'holding company', 'sustainability', 'hvac']",['Manufacturing & Industrial']
+754,Dogness,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'pets']",['Manufacturing & Industrial']
+755,Hygenic,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'welding']",['Manufacturing & Industrial']
+756,SM Mlekovita,"['Food & Beverage', 'consumer goods', 'distribution', 'beverages']",['Food & Beverage']
+757,Acqua Di Parma,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'distribution', 'luxury', 'jewellery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+758,Lulus,"['consumer goods', 'accessories', 'luxury', 'ecommerce', 'clothing', 'Retail', 'fashion']",['Retail']
+759,Atria Logic,"['electronics', 'Manufacturing & Industrial', 'engineering', 'semiconductors']",['Manufacturing & Industrial']
+760,Zoot Sports,"['consumer goods', 'textiles', 'sport', 'accessories', 'clothing', 'Retail', 'footwear']",['Retail']
+761,Vantage Specialty Chemicals,"['consumer goods', 'Manufacturing & Industrial', 'consumer chemistry', 'chemicals']",['Manufacturing & Industrial']
+762,ThreeMain,"['consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+763,Antonline.com,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+764,Casetify,"['consumer goods', 'accessories', 'distribution', 'ecommerce', 'platform', 'Technology', 'Retail', 'photo sharing']","['Technology', 'Retail']"
+765,Summit Electric Supply,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'batteries', 'cables', 'distribution', 'supply chain management', 'lighting', 'supply chain', 'electronic components']",['Manufacturing & Industrial']
+766,Smartbox,"['consumer goods', 'ecommerce', 'platform', 'Technology', 'gifts']",['Technology']
+767,Bulbtronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+768,LEDtronics,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'lighting']",['Manufacturing & Industrial']
+769,Amron International,"['consumer goods', 'sport', 'water', 'distribution', 'clothing', 'marine', 'Retail']",['Retail']
+770,Mud Hole Custom Tackle,"['consumer goods', 'distribution', 'Retail']",['Retail']
+771,Wellness Mats,"['flooring', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'home improvement']",['Manufacturing & Industrial']
+772,Zbattery.com,"['consumer goods', 'electronics', 'consumer electronics', 'batteries', 'distribution', 'ecommerce', 'Retail', 'electronic components']",['Retail']
+773,Daimer Industries,"['consumer goods', 'Manufacturing & Industrial', 'petroleum', 'Retail', 'chemicals']","['Manufacturing & Industrial', 'Retail']"
+774,Wise Safety & Environmental,"['consumer goods', 'accessories', 'distribution', 'protective equipment', 'clothing', 'Retail', 'eyewear']",['Retail']
+775,Bindertek,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging', 'furniture']",['Manufacturing & Industrial']
+776,Rokform,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+777,J&L Metrology,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'optics']",['Manufacturing & Industrial']
+778,Mailbox Works,"['consumer goods', 'home & garden', 'Retail']",['Retail']
+779,Mammoth Workwear,"['consumer goods', 'textiles', 'accessories', 'clothing', 'Retail']",['Retail']
+780,Avitech,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'distribution', 'Mobile & Telecommunications', 'telecommunications', 'Retail']","['Manufacturing & Industrial', 'Mobile & Telecommunications', 'Retail']"
+781,REVO America,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'security', 'electronic components']",['Manufacturing & Industrial']
+782,Keiser,"['consumer goods', 'Manufacturing & Industrial', 'sport']",['Manufacturing & Industrial']
+783,Safety Glasses USA,"['consumer goods', 'safety', 'accessories', 'distribution', 'protective equipment', 'ecommerce', 'Retail', 'eyewear']",['Retail']
+784,BisonOffice.com,"['paper and packaging', 'consumer goods', 'distribution', 'packaging', 'Retail', 'furniture']",['Retail']
+785,EK Ekcessories,"['consumer goods', 'Manufacturing & Industrial', 'pets']",['Manufacturing & Industrial']
+786,All Partitions & Parts,"['consumer goods', 'home improvement', 'distribution', 'Retail']",['Retail']
+787,Jones School Supply,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+788,FastCap,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'building materials', 'distribution']",['Manufacturing & Industrial']
+789,Wolfgang Car Care,"['consumer goods', 'vehicles', 'Retail']",['Retail']
+790,TheStampMaker.com,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+791,Lee & Cates Glass,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'building materials']",['Manufacturing & Industrial']
+792,BisonOffice.com,"['paper and packaging', 'consumer goods', 'distribution', 'packaging', 'Retail', 'furniture']",['Retail']
+793,EK Ekcessories,"['consumer goods', 'Manufacturing & Industrial', 'pets']",['Manufacturing & Industrial']
+794,All Partitions & Parts,"['consumer goods', 'home improvement', 'distribution', 'Retail']",['Retail']
+795,Jones School Supply,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+796,FastCap,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'building materials', 'distribution']",['Manufacturing & Industrial']
+797,Wolfgang Car Care,"['consumer goods', 'vehicles', 'Retail']",['Retail']
+798,TheStampMaker.com,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+799,Organizeit.com,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'ecommerce', 'furniture']",['Manufacturing & Industrial']
+800,Buzzfire,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'wireless', 'telecommunications']",['Manufacturing & Industrial']
+801,Spill 911,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'ecommerce', 'Retail', 'chemicals']","['Manufacturing & Industrial', 'Retail']"
+802,Dorcy International,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'batteries', 'generators', 'lighting']",['Manufacturing & Industrial']
+803,Successories.com,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+804,Franklin Retail Solutions,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+805,Mighty Bright,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'home & garden', 'lighting']",['Manufacturing & Industrial']
+806,Cutlery and More,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+807,Auto Body Toolmart,"['sport', 'auto parts', 'Automotive & Transportation', 'distribution', 'art', 'Retail']","['Automotive & Transportation', 'Retail']"
+808,Bluefin Solutions,['Business Products & Services'],['Business Products & Services']
+809,Ronald D and Faye E Flemister,"['printing', 'consumer goods', 'Business Products & Services']",['Business Products & Services']
+810,SuperWarehouse.com,"['paper and packaging', 'consumer goods', 'electronics', 'consumer electronics', 'cables', 'distribution', 'packaging', 'Retail']",['Retail']
+811,Alzatex,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'cables', 'wireless', 'displays']",['Manufacturing & Industrial']
+812,True Religion,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+813,Security Pro USA,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'security', 'defense']",['Manufacturing & Industrial']
+814,Forestry Suppliers,"['consumer goods', 'accessories', 'protective equipment', 'clothing', 'Retail']",['Retail']
+815,Pureland Supply,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'lighting']",['Manufacturing & Industrial']
+816,Forestry Suppliers,"['consumer goods', 'accessories', 'protective equipment', 'clothing', 'Retail']",['Retail']
+817,Pureland Supply,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'lighting']",['Manufacturing & Industrial']
+818,Out-Fit,"['consumer goods', 'sport', 'leisure', 'resorts', 'fitness & wellness', 'Retail']",['Retail']
+819,Keeney’s Office Supply,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+820,Packaging Supplies,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'supplements', 'packaging']",['Manufacturing & Industrial']
+821,Exacompta Clairefontaine,"['Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+822,JULABO,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'water', 'manufacturing equipment', 'wireless']",['Manufacturing & Industrial']
+823,The GPS Store,"['consumer goods', 'electronics', 'consumer electronics', 'accessories', 'marine', 'Retail']",['Retail']
+824,Redco Audio,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'machinery', 'cables']",['Manufacturing & Industrial']
+825,TCP Global,"['consumer goods', 'safety', 'accessories', 'distribution', 'ecommerce', 'Retail', 'chemicals']",['Retail']
+826,Remy Battery,"['consumer goods', 'batteries', 'generators', 'cables', 'energy storage', 'Retail']",['Retail']
+827,Saje,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'Healthcare', 'distribution']","['Manufacturing & Industrial', 'Healthcare']"
+828,Redco Audio,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'machinery', 'cables']",['Manufacturing & Industrial']
+829,TCP Global,"['consumer goods', 'safety', 'accessories', 'distribution', 'ecommerce', 'Retail', 'chemicals']",['Retail']
+830,Remy Battery,"['consumer goods', 'batteries', 'generators', 'cables', 'energy storage', 'Retail']",['Retail']
+831,Saje,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'Healthcare', 'distribution']","['Manufacturing & Industrial', 'Healthcare']"
+832,Highlight Industries,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'plastic', 'machinery', 'manufacturing equipment', 'home & garden', 'packaging']",['Manufacturing & Industrial']
+833,Tiger-Vac,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment']",['Manufacturing & Industrial']
+834,QuickCable,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'batteries', 'cables', 'energy storage', 'electronic components']",['Manufacturing & Industrial']
+835,Hoist Fitness Systems,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'fitness & wellness']",['Manufacturing & Industrial']
+836,TapeCase,"['consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+837,ACL Staticide,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'advanced materials', 'chemicals']",['Manufacturing & Industrial']
+838,GPS Source,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+839,San Diego Plastics,"['consumer goods', 'plastic', 'distribution', 'Retail']",['Retail']
+840,National Band and Tag,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+841,Imprint Comfort Mats,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'accessories', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+842,Spacesaver,"['consumer goods', 'Manufacturing & Industrial', 'protective equipment', 'security']",['Manufacturing & Industrial']
+843,Mechanix Wear,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'sport', 'accessories', 'home & garden', 'clothing']",['Manufacturing & Industrial']
+844,V-Belt Global Supply,"['consumer goods', 'plastic', 'manufacturing equipment', 'distribution', 'ecommerce', 'Retail']",['Retail']
+845,Automotive Workwear,"['consumer goods', 'textiles', 'accessories', 'distribution', 'clothing', 'Retail', 'footwear']",['Retail']
+846,General Filters,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'appliances', 'oil']",['Manufacturing & Industrial']
+847,Openyard,"['consumer goods', 'sport', 'fitness & wellness', 'Retail']",['Retail']
+848,Plaque Shack,"['consumer goods', 'plastic', 'Retail']",['Retail']
+849,Marv Golden Pilot Supplies,"['consumer goods', 'ecommerce', 'Retail', 'aviation']",['Retail']
+850,First Aid Supplies Online,"['consumer goods', 'Healthcare', 'ecommerce', 'Retail']","['Healthcare', 'Retail']"
+851,CRW Flags,"['consumer goods', 'accessories', 'Retail']",['Retail']
+852,Valhalla Scientific,"['consumer goods', 'Manufacturing & Industrial', 'engineering', 'electronic components']",['Manufacturing & Industrial']
+853,SmartSign,"['consumer goods', 'metal products', 'ecommerce', 'Retail']",['Retail']
+854,Pelican Products,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'accessories', 'packaging', 'lighting']",['Manufacturing & Industrial']
+855,SecurityBase,"['consumer goods', 'electronics', 'communication equipment', 'Business Products & Services', 'distribution', 'security', 'Retail']","['Business Products & Services', 'Retail']"
+856,Phillips Safety Products,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'optics']",['Manufacturing & Industrial']
+857,Vanguard Products,"['consumer goods', 'Manufacturing & Industrial', 'polymers', 'plastic', 'distribution']",['Manufacturing & Industrial']
+858,NetBankStore,"['printing', 'consumer goods', 'distribution', 'Retail', 'supply chain']",['Retail']
+859,Dornbracht,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'manufacturing equipment', 'building materials']",['Manufacturing & Industrial']
+860,FlagandBanner.com,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'distribution']",['Manufacturing & Industrial']
+861,Tutti Bambini,"['consumer goods', 'Manufacturing & Industrial', 'interior design', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+862,Doug Mockett & Company,"['consumer goods', 'Manufacturing & Industrial', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+863,Sorbothane,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'polymers', 'distribution']",['Manufacturing & Industrial']
+864,Dick Blick,"['consumer goods', 'distribution', 'ecommerce', 'art', 'Retail']",['Retail']
+865,Sauce Labs,"['enterprise software', 'platform', 'Technology', 'cloud']",['Technology']
+866,Anchortex,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'distribution', 'protective equipment', 'clothing', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+867,Sailrite,"['consumer goods', 'textiles', 'accessories', 'distribution', 'ecommerce', 'clothing', 'Retail']",['Retail']
+868,PCCables.com,"['consumer goods', 'electronics', 'consumer electronics', 'cables', 'Retail']",['Retail']
+869,National Hospitality Supply,"['consumer goods', 'accessories', 'distribution', 'Retail']",['Retail']
+870,Orion Printers & Parts,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail', 'used goods']",['Retail']
+871,Hutchison Ports,"['Travel & Leisure', 'maritime', 'logistics']",['Travel & Leisure']
+872,Continental Western,"['consumer goods', 'distribution', 'packaging', 'Retail', 'supply chain']",['Retail']
+873,Eartec,"['consumer goods', 'electronics', 'consumer electronics', 'communication equipment', 'distribution', 'Retail']",['Retail']
+874,Specialty Cases,"['consumer goods', 'Retail']",['Retail']
+875,Binders,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'Business Products & Services']","['Manufacturing & Industrial', 'Business Products & Services']"
+876,Fastener SuperStore,"['consumer goods', 'metal products', 'distribution', 'ecommerce', 'Retail']",['Retail']
+877,Malelo and Company,"['media', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Mobile & Telecommunications', 'telecommunications']","['Manufacturing & Industrial', 'Mobile & Telecommunications']"
+878,Iron Grip Barbell,"['consumer goods', 'Manufacturing & Industrial', 'sport']",['Manufacturing & Industrial']
+879,BedInABox,"['consumer goods', 'Manufacturing & Industrial', 'ecommerce', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+880,Paul C. Buff,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'photography', 'consumer electronics', 'mechanical components']",['Manufacturing & Industrial']
+881,International E-Z UP,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+882,Gettysburg Flag Works,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'home improvement', 'furniture']",['Manufacturing & Industrial']
+883,Cementex Products,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'clothing', 'fabrication tools']",['Manufacturing & Industrial']
+884,Displaysense,"['consumer goods', 'Manufacturing & Industrial', 'displays', 'ecommerce', 'Retail', 'facilities management']","['Manufacturing & Industrial', 'Retail']"
+885,Stage Lighting Store,"['consumer goods', 'Media & Entertainment', 'lighting', 'Retail']","['Media & Entertainment', 'Retail']"
+886,Delta Marketing Group,"['consumer goods', 'electronics', 'cables', 'distribution', 'Retail', 'supply chain', 'electronic components']",['Retail']
+887,RefurbUPS,"['consumer goods', 'electronics', 'manufacturing equipment', 'distribution', 'enterprise software', 'Retail']",['Retail']
+888,Displaysense,"['consumer goods', 'Manufacturing & Industrial', 'displays', 'ecommerce', 'Retail', 'facilities management']","['Manufacturing & Industrial', 'Retail']"
+889,Stage Lighting Store,"['consumer goods', 'Media & Entertainment', 'lighting', 'Retail']","['Media & Entertainment', 'Retail']"
+890,Delta Marketing Group,"['consumer goods', 'electronics', 'cables', 'distribution', 'Retail', 'supply chain', 'electronic components']",['Retail']
+891,RefurbUPS,"['consumer goods', 'electronics', 'manufacturing equipment', 'distribution', 'enterprise software', 'Retail']",['Retail']
+892,Pigeon Mountain Industries,"['consumer goods', 'Manufacturing & Industrial', 'textiles']",['Manufacturing & Industrial']
+893,Think Vacuums,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'manufacturing equipment', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+894,Nick's Garden Center & Farm Market,"['consumer goods', 'home improvement', 'distribution', 'home & garden', 'Retail']",['Retail']
+895,Toner Cable Equipment,"['fiber optic', 'consumer goods', 'electronics', 'consumer electronics', 'communication equipment', 'accessories', 'cables', 'distribution', 'telecommunications', 'Retail']",['Retail']
+896,VCOM International Multimedia,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'routers & switches', 'cables']",['Manufacturing & Industrial']
+897,Advanced Office Environments,"['consumer goods', 'distribution', 'Retail', 'furniture']",['Retail']
+898,Abadak,"['consumer goods', 'accessories', 'distribution', 'ecommerce', 'Retail', 'furniture']",['Retail']
+899,JTF Business Systems,"['consumer goods', 'electronics', 'distribution', 'security', 'Retail', 'furniture']",['Retail']
+900,Magnum Magnetics,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+901,Marshall Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'cables', 'audio', 'video']",['Manufacturing & Industrial']
+902,Block and Company,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution', 'security']",['Manufacturing & Industrial']
+903,Lenox Corporation,"['consumer goods', 'Manufacturing & Industrial', 'home & garden']",['Manufacturing & Industrial']
+904,Pentland Brands plc,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'sport', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+905,WAXIE Sanitary Supply,"['consumer goods', 'consumer chemistry', 'accessories', 'distribution', 'protective equipment', 'lighting', 'Retail', 'chemicals']",['Retail']
+906,The Charles Stark Draper Laboratory,"['biotech', 'engineering', 'defense', 'aerospace', 'Technology', 'Non-Profit']","['Technology', 'Non-Profit']"
+907,Speedway Motorsports,"['sport', 'Marketing', 'Media & Entertainment']","['Marketing', 'Media & Entertainment']"
+908,Oreck,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'cleantech', 'appliances']",['Manufacturing & Industrial']
+909,Simon Jersey,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'textiles', 'clothing', 'fashion']",['Manufacturing & Industrial']
+910,Innovation First International,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'robotics']",['Manufacturing & Industrial']
+911,Beyond Yoga,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'distribution', 'luxury', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+912,Dynabrade,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'machinery', 'manufacturing equipment', 'mechanical components']",['Manufacturing & Industrial']
+913,MicroCare,"['consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+914,Wenger Corporation,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'sport', 'music', 'furniture']",['Manufacturing & Industrial']
+915,Hillyard,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'home & garden', 'chemicals']",['Manufacturing & Industrial']
+916,Lamps Plus,"['consumer goods', 'electronics', 'consumer electronics', 'home improvement', 'interior design', 'lighting', 'Retail', 'furniture']",['Retail']
+917,Hobbytown USA,"['consumer goods', 'toys', 'Retail']",['Retail']
+918,Navitar,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'optics', 'imaging', 'electronic components']",['Manufacturing & Industrial']
+919,Accuform Signs,"['consumer goods', 'consumer products & services', 'distribution', 'Retail', 'furniture']",['Retail']
+920,Leatherman Tool Group,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'wearables']",['Manufacturing & Industrial']
+921,Springs Window Fashions,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+922,Brownells,"['consumer goods', 'sport', 'accessories', 'firearms', 'Retail', 'chemicals']",['Retail']
+923,CROSSMARK,"['consumer goods', 'Manufacturing & Industrial', 'Business Products & Services', 'advertising', 'Technology', 'app development', 'management consulting']","['Manufacturing & Industrial', 'Business Products & Services', 'Technology']"
+924,Ericson Manufacturing,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electricity', 'protective equipment', 'lighting']",['Manufacturing & Industrial']
+925,Lifetime Products,"['consumer goods', 'Manufacturing & Industrial', 'furniture']",['Manufacturing & Industrial']
+926,ABT Electronics,"['consumer goods', 'electronics', 'consumer products & services', 'consumer electronics', 'accessories', 'distribution', 'audio', 'ecommerce', 'Retail', 'video']",['Retail']
+927,Natural World Products,"['recycling', 'renewables', 'waste management', 'Energy & Utilities']",['Energy & Utilities']
+928,G.L. Huyett,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'accessories', 'lubricants', 'mechanical components', 'hydraulic']",['Manufacturing & Industrial']
+929,Brady Industries,"['consumer goods', 'Business Products & Services', 'distribution', 'Retail']","['Business Products & Services', 'Retail']"
+930,Team Technologies,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'contractor']",['Manufacturing & Industrial']
+931,Young Electric Sign Company (YESCO),"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Business Products & Services', 'advertising']","['Manufacturing & Industrial', 'Business Products & Services']"
+932,Visiontron,"['consumer goods', 'electronics', 'safety', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+933,Dickies,"['consumer goods', 'ecommerce', 'clothing', 'Retail']",['Retail']
+934,Phillips Safety Products,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'optics']",['Manufacturing & Industrial']
+935,Sylvane,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'hvac']",['Manufacturing & Industrial']
+936,Displayit,"['consumer goods', 'Manufacturing & Industrial', 'project management', 'distribution', 'graphic design', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+937,Stansport,"['consumer goods', 'sport', 'Retail']",['Retail']
+938,Arcontech,"['fintech', 'platform', 'Technology']",['Technology']
+939,Keystone Plastics,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'plastic']",['Manufacturing & Industrial']
+940,Gordon Brush,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+941,US Markerboard,"['consumer goods', 'accessories', 'distribution', 'Retail', 'supply chain', 'furniture']",['Retail']
+942,Glen Raven,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+943,MaxiAids.com,"['consumer goods', 'electronics', 'consumer electronics', 'Healthcare', 'diabetes', 'Retail']","['Healthcare', 'Retail']"
+944,Guiry's,"['consumer goods', 'home improvement', 'distribution', 'Retail', 'supply chain', 'furniture']",['Retail']
+945,MCR Safety,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+946,American Science & Surplus,"['consumer goods', 'home improvement', 'toys', 'Education', 'distribution', 'art', 'Retail']","['Education', 'Retail']"
+947,Fisheries Supply Company,"['consumer goods', 'distribution', 'marine', 'Retail']",['Retail']
+948,Do it Best Corp,"['consumer goods', 'building management', 'home improvement', 'construction equipment', 'distribution', 'Real Estate & Construction', 'Retail']","['Real Estate & Construction', 'Retail']"
+949,Felix Storch,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'appliances', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+950,ITM Instruments,"['consumer goods', 'electronics', 'metal products', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+951,Telemetrics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'robotics']",['Manufacturing & Industrial']
+952,Full Source,"['consumer goods', 'distribution', 'protective equipment', 'ecommerce', 'clothing', 'Retail']",['Retail']
+953,Ebulb,"['consumer goods', 'manufacturing equipment', 'lighting', 'Retail']",['Retail']
+954,Cedar Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+955,Carhartt,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+956,Whistle Workwear,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'clothing', 'wearables']",['Manufacturing & Industrial']
+957,Seville Classics,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+958,Micro-Mode Products,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electronic components']",['Manufacturing & Industrial']
+959,Morehouse Instrument Company,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment']",['Manufacturing & Industrial']
+960,Tiresocks,"['flooring', 'consumer goods', 'safety', 'Manufacturing & Industrial', 'protective equipment']",['Manufacturing & Industrial']
+961,Fragrance Direct,"[""women's health"", 'consumer goods', 'health & beauty', 'cosmetics', 'luxury', 'Retail']",['Retail']
+962,Alpha Card Systems,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'distribution', 'ecommerce']",['Manufacturing & Industrial']
+963,Supply Chimp,"['consumer goods', 'Retail', 'furniture']",['Retail']
+964,Da Milano,"['consumer goods', 'accessories', 'distribution', 'luxury', 'Retail']",['Retail']
+965,National Marker Company,"['consumer goods', 'electronics', 'safety', 'Manufacturing & Industrial', 'consumer electronics', 'Business Products & Services']","['Manufacturing & Industrial', 'Business Products & Services']"
+966,BC Industrial Supply,"['consumer goods', 'electronics', 'manufacturing equipment', 'building materials', 'distribution', 'Retail', 'electronic components']",['Retail']
+967,Avocor,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'displays']",['Manufacturing & Industrial']
+968,Greenlane,"['consumer goods', 'accessories', 'Retail']",['Retail']
+969,Huhtamaki,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'packaging']","['Food & Beverage', 'Manufacturing & Industrial']"
+970,Doosan Infracore,"['Manufacturing & Industrial', 'generators', 'construction equipment', 'holding company', 'lighting', 'engines']",['Manufacturing & Industrial']
+971,Mastrad,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+972,Leifheit,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+973,Papoutsanis,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+974,HB Grandi,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'agritech', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+975,Korres,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics', 'pharmacy', 'pharma', 'sustainability', 'drug development', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+976,Indel B,"['consumer goods', 'Manufacturing & Industrial', 'hospitality', 'appliances']",['Manufacturing & Industrial']
+977,Verallia Deutschland,"['consumer goods', 'Manufacturing & Industrial', 'sustainability', 'packaging']",['Manufacturing & Industrial']
+978,Redding Bank of Commerce,"['mortgages', 'holding company', 'insurance', 'Financial Services', 'commercial banks', 'banks']",['Financial Services']
+979,Atlantik Petrol,"['consumer goods', 'Manufacturing & Industrial', 'oil', 'chemicals']",['Manufacturing & Industrial']
+980,Safilo,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'protective equipment', 'luxury', 'optics', 'Retail', 'fashion', 'eyewear']","['Manufacturing & Industrial', 'Retail']"
+981,InfoPeople,"['Business Products & Services', 'it staffing', 'Human Resources & Recruiting', 'Technology', 'recruiting']","['Business Products & Services', 'Human Resources & Recruiting', 'Technology']"
+982,Ratti,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+983,Creta Farms,"['Food & Beverage', 'consumer goods', 'distribution', 'delivery', 'Retail', 'nutrition']","['Food & Beverage', 'Retail']"
+984,Park Systems,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electronic components']",['Manufacturing & Industrial']
+985,Stefanel,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'ecommerce', 'clothing', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+986,B&C Speakers,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'distribution', 'audio', 'Retail', 'electronic components']","['Manufacturing & Industrial', 'Retail']"
+987,Ratti,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+988,Creta Farms,"['Food & Beverage', 'consumer goods', 'distribution', 'delivery', 'Retail', 'nutrition']","['Food & Beverage', 'Retail']"
+989,Gambero Rosso,"['Food & Beverage', 'media', 'consumer goods', 'professional education', 'news', 'books', 'Media & Entertainment', 'newspaper', 'television']","['Food & Beverage', 'Media & Entertainment']"
+990,Orchestra Premaman,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'toys', 'clothing', 'kids', 'Retail', 'furniture', 'nutrition']","['Manufacturing & Industrial', 'Retail']"
+991,O Sorbet D'amour,"['Food & Beverage', 'consumer goods', 'restaurant', 'beverages', 'nutrition']",['Food & Beverage']
+992,Kotipizza Group,"['Food & Beverage', 'consumer goods', 'hospitality', 'restaurant', 'beverages', 'Media & Entertainment', 'nutrition']","['Food & Beverage', 'Media & Entertainment']"
+993,Autogrill,"['Food & Beverage', 'consumer goods', 'restaurant', 'Retail']","['Food & Beverage', 'Retail']"
+994,Mathios Refractories,"['consumer goods', 'Manufacturing & Industrial', 'procurement', 'home improvement', 'building materials', 'distribution', 'engineering', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+995,Piedmont Natural Gas Company,"['energy services', 'natural gas', 'distribution', 'Energy & Utilities']",['Energy & Utilities']
+996,Moda Bagno - N. Varveris,"['flooring', 'consumer goods', 'home improvement', 'home & garden', 'lighting', 'Retail', 'furniture']",['Retail']
+997,Helical Bar,"['Real Estate & Construction', 'property finance', 'property management']",['Real Estate & Construction']
+998,ezbuy,"['consumer goods', 'toys', 'home & garden', 'ecommerce', 'appliances', 'clothing', 'Technology', 'Retail', 'footwear', 'shipping', 'marketplace']","['Technology', 'Retail']"
+999,Beghelli,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'security', 'lighting', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+1000,Hornbach,"['flooring', 'consumer goods', 'home improvement', 'distribution', 'home & garden', 'holding company', 'Real Estate & Construction', 'Retail']","['Real Estate & Construction', 'Retail']"
+1001,MedMen,"['Other', 'consumer goods', 'cannabis', 'Retail']","['Other', 'Retail']"
+1002,Suominen,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'textiles', 'plastic', 'health & beauty', 'cosmetics', 'packaging', 'clothing']",['Manufacturing & Industrial']
+1003,UniEuro,"['consumer goods', 'electronics', 'consumer electronics', 'games', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1004,ThinkUp,"['consumer goods', 'ecommerce', 'Technology', 'Retail', 'consumer software']","['Technology', 'Retail']"
+1005,ALIO Industries,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'nanotech', 'engineering', 'robotics']",['Manufacturing & Industrial']
+1006,Sanwa Holdings,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'building materials', 'construction equipment', 'home & garden', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1007,Officenation,"['consumer goods', 'electronics', 'consumer electronics', 'machinery', 'manufacturing equipment', 'distribution', 'Retail']",['Retail']
+1008,Static Controls Corporation,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+1009,Western Filament,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'aerospace']",['Manufacturing & Industrial']
+1010,Norman Lamps,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'distribution', 'lighting']",['Manufacturing & Industrial']
+1011,Wonderful Company,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'beverages', 'wine', 'agritech']","['Food & Beverage', 'Manufacturing & Industrial']"
+1012,Char-Broil,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+1013,Valutek,"['consumer goods', 'protective equipment', 'clothing', 'Retail']",['Retail']
+1014,ERC Wiping Products,"['consumer goods', 'Manufacturing & Industrial', 'textiles']",['Manufacturing & Industrial']
+1015,Hoya,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'healthtech', 'medical devices', 'Healthcare', 'optics', 'semiconductors']","['Manufacturing & Industrial', 'Healthcare']"
+1016,Carpenter Technology,"['metal products', 'Manufacturing & Industrial', 'distribution', 'advanced materials']",['Manufacturing & Industrial']
+1017,VILVI,"['Food & Beverage', 'consumer goods', 'distribution']",['Food & Beverage']
+1018,JRI Industries,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'fabrication tools']",['Manufacturing & Industrial']
+1019,Gogotech,"['consumer goods', 'Marketing', 'ecommerce', 'it services', 'Technology', 'Retail', 'content management']","['Marketing', 'Technology', 'Retail']"
+1020,Better Direct,"['consumer goods', 'electronics', 'consumer electronics', 'communication equipment', 'distribution', 'Retail']",['Retail']
+1021,Apex Mills,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1022,United Seal & Rubber,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'packaging']",['Manufacturing & Industrial']
+1023,Vaughan Premier,"['consumer goods', 'home improvement', 'distribution', 'lighting', 'Retail']",['Retail']
+1024,Affordable Wipers,"['consumer goods', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+1025,Gary Manufacturing,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing']",['Manufacturing & Industrial']
+1026,Bay Reprographic & Supply,"['printing', 'consumer goods', 'electronics', 'consumer electronics', 'distribution', 'Retail']",['Retail']
+1027,Dage-MTI,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1028,G-Force Powersports,"['consumer goods', 'auto parts', 'accessories', 'art', 'vehicles', 'Retail', 'auto dealers']",['Retail']
+1029,Lock America,"['consumer goods', 'Business Products & Services', 'manufacturing equipment', 'construction equipment', 'security']",['Business Products & Services']
+1030,Allied Network Solutions,"['consumer goods', 'electronics', 'consumer electronics', 'displays', 'enterprise software', 'Retail', 'electronic components']",['Retail']
+1031,Tennsmith,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'engineering']",['Manufacturing & Industrial']
+1032,EtchArt,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+1033,SPORTSMIT,"['consumer goods', 'sport', 'leisure', 'fitness & wellness', 'Retail']",['Retail']
+1034,National Bolt & Nut Corporation,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'manufacturing equipment', 'building materials', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1035,Brodart,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'accessories', 'books', 'furniture']",['Manufacturing & Industrial']
+1036,Fellowes Brands,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'lighting', 'hvac', 'furniture']",['Manufacturing & Industrial']
+1037,LR Health & Beauty Systems,"['consumer goods', 'health & beauty', 'cosmetics', 'distribution', 'Retail']",['Retail']
+1038,Pathway Innovations and Technologies,"['application software', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'displays', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1039,Clad Safety,"['consumer goods', 'safety', 'distribution', 'clothing', 'Retail', 'footwear']",['Retail']
+1040,Sim Supply,"['consumer goods', 'electronics', 'metal products', 'batteries', 'accessories', 'building materials', 'construction equipment', 'distribution', 'lubricants', 'mechanical components', 'clothing', 'lighting', 'Retail', 'chemicals', 'furniture']",['Retail']
+1041,Comvita,"['consumer goods', 'health & beauty', 'Healthcare', 'supplements', 'distribution', 'Retail']","['Healthcare', 'Retail']"
+1042,Barefoot Scientist,"['consumer goods', 'health & beauty', 'Healthcare']",['Healthcare']
+1043,Stovekraft,"['consumer goods', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+1044,Aperture Optical Sciences,"['consumer goods', 'Manufacturing & Industrial', 'optics', 'defense']",['Manufacturing & Industrial']
+1045,Case Design,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'packaging', 'transportation']",['Manufacturing & Industrial']
+1046,Dynamic Precision Tool & Manufacturing,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'Retail', 'auto dealers']","['Manufacturing & Industrial', 'Retail']"
+1047,Tacoma Rubber Stamp,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'Business Products & Services']","['Manufacturing & Industrial', 'Business Products & Services']"
+1048,Billie,"['consumer goods', 'health & beauty', 'Healthcare', 'fitness & wellness', 'lifestyle']",['Healthcare']
+1049,Art Materials,"['paper and packaging', 'consumer goods', 'distribution', 'supply chain management', 'packaging', 'Retail', 'supply chain']",['Retail']
+1050,Genesis Colors pvt ltd,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'distribution', 'luxury', 'clothing', 'lifestyle', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+1051,Campaign Monitor,"['email marketing', 'Marketing', 'enterprise software', 'Technology', 'cloud']","['Marketing', 'Technology']"
+1052,Rokiskio Suris,"['Food & Beverage', 'consumer goods', 'distribution']",['Food & Beverage']
+1053,CxS,"['consumer goods', 'Manufacturing & Industrial', 'engineering', 'robotics', 'Technology', 'internet of things']","['Manufacturing & Industrial', 'Technology']"
+1054,Deoleo,"['Food & Beverage', 'groceries', 'consumer goods', 'Manufacturing & Industrial', 'agritech']","['Food & Beverage', 'Manufacturing & Industrial']"
+1055,Lockitron,"['Technology', 'mobile app']",['Technology']
+1056,Etiler Marmaris,"['Food & Beverage', 'consumer goods', 'restaurant', 'beverages', 'nutrition']",['Food & Beverage']
+1057,Harboes Bryggeri,"['beer', 'Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'beverages', 'wine']","['Food & Beverage', 'Manufacturing & Industrial']"
+1058,Porceleyne Fles,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+1059,Universum,"['brand creation', 'hrtech', 'Human Resources & Recruiting']",['Human Resources & Recruiting']
+1060,Graines Voltz,"['Food & Beverage', 'groceries', 'consumer goods', 'distribution', 'Retail', 'bcorp', 'agritech']","['Food & Beverage', 'Retail']"
+1061,ICA Gruppen,"['groceries', 'consumer goods', 'insurance', 'Financial Services', 'supermarkets', 'Retail', 'banks']","['Financial Services', 'Retail']"
+1062,Aquafil,"['flooring', 'fiber optic', 'consumer goods', 'Manufacturing & Industrial', 'polymers', 'textiles', 'engineering', 'Retail', 'chemicals']","['Manufacturing & Industrial', 'Retail']"
+1063,Bozzuto's,"['consumer goods', 'procurement', 'distribution', 'Retail', 'logistics']",['Retail']
+1064,Marktek,"['consumer goods', 'Manufacturing & Industrial', 'textiles']",['Manufacturing & Industrial']
+1065,Apollo Sprayers,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'machinery', 'manufacturing equipment']",['Manufacturing & Industrial']
+1066,Stewart-MacDonald,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'music', 'Retail']",['Retail']
+1067,N. Glantz & Son,"['consumer goods', 'distribution', 'lighting', 'Retail']",['Retail']
+1068,American Fiber & Finishing,"['consumer goods', 'Manufacturing & Industrial', 'textiles']",['Manufacturing & Industrial']
+1069,Kenny Products,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution']",['Manufacturing & Industrial']
+1070,Ranco Industries,"['flooring', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1071,Microframe,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'displays']",['Manufacturing & Industrial']
+1072,UKAM Industrial Superhard Tools,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'mechanical components', 'engineering']",['Manufacturing & Industrial']
+1073,AXSA Imaging Solutions,"['printing', 'consumer goods', 'Business Products & Services', 'distribution', 'Retail']","['Business Products & Services', 'Retail']"
+1074,In-Phase Technologies,"['fiber optic', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+1075,Arlyn Scales,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'machinery', 'manufacturing equipment', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1076,J.L. Wingert,"['consumer goods', 'Manufacturing & Industrial', 'water', 'manufacturing equipment', 'Retail', 'supply chain']","['Manufacturing & Industrial', 'Retail']"
+1077,U.S. Rigging Supply,"['consumer goods', 'safety', 'sport', 'distribution', 'protective equipment', 'Retail']",['Retail']
+1078,Soundproofing America,"['consumer goods', 'distribution', 'Retail']",['Retail']
+1079,Milano Digital,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'distribution']",['Manufacturing & Industrial']
+1080,Lovevery,"['consumer goods', 'toys', 'Retail', 'shipping']",['Retail']
+1081,Clean Earth Systems,"['consumer goods', 'recycling', 'packaging', 'waste management', 'Energy & Utilities']",['Energy & Utilities']
+1082,Indiana Stamp,"['printing', 'consumer goods', 'metal products', 'Manufacturing & Industrial', 'plastic']",['Manufacturing & Industrial']
+1083,JKL Components,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+1084,H. A. Guden,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1085,Minor Rubber,"['consumer goods', 'Manufacturing & Industrial', 'polymers', 'accessories']",['Manufacturing & Industrial']
+1086,NorMed,"['consumer goods', 'health & beauty', 'medical devices', 'Healthcare', 'supplements', 'Retail']","['Healthcare', 'Retail']"
+1087,FastVision,"['consumer goods', 'Manufacturing & Industrial', 'optics']",['Manufacturing & Industrial']
+1088,Larson Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'lighting']",['Manufacturing & Industrial']
+1089,Cospolich,"['consumer goods', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+1090,P&R Technologies,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'lighting']",['Manufacturing & Industrial']
+1091,Farwest Paint Manufacturing,"['consumer goods', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+1092,Big Creek Lumber,"['consumer goods', 'consumer products & services', 'wood product', 'building materials', 'Retail']",['Retail']
+1093,Kappler,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'textiles', 'accessories', 'protective equipment', 'clothing', 'advanced materials']",['Manufacturing & Industrial']
+1094,Colonial Needle,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+1095,The Original Bungee,"['consumer goods', 'Retail']",['Retail']
+1096,Avco Key & Novelty,"['consumer goods', 'accessories', 'distribution', 'Retail']",['Retail']
+1097,Nordic Group of Companies,"['consumer goods', 'accessories', 'manufacturing equipment', 'toys', 'vehicles', 'Retail']",['Retail']
+1098,GCJ,"['consumer goods', 'wood product', 'Retail']",['Retail']
+1099,Globe Scientific,"['consumer goods', 'plastic', 'medical devices', 'distribution', 'Retail']",['Retail']
+1100,Modern Pacific Corporation,"['consumer goods', 'Manufacturing & Industrial', 'home & garden', 'Retail', 'furniture']","['Manufacturing & Industrial', 'Retail']"
+1101,Mocap,"['consumer goods', 'Manufacturing & Industrial', 'plastic']",['Manufacturing & Industrial']
+1102,Hedstrom,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1103,Quintana Supply,"['consumer goods', 'safety', 'Business Products & Services', 'packaging']",['Business Products & Services']
+1104,Osgood Textile,"['consumer goods', 'textiles', 'distribution', 'Retail']",['Retail']
+1105,Updater,"['enterprise software', 'Real Estate & Construction', 'moving services', 'Technology', 'logistics']","['Real Estate & Construction', 'Technology']"
+1106,Meller Optics,"['consumer goods', 'Manufacturing & Industrial', 'Business Products & Services', 'optics']","['Manufacturing & Industrial', 'Business Products & Services']"
+1107,Medallic Art,"['gold', 'consumer goods', 'metal products', 'Manufacturing & Industrial', 'accessories', 'jewellery']",['Manufacturing & Industrial']
+1108,Whitehead Industrial Hardware,"['consumer goods', 'Manufacturing & Industrial', 'building materials', 'distribution']",['Manufacturing & Industrial']
+1109,Ram Products,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'distribution', 'delivery']",['Manufacturing & Industrial']
+1110,The Crowd Controller,"['consumer goods', 'distribution', 'security', 'Retail']",['Retail']
+1111,RapidSupplies.com,"['consumer goods', 'Retail']",['Retail']
+1112,Cowlitz River Rigging,"['consumer goods', 'manufacturing equipment', 'clothing', 'Retail']",['Retail']
+1113,Eldorado Climbing Walls,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'Travel & Leisure', 'construction & design']","['Manufacturing & Industrial', 'Travel & Leisure']"
+1114,Sayre Enterprises,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1115,Electronic Displays,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'displays']",['Manufacturing & Industrial']
+1116,RapidSupplies.com,"['consumer goods', 'Retail']",['Retail']
+1117,Cowlitz River Rigging,"['consumer goods', 'manufacturing equipment', 'clothing', 'Retail']",['Retail']
+1118,Martek Industries,"['consumer goods', 'Manufacturing & Industrial', 'electricity', 'distribution', 'lighting']",['Manufacturing & Industrial']
+1119,Aeromicro,"['consumer goods', 'toys', 'Retail']",['Retail']
+1120,Optical Gallery,"['consumer goods', 'health & beauty', 'distribution', 'Retail']",['Retail']
+1121,Lampline Lighting,"['consumer goods', 'distribution', 'lighting', 'Retail']",['Retail']
+1122,Tecra Tools,"['consumer goods', 'electronics', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1123,Abatement Technologies,"['consumer goods', 'Manufacturing & Industrial', 'consumer chemistry', 'chemicals']",['Manufacturing & Industrial']
+1124,Schwaab,"['consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+1125,Master Magnetics,"['consumer goods', 'metal products', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1126,Precision Fabrics Group,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1127,Edges Electrical Group,"['consumer goods', 'batteries', 'cables', 'distribution', 'mechanical components', 'lighting', 'Retail', 'electronic components']",['Retail']
+1128,Web Direct Brands,"['consumer goods', 'consumer products & services', 'sport', 'accessories', 'ecommerce', 'clothing', 'fitness & wellness', 'Retail', 'furniture']",['Retail']
+1129,CDS Moving Equipment,"['consumer goods', 'packaging', 'Retail']",['Retail']
+1130,CP Company,"['consumer goods', 'sport', 'clothing', 'defense', 'Retail']",['Retail']
+1131,Alca Fasteners,"['metal products', 'distribution', 'Retail']",['Retail']
+1132,Wellav Technologies,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'audio', 'video']",['Manufacturing & Industrial']
+1133,Midland Hardware,"['consumer goods', 'home improvement', 'accessories', 'Retail']",['Retail']
+1134,Sonance,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'audio']",['Manufacturing & Industrial']
+1135,TKO Sports,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'fitness & wellness']",['Manufacturing & Industrial']
+1136,OneSource Water,"['consumer goods', 'Manufacturing & Industrial', 'water', 'distribution']",['Manufacturing & Industrial']
+1137,Innocor,"['mattress', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'ecommerce', 'furniture']",['Manufacturing & Industrial']
+1138,American Achievement Corporation,"['consumer goods', 'Manufacturing & Industrial', 'watches', 'jewellery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1139,Corep Lighting,"['consumer goods', 'Manufacturing & Industrial', 'lighting']",['Manufacturing & Industrial']
+1140,VIP Industries,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing']",['Manufacturing & Industrial']
+1141,Thule Group,"['consumer goods', 'sport', 'clothing', 'transportation', 'Retail', 'footwear']",['Retail']
+1142,Hydraulique PB,"['consumer goods', 'Manufacturing & Industrial', 'engineering']",['Manufacturing & Industrial']
+1143,Jeronimo Martins,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'Retail', 'used goods']","['Food & Beverage', 'Manufacturing & Industrial', 'Retail']"
+1144,Gabriel Holding,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1145,Jays Group,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'cables', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1146,Valsoia,"['Food & Beverage', 'groceries', 'consumer goods', 'Manufacturing & Industrial', 'sport', 'transportation', 'lifestyle', 'Retail', 'agritech']","['Food & Beverage', 'Manufacturing & Industrial', 'Retail']"
+1147,Caterpillar,"['Manufacturing & Industrial', 'machinery', 'heavy equipment', 'auto parts', 'construction equipment', 'mechanical components', 'art', 'engines']",['Manufacturing & Industrial']
+1148,Ainsworth Pet Nutrition,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'pets']","['Food & Beverage', 'Manufacturing & Industrial']"
+1149,Nireus Aquaculture,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'farming', 'Agriculture']","['Food & Beverage', 'Manufacturing & Industrial', 'Agriculture']"
+1150,Philippos Nakas,"['consumer goods', 'electronics', 'consumer electronics', 'distribution', 'music', 'Retail']",['Retail']
+1151,Kri Kri,"['Food & Beverage', 'consumer goods', 'nutrition']",['Food & Beverage']
+1152,Function1,"['Business Products & Services', 'cybersecurity', 'infrastructure', 'security', 'data management', 'it services', 'Technology', 'app development']","['Business Products & Services', 'Technology']"
+1153,Scandinavian Tobacco,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'accessories']",['Manufacturing & Industrial']
+1154,Nilorngruppen,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'packaging', 'security']",['Manufacturing & Industrial']
+1155,Svedbergs,"['consumer goods', 'Manufacturing & Industrial', 'home improvement', 'accessories', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+1156,Swedol,"['consumer goods', 'accessories', 'building materials', 'distribution', 'Retail']",['Retail']
+1157,Celik Halat,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'distribution']",['Manufacturing & Industrial']
+1158,Vincenzo Zucchi,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'home & garden']",['Manufacturing & Industrial']
+1159,Funkwerk,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'telecommunications', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1160,Socfinaf,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'sustainability', 'farming', 'Retail', 'Agriculture', 'agritech']","['Manufacturing & Industrial', 'Retail', 'Agriculture']"
+1161,Invisio Communications,"['consumer goods', 'electronics', 'safety', 'Manufacturing & Industrial', 'consumer electronics', 'communication equipment', 'accessories', 'distribution', 'protective equipment', 'audio', 'telecommunications']",['Manufacturing & Industrial']
+1162,Minerva Knitwear,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'lifestyle', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+1163,Priceprice.com,"['electronics', 'consumer products & services', 'consumer electronics', 'price comparison', 'Technology']",['Technology']
+1164,Bygghemma Group First,"['consumer goods', 'home improvement', 'home & garden', 'ecommerce', 'Retail', 'furniture']",['Retail']
+1165,Food Service Group,"['Food & Beverage', 'consumer goods', 'nutrition']",['Food & Beverage']
+1166,Green Park Brands,"['Food & Beverage', 'consumer goods', 'health & beauty', 'fitness & wellness']",['Food & Beverage']
+1167,Anstel,"['consumer goods', 'accessories', 'toys', 'distribution', 'ecommerce', 'clothing', 'kids', 'Retail', 'footwear', 'furniture']",['Retail']
+1168,Essel Group,"['consumer goods', 'health & beauty', 'cosmetics', 'Healthcare']",['Healthcare']
+1169,Ecologic Designs,"['consumer goods', 'recycling', 'Retail', 'bcorp']",['Retail']
+1170,BSX Athletics,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'fitness & wellness', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1171,Networks International Corporation,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electronic components']",['Manufacturing & Industrial']
+1172,Astrocom Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'cable provider', 'consumer electronics', 'communication equipment', 'aerospace']",['Manufacturing & Industrial']
+1173,Wideband Systems,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'aerospace']",['Manufacturing & Industrial']
+1174,DIANA Group,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'kids', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+1175,Cyprus Trading Corporation,"['tobacco', 'consumer goods', 'electronics', 'consumer electronics', 'heavy equipment', 'distribution', 'art', 'property finance', 'vehicles', 'property management', 'Retail', 'department stores']",['Retail']
+1176,Linz Textil Holding,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1177,Nuluv,"[""women's health"", 'consumer goods', 'distribution', 'home care', 'ecommerce', 'platform', 'kids', 'Retail']",['Retail']
+1178,LoopUp,"['Mobile & Telecommunications', 'enterprise software', 'video technology', 'Technology', 'video conference', 'video', 'mobile app']","['Mobile & Telecommunications', 'Technology']"
+1179,Evolution Design Systems,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'ecommerce', 'identity management']",['Manufacturing & Industrial']
+1180,MicroCentric,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'mechanical components', 'engineering']",['Manufacturing & Industrial']
+1181,Jan-Al Cases,"['consumer goods', 'Manufacturing & Industrial', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1182,Gibson & Barnes,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1183,Purdy Electronics Corporation,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+1184,Web Commerce Partners,"['consumer goods', 'consumer products & services', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1185,San Jose Boiler Works,"['consumer goods', 'manufacturing equipment', 'building materials', 'Real Estate & Construction', 'Retail']","['Real Estate & Construction', 'Retail']"
+1186,Work Tools International,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution']",['Manufacturing & Industrial']
+1187,Galeton,"['consumer goods', 'safety', 'distribution', 'protective equipment', 'clothing', 'Retail', 'footwear']",['Retail']
+1188,Galeton,"['consumer goods', 'safety', 'distribution', 'protective equipment', 'clothing', 'Retail', 'footwear']",['Retail']
+1189,Parr Instrument,"['medical diagnostics', 'consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'medical devices', 'Healthcare']","['Manufacturing & Industrial', 'Healthcare']"
+1190,Singer Equipment,"['consumer goods', 'consumer products & services', 'machinery', 'Business Products & Services', 'project management', 'manufacturing equipment', 'distribution', 'restaurant', 'interior design', 'Retail']","['Business Products & Services', 'Retail']"
+1191,Best Source Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'communication equipment', 'cables']",['Manufacturing & Industrial']
+1192,Amglo Kemlite Laboratories,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'lighting']",['Manufacturing & Industrial']
+1193,DARE Electronics,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'mechanical components', 'sensors', 'electronic components']",['Manufacturing & Industrial']
+1194,Diamond Water Systems,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'water', 'manufacturing equipment', 'waste management']",['Manufacturing & Industrial']
+1195,Suburban Wholesale Lighting,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'home improvement', 'project management', 'lighting', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1196,Textum,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1197,HLF Distributing,"['consumer goods', 'distribution', 'vehicles', 'Retail']",['Retail']
+1198,United Innovations,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+1199,Critical Vac Filtration,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'cleantech']",['Manufacturing & Industrial']
+1200,Coplan & Coplan,"['consumer goods', 'art', 'Retail']",['Retail']
+1201,Symbiote,"['consumer goods', 'Manufacturing & Industrial', 'furniture']",['Manufacturing & Industrial']
+1202,Microscope World,"['consumer goods', 'Manufacturing & Industrial', 'optics']",['Manufacturing & Industrial']
+1203,Supracor,"['consumer goods', 'safety', 'Manufacturing & Industrial', 'accessories', 'recycling', 'sustainability', 'clothing', 'furniture']",['Manufacturing & Industrial']
+1204,Emblem Enterprises,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1205,Welch Fluorocarbon,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'plastic', 'machinery', 'packaging']",['Manufacturing & Industrial']
+1206,Custom Case Company,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'packaging']",['Manufacturing & Industrial']
+1207,ALL Magnetics,"['consumer goods', 'electronics', 'metal products', 'Manufacturing & Industrial', 'consumer electronics', 'machinery']",['Manufacturing & Industrial']
+1208,Wholesale Marine,"['consumer goods', 'electronics', 'accessories', 'distribution', 'mechanical components', 'ecommerce', 'lighting', 'marine', 'vehicles', 'electric vehicles', 'Retail', 'electronic components']",['Retail']
+1209,BeiBei,"['consumer goods', 'ecommerce', 'clothing', 'platform', 'kids', 'Technology', 'Retail']","['Technology', 'Retail']"
+1210,West Shore Distributors,"['printing', 'consumer goods', 'consumer products & services', 'distribution', 'Retail']",['Retail']
+1211,Acorn Office Products,"['consumer goods', 'distribution', 'Retail', 'furniture']",['Retail']
+1212,Vision Components,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'electronic components']",['Manufacturing & Industrial']
+1213,Microscope.com,"['consumer goods', 'distribution', 'optics', 'Retail']",['Retail']
+1214,Star Poly Bag,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'plastic', 'packaging']",['Manufacturing & Industrial']
+1215,American Floor Mats,"['flooring', 'consumer goods', 'Manufacturing & Industrial', 'home improvement', 'home & garden']",['Manufacturing & Industrial']
+1216,McGean,"['consumer goods', 'Manufacturing & Industrial', 'maritime', 'aviation', 'chemicals']",['Manufacturing & Industrial']
+1217,So-Low Environmental Equipment,"['consumer goods', 'Manufacturing & Industrial', 'appliances']",['Manufacturing & Industrial']
+1218,Silicon Imaging,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'optics', 'video technology', 'video']",['Manufacturing & Industrial']
+1219,BIDWELL Industrial Group,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'mechanical components', 'engineering']",['Manufacturing & Industrial']
+1220,Washington Professional Systems,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'sound', 'engineering', 'telecommunications', 'video']",['Manufacturing & Industrial']
+1221,GVS Enterprises,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'cables', 'distribution', 'security', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1222,Supply Hero,"['consumer goods', 'Business Products & Services']",['Business Products & Services']
+1223,West Shore Distributors,"['printing', 'consumer goods', 'consumer products & services', 'distribution', 'Retail']",['Retail']
+1224,Acorn Office Products,"['consumer goods', 'distribution', 'Retail', 'furniture']",['Retail']
+1225,Electrix International,"['Manufacturing & Industrial', 'manufacturing equipment', 'cables']",['Manufacturing & Industrial']
+1226,Aqueous Technologies Corporation,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1227,JM Canty,"['consumer goods', 'electronics', 'metal products', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'electronic components']",['Manufacturing & Industrial']
+1228,Orenco Composites,"['consumer goods', 'Manufacturing & Industrial', 'building materials', 'advanced materials']",['Manufacturing & Industrial']
+1229,Phoenix Rope and Cordage,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment']",['Manufacturing & Industrial']
+1230,Liberty Office Products,"['consumer goods', 'accessories', 'distribution', 'Retail', 'furniture']",['Retail']
+1231,Trek Equipment Corporation,"['consumer goods', 'Business Products & Services', 'distribution', 'Retail', 'rental']","['Business Products & Services', 'Retail']"
+1232,Sonfarrel Aerospace,"['printing', 'metal products', 'Manufacturing & Industrial', 'machinery', 'mechanical components', 'aerospace', '3d printing']",['Manufacturing & Industrial']
+1233,Delkn,"['brand creation', 'outsourcing', 'website design', 'it services', 'Technology', 'app development', 'search']",['Technology']
+1234,Brown and Perkins,"['consumer goods', 'metal products', 'home improvement', 'building materials', 'cables', 'Real Estate & Construction', 'Retail']","['Real Estate & Construction', 'Retail']"
+1235,Polyplastic Forms,"['consumer goods', 'electronics', 'metal products', 'Manufacturing & Industrial', 'consumer electronics', 'plastic', 'Business Products & Services']","['Manufacturing & Industrial', 'Business Products & Services']"
+1236,Displays & Optical Technologies,"['consumer goods', 'Manufacturing & Industrial', 'optics']",['Manufacturing & Industrial']
+1237,Fabric Development,"['consumer goods', 'Manufacturing & Industrial', 'textiles']",['Manufacturing & Industrial']
+1238,WECsys,"['consumer goods', 'electronics', 'distribution', 'Retail', 'supply chain', 'furniture']",['Retail']
+1239,Moffatt Products,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'lighting']",['Manufacturing & Industrial']
+1240,American Marking,"['printing', 'consumer goods', 'Retail']",['Retail']
+1241,Jacknob,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1242,Magnetic Concepts,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics']",['Manufacturing & Industrial']
+1243,Ash Love-Less Company,"['consumer goods', 'Manufacturing & Industrial', 'cleantech']",['Manufacturing & Industrial']
+1244,Corder Products,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1245,Caprice Electronics,"['consumer goods', 'plastic', 'distribution', 'Retail', 'fabrication tools', 'electronic components']",['Retail']
+1246,Access Hardware Supply,"['consumer goods', 'electronics', 'consumer electronics', 'home improvement', 'distribution', 'mechanical components', 'Retail']",['Retail']
+1247,Tejas Office Products,"['consumer goods', 'consumer products & services', 'distribution', 'Retail', 'supply chain']",['Retail']
+1248,Optimax Systems,"['consumer goods', 'Manufacturing & Industrial', 'optics']",['Manufacturing & Industrial']
+1249,GlobalTech Industries,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1250,Interworld Highway,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'audio', 'video']",['Manufacturing & Industrial']
+1251,DVC Company,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'optics', 'Real Estate & Construction', 'mechanical components', 'engineering', 'imaging']","['Manufacturing & Industrial', 'Real Estate & Construction']"
+1252,Space Optics Research,"['consumer goods', 'Manufacturing & Industrial', 'optics', 'defense', 'aerospace']",['Manufacturing & Industrial']
+1253,Starlite Industries,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'building materials']",['Manufacturing & Industrial']
+1254,Miller Waste Mills,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'recycling', 'sustainability', 'waste management']",['Manufacturing & Industrial']
+1255,Advanced Glass Industries,"['consumer goods', 'Manufacturing & Industrial', 'medical devices', 'manufacturing equipment', 'optics']",['Manufacturing & Industrial']
+1256,CHawk Technology International,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'manufacturing equipment']",['Manufacturing & Industrial']
+1257,KH Industries,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'lighting']",['Manufacturing & Industrial']
+1258,Composite Technology Development,"['Manufacturing & Industrial', 'defense', 'aerospace', 'advanced materials', 'sensors']",['Manufacturing & Industrial']
+1259,Macintosh Retail Group,"['consumer goods', 'distribution', 'Retail']",['Retail']
+1260,Inventory Management Solutions,"['consumer goods', 'electronics', 'consumer electronics', 'accessories', 'manufacturing equipment', 'distribution', 'clothing', 'Retail', 'logistics', 'footwear']",['Retail']
+1261,ReferApps,"['consumer goods', 'Marketing', 'distribution', 'Technology', 'mobile app']","['Marketing', 'Technology']"
+1262,Connevans,"['consumer goods', 'Manufacturing & Industrial', 'medtech', 'health & beauty', 'medical devices', 'distribution']",['Manufacturing & Industrial']
+1263,Paul David Enterprises,"['paper and packaging', 'consumer goods', 'packaging', 'Retail', 'furniture']",['Retail']
+1264,Green Paper Products,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'packaging']",['Manufacturing & Industrial']
+1265,Compressor World,"['consumer goods', 'distribution', 'Retail']",['Retail']
+1266,Tri Dee Arts,"['consumer goods', 'toys', 'gifts', 'Retail']",['Retail']
+1267,Sport Court Colorado,"['consumer goods', 'sport', 'Retail']",['Retail']
+1268,Sheets & Giggles,"['consumer goods', 'textiles', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1269,Floravere,"['consumer goods', 'Retail', 'weddings']",['Retail']
+1270,Michaels Holdings,"['consumer goods', 'sport', 'Retail']",['Retail']
+1271,Performance Bike,"['consumer goods', 'sport', 'Retail']",['Retail']
+1272,Cheaper Than Dirt,"['consumer goods', 'sport', 'Retail']",['Retail']
+1273,Crown Trophy,"['consumer goods', 'consumer products & services', 'sport', 'gifts', 'Retail']",['Retail']
+1274,VI-John Group,"['consumer goods', 'cosmetics', 'distribution', 'Retail']",['Retail']
+1275,Nom Noms World Food,"['Food & Beverage', 'consumer goods', 'Retail', 'nutrition']","['Food & Beverage', 'Retail']"
+1276,Blume Ventures,[],[]
+1277,Planet Superheroes,"['consumer goods', 'toys', 'distribution', 'Retail']",['Retail']
+1278,Triple J Armory,"['consumer goods', 'firearms', 'Retail']",['Retail']
+1279,Ruhnn,"['consumer goods', 'platform', 'Technology', 'Retail', 'fashion']","['Technology', 'Retail']"
+1280,NakedPoppy,"['consumer goods', 'health & beauty', 'cosmetics', 'ecommerce', 'Retail', 'fashion']",['Retail']
+1281,Ege Profil,"['consumer goods', 'Manufacturing & Industrial', 'plastic', 'mechanical components']",['Manufacturing & Industrial']
+1282,Warpaint London,"['consumer goods', 'health & beauty', 'cosmetics', 'Retail']",['Retail']
+1283,Scandi Standard,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+1284,Alexanderwerk,"['consumer goods', 'Manufacturing & Industrial', 'professional education', 'machinery', 'manufacturing equipment']",['Manufacturing & Industrial']
+1285,Scandi Standard,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+1286,Dogi,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1287,Lavipharm,"['consumer goods', 'cosmetics', 'pharma', 'Healthcare', 'distribution', 'drug development', 'Retail']","['Healthcare', 'Retail']"
+1288,IC Group A/S,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'ecommerce', 'clothing', 'art', 'supermarkets', 'Retail', 'department stores']","['Manufacturing & Industrial', 'Retail']"
+1289,Vivanco Gruppe,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'accessories', 'telecommunications', 'connectivity']",['Manufacturing & Industrial']
+1290,Carmila,"['consumer goods', 'Marketing', 'ecommerce', 'supermarkets', 'Retail']","['Marketing', 'Retail']"
+1291,Mallouppas & Papacostas,"['consumer goods', 'distribution', 'clothing', 'Retail', 'fashion', 'footwear']",['Retail']
+1292,Dogtas Kelebek,"['consumer goods', 'Manufacturing & Industrial', 'wood product', 'home improvement', 'home & garden', 'furniture']",['Manufacturing & Industrial']
+1293,Katsuragawa Electric,"['application software', 'printing', 'consumer goods', 'Manufacturing & Industrial', 'distribution', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1294,Chatzikraniotis & Sons Mills,"['groceries', 'consumer goods', 'Manufacturing & Industrial', 'farming', 'Agriculture', 'agritech']","['Manufacturing & Industrial', 'Agriculture']"
+1295,J Boutaris & Son Holding,"['Food & Beverage', 'consumer goods', 'Investment', 'beverages', 'Financial Services', 'wine']","['Food & Beverage', 'Investment', 'Financial Services']"
+1296,PDC Brands,"['consumer goods', 'Manufacturing & Industrial', 'cosmetics']",['Manufacturing & Industrial']
+1297,La Doria Group,"['Food & Beverage', 'groceries', 'consumer goods', 'Retail', 'agritech', 'nutrition']","['Food & Beverage', 'Retail']"
+1298,Rapala VMC,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'distribution', 'fishery', 'Retail', 'Agriculture']","['Manufacturing & Industrial', 'Retail', 'Agriculture']"
+1299,Hagar,"['Food & Beverage', 'groceries', 'consumer goods', 'leisure', 'distribution', 'art', 'Retail', 'department stores']","['Food & Beverage', 'Retail']"
+1300,NSC Groupe,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'machinery', 'manufacturing equipment', 'packaging', 'robotics']",['Manufacturing & Industrial']
+1301,Alkim Kagit,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+1302,BasicNet,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'sport', 'accessories', 'distribution', 'clothing', 'property management', 'lifestyle', 'Retail', 'footwear']","['Manufacturing & Industrial', 'Retail']"
+1303,AEON Global Health,"['healthtech', 'telehealth', 'Healthcare', 'hospitals']",['Healthcare']
+1304,Tandem Group,"['consumer goods', 'sport', 'fitness & wellness', 'Retail']",['Retail']
+1305,Pidilite,"['consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+1306,ITN Nanovation,"['consumer goods', 'Manufacturing & Industrial', 'water', 'distribution', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1307,Italia Independent,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'luxury', 'lifestyle', 'eyewear']",['Manufacturing & Industrial']
+1308,Italia Independent,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'luxury', 'lifestyle', 'eyewear']",['Manufacturing & Industrial']
+1309,Aeffe,"['consumer goods', 'accessories', 'clothing', 'Retail', 'footwear']",['Retail']
+1310,PPG Industries,"['fiber optic', 'coatings', 'Manufacturing & Industrial', 'sport', 'Automotive & Transportation', 'aerospace', 'advanced materials', 'chemicals']","['Manufacturing & Industrial', 'Automotive & Transportation']"
+1311,Frigo-pak,"['Food & Beverage', 'consumer goods', 'beverages', 'nutrition']",['Food & Beverage']
+1312,Excelligence Learning,"['consumer goods', 'Manufacturing & Industrial', 'Education', 'distribution', 'Retail']","['Manufacturing & Industrial', 'Education', 'Retail']"
+1313,F.G. Europe,"['consumer goods', 'electronics', 'consumer electronics', 'appliances', 'hvac', 'Retail', 'electronic components']",['Retail']
+1314,Nafpaktos Textile Industry,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'home & garden', 'clothing']",['Manufacturing & Industrial']
+1315,New Wave Group,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'art', 'supermarkets', 'Retail', 'department stores']","['Manufacturing & Industrial', 'Retail']"
+1316,Gima TT,"['tobacco', 'consumer goods', 'Manufacturing & Industrial', 'machinery', 'packaging']",['Manufacturing & Industrial']
+1317,Paperpack Printing Box Manufacturing and Paper Packaging Industrial,"['paper and packaging', 'printing', 'consumer goods', 'Manufacturing & Industrial', 'packaging', 'Media & Entertainment']","['Manufacturing & Industrial', 'Media & Entertainment']"
+1318,Min Yuen,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'chemicals']",['Manufacturing & Industrial']
+1319,Ningbo Jenius,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1320,Acushnet Company,"['consumer goods', 'Manufacturing & Industrial', 'sport', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1321,Pacific Purification,"['consumer goods', 'water', 'Retail']",['Retail']
+1322,East Brooklyn Labs,"['consumer goods', 'wireless', 'Technology']",['Technology']
+1323,The Encore Group,"['printing', 'consumer goods', 'Manufacturing & Industrial', 'Business Products & Services', 'packaging']","['Manufacturing & Industrial', 'Business Products & Services']"
+1324,kaufDA,"['consumer goods', 'Retail', 'marketplace']",['Retail']
+1325,Public Goods,"['consumer goods', 'distribution', 'Retail', 'shipping', 'marketplace']",['Retail']
+1326,Maximum Weather Instruments,"['consumer goods', 'sport', 'Retail']",['Retail']
+1327,Inline Warehouse,"['consumer goods', 'sport', 'Retail']",['Retail']
+1328,Academy of Learners,"['consumer goods', 'sport', 'Retail']",['Retail']
+1329,TackleTech,"['consumer goods', 'sport', 'Retail']",['Retail']
+1330,Athletic Stuff Store,"['consumer goods', 'sport', 'Retail']",['Retail']
+1331,CCI Industries,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1332,Alpine Trophies,"['consumer goods', 'Retail']",['Retail']
+1333,The Original Whistle Stop,"['consumer goods', 'distribution', 'Retail']",['Retail']
+1334,My Brands,"['consumer goods', 'distribution', 'ecommerce', 'platform', 'Retail']",['Retail']
+1335,Ironcompany.com,"['consumer goods', 'sport', 'Retail']",['Retail']
+1336,ATS Media,"['consumer goods', 'sport', 'Retail']",['Retail']
+1337,Kit Kraft,"['consumer goods', 'sport', 'Retail']",['Retail']
+1338,Du-All Art and Drafting Supply,"['consumer goods', 'sport', 'Retail']",['Retail']
+1339,Treads Bicycle Outfitters,"['consumer goods', 'sport', 'accessories', 'Retail']",['Retail']
+1340,Public Missiles,"['consumer goods', 'sport', 'Retail']",['Retail']
+1341,Cello Health,"['enterprise software', 'Technology']",['Technology']
+1342,TheSurpriser.com,"['consumer goods', 'ecommerce', 'platform', 'Technology', 'gifts', 'Retail']","['Technology', 'Retail']"
+1343,JMTY,"['consumer goods', 'platform', 'used goods']",[]
+1344,Ryan Enterprise,"['consumer goods', 'distribution', 'Retail']",['Retail']
+1345,Awards By Norm,"['consumer goods', 'accessories', 'distribution', 'gifts', 'Retail']",['Retail']
+1346,TheSurpriser.com,"['consumer goods', 'ecommerce', 'platform', 'Technology', 'gifts', 'Retail']","['Technology', 'Retail']"
+1347,Fanli,"['auction', 'consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1348,HuiMin,"['consumer goods', 'delivery', 'ecommerce', 'platform', 'Technology', 'Retail']","['Technology', 'Retail']"
+1349,H. F. Staples & Co,"['consumer goods', 'Manufacturing & Industrial', 'consumer chemistry']",['Manufacturing & Industrial']
+1350,Golf Cars of Louisiana,"['consumer goods', 'sport', 'Retail']",['Retail']
+1351,Hengan,"['paper and packaging', 'consumer goods', 'Manufacturing & Industrial', 'packaging']",['Manufacturing & Industrial']
+1352,Yonghui Superstores,"['consumer goods', 'electronics', 'consumer electronics', 'clothing', 'supermarkets', 'Retail']",['Retail']
+1353,Metrovista,"['paper and packaging', 'printing', 'consumer goods', 'Business Products & Services', 'packaging', 'Retail']","['Business Products & Services', 'Retail']"
+1354,Lotus Chocolate,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+1355,Batesville,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'funeral']",['Manufacturing & Industrial']
+1356,Lotus Chocolate,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial']","['Food & Beverage', 'Manufacturing & Industrial']"
+1357,Batesville,"['consumer goods', 'Manufacturing & Industrial', 'consumer products & services', 'funeral']",['Manufacturing & Industrial']
+1358,Grays of Cambridge,"['consumer goods', 'Manufacturing & Industrial', 'sport']",['Manufacturing & Industrial']
+1359,Stretchline,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1360,Delta Faucet Morgantown,"['consumer goods', 'Manufacturing & Industrial', 'manufacturing equipment', 'building materials']",['Manufacturing & Industrial']
+1361,Interloop,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'clothing']",['Manufacturing & Industrial']
+1362,Sophie Paris,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'platform', 'Retail', 'fashion']","['Manufacturing & Industrial', 'Retail']"
+1363,DAP Products,"['consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+1364,Rousselot,"['Food & Beverage', 'consumer goods', 'Manufacturing & Industrial', 'nutrition']","['Food & Beverage', 'Manufacturing & Industrial']"
+1365,Victorinox,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'distribution', 'watches', 'clothing']",['Manufacturing & Industrial']
+1366,Computer Nerds International,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'accessories', 'ecommerce', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1367,HumanWare,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'Technology', 'app development']","['Manufacturing & Industrial', 'Technology']"
+1368,Bittylab,"['consumer goods', 'Manufacturing & Industrial', 'healthtech', 'medical devices', 'kids']",['Manufacturing & Industrial']
+1369,Rockline Industries,"['consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1370,SportsJam,"['consumer goods', 'ecommerce', 'platform', 'Technology', 'Retail']","['Technology', 'Retail']"
+1371,Guardian Industrial Supply Group,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1372,ElInvento,"['consumer goods', 'metal products', 'Manufacturing & Industrial', 'accessories', 'distribution']",['Manufacturing & Industrial']
+1373,Package Free,"['consumer goods', 'ecommerce', 'waste management', 'Retail']",['Retail']
+1374,Shiseido,"['consumer goods', 'Manufacturing & Industrial', 'cosmetics']",['Manufacturing & Industrial']
+1375,Larson-Juhl,"['consumer goods', 'Manufacturing & Industrial', 'wood product', 'distribution']",['Manufacturing & Industrial']
+1376,Icelandic Glacial,"['groceries', 'consumer goods', 'Manufacturing & Industrial']",['Manufacturing & Industrial']
+1377,1-800 Flowers,"['Food & Beverage', 'consumer products & services', 'distribution', 'ecommerce', 'jewellery', 'gifts', 'Retail']","['Food & Beverage', 'Retail']"
+1378,Malabar Golds and Diamonds,"['consumer goods', 'Manufacturing & Industrial', 'luxury', 'ecommerce', 'jewellery', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1379,Fakir Apparels,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing']",['Manufacturing & Industrial']
+1380,DayGlo Color,"['consumer goods', 'Manufacturing & Industrial', 'Technology', 'chemicals']","['Manufacturing & Industrial', 'Technology']"
+1381,Pitco Foods,"['groceries', 'consumer goods', 'health & beauty', 'distribution', 'beverages', 'Retail', 'nutrition']",['Retail']
+1382,Nine West,"['consumer goods', 'Manufacturing & Industrial', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
+1383,Diptyque,"['consumer goods', 'health & beauty', 'cosmetics', 'accessories', 'distribution', 'Retail']",['Retail']
+1384,The Legacy Companies,"['consumer goods', 'Manufacturing & Industrial', 'Business Products & Services', 'appliances']","['Manufacturing & Industrial', 'Business Products & Services']"
+1385,Merritt Square Mall,"['consumer goods', 'accessories', 'distribution', 'clothing', 'art', 'Retail', 'department stores', 'fashion', 'footwear']",['Retail']
+1386,Aloette Cosmetics,"['consumer goods', 'Manufacturing & Industrial', 'health & beauty', 'cosmetics']",['Manufacturing & Industrial']
+1387,Feizy,"['consumer goods', 'Manufacturing & Industrial', 'home improvement']",['Manufacturing & Industrial']
+1388,Martin Sprocket & Gear,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'engineering', 'electronic components']",['Manufacturing & Industrial']
+1389,Advantage Solutions,"['consumer goods', 'marketing agency', 'Business Products & Services', 'business intelligence']",['Business Products & Services']
+1390,DealShare,"['consumer goods', 'distribution', 'ecommerce', 'Retail', 'marketplace']",['Retail']
+1391,Domalys,"['senior care', 'consumer goods', 'consumer products & services', 'Healthcare']",['Healthcare']
+1392,Yesmro,"['consumer goods', 'distribution', 'ecommerce', 'Retail']",['Retail']
+1393,Future State Brands,"['consumer goods', 'distribution', 'ecommerce', 'cannabis', 'supermarkets', 'Retail']",['Retail']
+1394,Baiwancang,"['consumer goods', 'platform', 'Technology', 'Retail']","['Technology', 'Retail']"
+1395,Kyoku,"['Food & Beverage', 'consumer goods', 'supplements', 'distribution', 'fitness & wellness', 'Retail', 'nutrition']","['Food & Beverage', 'Retail']"
+1396,Oxyfresh,"['consumer goods', 'Manufacturing & Industrial', 'dental', 'Healthcare', 'fitness & wellness']","['Manufacturing & Industrial', 'Healthcare']"
+1397,Carboline,"['coatings', 'consumer goods', 'Manufacturing & Industrial', 'chemicals']",['Manufacturing & Industrial']
+1398,QD Vision,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'displays', 'nanotech', 'visual', 'Technology']","['Manufacturing & Industrial', 'Technology']"
+1399,Bedgear,"['consumer goods', 'Manufacturing & Industrial', 'distribution', 'furniture']",['Manufacturing & Industrial']
+1400,Georgia Oven,"['consumer goods', 'Manufacturing & Industrial', 'machinery', 'manufacturing equipment', 'appliances']",['Manufacturing & Industrial']
+1401,Traeger Grills,"['Food & Beverage', 'consumer goods', 'Retail']","['Food & Beverage', 'Retail']"
+1402,GreenWorks Tools,"['consumer goods', 'electronics', 'Manufacturing & Industrial', 'consumer electronics', 'machinery', 'home & garden']",['Manufacturing & Industrial']
+1403,Anatomie,"['consumer goods', 'Manufacturing & Industrial', 'textiles', 'accessories', 'clothing', 'Retail']","['Manufacturing & Industrial', 'Retail']"
