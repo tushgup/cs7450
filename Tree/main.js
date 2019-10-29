@@ -15,8 +15,25 @@ var drag = d3.drag()
 			.on('drag', dragged)
 			.on('end', dragended);
 
+var tip = d3.tip().attr('class', 'd3-tip').html((d) => d.id)
+
 d3.json('clothingallnodes.json').then(function(dataset) {
-    network = dataset;
+	network = dataset;
+	network["links"].forEach((item, index) => {
+		let j = network["nodes"].findIndex((v) => (v.id === item["source"]))
+		if (j != null) {
+			if (!("degree" in network["nodes"][j]))
+				network["nodes"][j]["degree"] = 0
+			network["nodes"][j]["degree"] += 1
+		}
+
+		let x = network["nodes"].findIndex((v) => (v.id === item["target"]))
+		if (x != null) {
+			if (!("degree" in network["nodes"][x]))
+				network["nodes"][x]["degree"] = 0
+			network["nodes"][x]["degree"] += 1
+		}
+	});
 
     linkScale.domain(d3.extent(network.links, function(d){ return d.value;}));
 
@@ -32,7 +49,7 @@ d3.json('clothingallnodes.json').then(function(dataset) {
 					    .append('line')
 					    .attr('class', 'link')
 					    .attr('stroke-width', function(d) {
-					        return linkScale(10);
+					        return linkScale(5);
 					    });
 
     var nodeEnter = nodeG.selectAll('.node')
@@ -40,10 +57,15 @@ d3.json('clothingallnodes.json').then(function(dataset) {
 					    .enter()
 					    .append('circle')
 					    .attr('class', 'node')
-					    .attr('r', 6)
-					    .style('fill', function(d) {
-					        return colorScale(d.group);
-					    });
+					    .attr('r', (v) => v.degree)
+						.style('fill-opacity', 0.5)
+						// .style()
+						//  function(d) {
+						// 	// return colorScale(d.group);})
+						.on('mouseover', tip.show)
+						.on('mouseout', tip.hide)
+	
+	nodeEnter.call(tip)
 
 	// var force = d3.layout.force()
 	// 		    .nodes(data.nodes)
