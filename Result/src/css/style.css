@@ -1,0 +1,13 @@
+.scatterplot {
+    position: absolute;
+    left: 220px;
+}
+
+.visualization {
+    position: absolute;
+    width: 1440px;
+}
+
+.scatterplot_svg {
+    background: antiquewhite;
+}
