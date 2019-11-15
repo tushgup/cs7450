@@ -1,6 +1,6 @@
 .scatterplot {
     position: absolute;
-    left: 220px;
+    left: 295px;
 }
 
 .visualization {
@@ -9,5 +9,23 @@
 }
 
 .scatterplot_svg {
-    background: antiquewhite;
+    background: black;
+}
+
+.axis {
+    color: white;
+}
+.scatterplot_svg .axis .domain,
+.scatterplot_svg .axis line {
+    display: none;
+
+}
+
+.sidebar {
+    height: 900px;
+    background: black;
+    width: 295px;
+    position: absolute;
+    border-right-color: white;
+    border-right: solid;
 }
