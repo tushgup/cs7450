@@ -7,6 +7,7 @@ class CompanyData {
             v.value = d3.group(v.value, d => d.year)
             return v
         })
+        this.list_companies = this.incomestatements.map(v => v.key)
         this.location = dataset[1]
         this.misc = dataset[2]
         this.tagslist = dataset[3]
@@ -25,12 +26,52 @@ class CompanyData {
         return this.location.filter(v => v.hq).find(v => v.displayName === company)
     }
 
+    getMarketCapOf(company) {
+        const d = this.misc.find(v => v.displayName === company)
+        if (d) return +d.stocksSummary < 1e-15 ? undefined : +d.stocksSummary
+        else return undefined
+    }
+
+    getValuationOf(company) {
+        const d = this.misc.find(v => v.displayName === company)
+        if (d) return +d.valuation.replace(/ .*/, '') < 1e-15 ? undefined : +d.valuation.replace(/ .*/, '')
+        else return undefined
+    }
+
+    getExtentOfValuation() {
+        return d3.extent(this.list_companies.map(n => {
+            const d = this.misc.find(v => v.displayName === n)
+            if (d) return +d.valuation.replace(/ .*/, '') < 1e-15 ? undefined : +d.valuation.replace(/ .*/, '')
+            else return undefined
+        }))
+    }
+
     getExtentOfRevenue(year) {
-        console.log(year.toString())
         const r = d3.extent(_(this.incomestatements)
             .flatMap(v => v.value.get(year.toString()))
-            .map(v => v ? +v.revenueUSD : 0).values())
+            .map(v => v ? +v.revenueUSD : undefined).values())
         r[0] += 1e-15
+        return r
+    }
+
+    getExtentOfProfit(year) {
+        const r = d3.extent(_(this.incomestatements)
+            .flatMap(v => v.value.get(year.toString()))
+            .map(v => v ? +v.grossProfitUSD : undefined).values())
+        return r
+    }
+
+    getExtentOfProfitMargin(year) {
+        const r = d3.extent(_(this.incomestatements)
+            .flatMap(v => v.value.get(year.toString()))
+            .map(v => v ? +v.grossProfitMargin : undefined).values())
+        return r
+    }
+
+    getExtentOfTax(year) {
+        const r = d3.extent(_(this.incomestatements)
+            .flatMap(v => v.value.get(year.toString()))
+            .map(v => v ? +v.incomeTaxExpense : undefined).values())
         return r
     }
 
@@ -101,12 +142,32 @@ class ScatterplotState {
         switch (option) {
             case "location":
                 this.yScale = d3.scalePoint().range([this.height, 0])
-                this.y = this.yScale.domain([""].concat(this.data.getAllLocation()))
+                this.y = this.yScale.domain(this.data.getAllLocation())
                 this.axisL.transition().duration(1500).call(d3.axisLeft(this.y))
                 break;
             case "revenue":
                 this.yScale = d3.scaleSqrt().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfRevenue(this.year)).nice()
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                break;
+            case "valuation":
+                this.yScale = d3.scaleSqrt().range([this.height, 0])
+                this.y = this.yScale.domain(this.data.getExtentOfValuation()).nice()
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                break;
+            case "profit":
+                this.yScale = d3.scaleLinear().range([this.height, 0])
+                this.y = this.yScale.domain(this.data.getExtentOfProfit(this.year)).nice()
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                break;
+            case "profitmargin":
+                this.yScale = d3.scaleLinear().range([this.height, 0])
+                this.y = this.yScale.domain(this.data.getExtentOfProfitMargin(this.year)).nice()
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                break;
+            case "tax":
+                this.yScale = d3.scaleLinear().range([this.height, 0])
+                this.y = this.yScale.domain(this.data.getExtentOfTax(this.year)).nice()
                 this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
                 break;
             default:
@@ -117,14 +178,33 @@ class ScatterplotState {
     axisBGenerator(option) {
         switch (option) {
             case "location":
-                this.xScale = d3.scalePoint().range([this.margin.left * 2 , this.width]);
-                this.x = this.xScale.domain([""].concat(this.data.getAllLocation()))
+                this.xScale = d3.scalePoint().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getAllLocation())
                 this.axisB.transition().duration(1500).call(d3.axisBottom(this.x))
                 break;
             case "revenue":
-                this.xScale = d3.scaleSqrt().range([this.margin.left * 2 , this.width]);
-                const invert = v => [v[0], v[1]]
-                this.x = this.xScale.domain(invert(this.data.getExtentOfRevenue(this.year))).nice()
+                this.xScale = d3.scaleSqrt().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getExtentOfRevenue(this.year)).nice()
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                break;
+            case "valuation":
+                this.xScale = d3.scaleSqrt().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getExtentOfValuation()).nice()
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                break;
+            case "profit":
+                this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getExtentOfProfit(this.year)).nice()
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                break;
+            case "profitmargin":
+                this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getExtentOfProfitMargin(this.year)).nice()
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                break;
+            case "tax":
+                this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
+                this.x = this.xScale.domain(this.data.getExtentOfTax(this.year)).nice()
                 this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
                 break;
             default:
@@ -140,10 +220,28 @@ class ScatterplotState {
                     (this.allLocationsCat.includes(located.country)) ?
                     located.country : "Other"
                 return locCat
-            case "revenue":
+            case "revenue": {
                 const search = d.value.get(this.year.toString())
-                if (!search || +search[0].revenueUSD < 0.01) return undefined
+                if (!search) return undefined
                 return +search[0].revenueUSD
+            }
+            case "valuation":
+                return this.data.getValuationOf(d.key)
+            case "profit": {
+                const search = d.value.get(this.year.toString())
+                if (!search) return undefined
+                return +search[0].grossProfitUSD
+            }
+            case "profitmargin": {
+                const search = d.value.get(this.year.toString())
+                if (!search) return undefined
+                return +search[0].grossProfitMargin
+            }
+            case "tax": {
+                const search = d.value.get(this.year.toString())
+                if (!search) return undefined
+                return +search[0].incomeTaxExpense
+            }
             default:
                 console.log("Something is wrong. Fucked!")
         }
