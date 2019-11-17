@@ -1,55 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Multinational Coorporation Visualization</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous" defer></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous" defer></script>
-        <script src="https://d3js.org/d3.v5.min.js" defer></script>
-        <script src="https://unpkg.com/d3-simple-slider" defer></script>
-        <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
-        <script src="https://d3js.org/d3-array.v2.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" defer></script>
-        <script src="js/stupidstuff.js" defer></script>
-        <script src="js/scatterplot.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Material Icons WebFont -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://unpkg.com/d3-simple-slider" defer></script>
+    <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" defer></script>
+    <script src="js/stupidstuff.js" defer></script>
+    <script src="js/scatterplot.js" defer></script>
+</head>
 
-    </head>
-
-    <body>
-        <div class="visualization">
-            <div class="scatterplot">
-                <svg class="scatterplot_svg" width="1000px" height="700px"></svg>
+<body>
+    <div class="row">
+        <div class="col-2 sidebar">
+            <div class="leftPanel">
+                <div class="form-inline my-2 my-lg-0" style="align-self:flex-end">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <span class="input-group-addon"><i class="material-icons">search</i></span>
+                </div>
             </div>
-            <div class="sidebar">
-                <div>
-                    <p id="value-step"></p>
-                </div>
-                <div>
-                    <div id="slider-step"></div>
-                </div>
-                <div style="position: relative;top: 0100px;">
+
+            <div class="row leftPanel">
+                <div class="col-4" style="align-self:flex-end">
                     <label for="x_axis">X axis: </label>
+                </div>
+                <div class="col-8">
                     <select class="custom-select" id="xaxis" onchange="onxaxischange()">
                         <option selected value="location">Location</option>
                         <option value="revenue">Revenue</option>
@@ -59,23 +56,165 @@
                         <option value="tax">Income Tax Expense</option>
                     </select>
                 </div>
-                <div style="position: relative;top: 0100px;">
+            </div>
+
+            <div class="row leftPanel">
+                <div class="col-4" style="align-self:flex-end">
                     <label for="y_axis">Y axis: </label>
+                </div>
+                <div class="col-8">
                     <select class="custom-select" id="yaxis" onchange="onyaxischange()">
-                    <option value="location">Location</option>
-                    <option selected value="revenue">Revenue</option>
-                    <option value="valuation">Valuation</option>
-                    <option value="profitmargin">Gross Profit Margin</option>
-                    <option value="profit">Gross Profit</option>
-                    <option value="tax">Income Tax Expense</option>
+                        <option value="location">Location</option>
+                        <option selected value="revenue">Revenue</option>
+                        <option value="valuation">Valuation</option>
+                        <option value="profitmargin">Gross Profit Margin</option>
+                        <option value="profit">Gross Profit</option>
+                        <option value="tax">Income Tax Expense</option>
                     </select>
                 </div>
             </div>
 
+            <h3>Filters</h3>
+
+            <div class="filterGroup">
+                <h4>By Tags</h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Select All</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Consumer Goods</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Retail</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Technology</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filterGroup">
+                <h4>By Type</h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Select All</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Private</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Public</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Subsidiary</label>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="col-7">
+                    <ul class="nav nav-pills mt-4" style="justify-content: space-evenly;" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-acquisition-tab" data-toggle="pill" href="#pills-acquisition" role="tab" aria-controls="pills-acquisition" aria-selected="false">Acquisition</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-geo-tab" data-toggle="pill" href="#pills-geo" role="tab" aria-controls="pills-geo" aria-selected="false">Geo</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" id="pills-funding-tab" data-toggle="pill" href="#pills-funding" role="tab" aria-controls="pills-funding" aria-selected="false">Funding</a>
+                                  </li>
+                        </ul>
+                          
+                          
+                          
+                          <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+                                    <div class="scatterplot">
+                                            <svg class="scatterplot_svg" width="1000px" height="700px"></svg>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-acquisition" role="tabpanel" aria-labelledby="pills-acquisition-tab">
+                                <p> Acquisition View</p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
+                                    <p> Geo View</p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-funding" role="tabpanel" aria-labelledby="pills-funding-tab">
+                                    <p> Funding View</p>
+                            </div>
+                          </div>
 
+        </div>
+        <div class="col-3 companyDetails">
+            <div class="row">
+                <div class="col-8" style="align-self:flex-end">
+                    <h6 class="labelText">Company Name</h6>
+                </div>
+                <div class="col-3  offset-1">
+                    <button type="button" class="btn btn-primary">
+                        Clear
+                    </button>
+                </div>
+            </div>
+            <h3 class="companyName">The Walt Disney Company</h3>
 
+            <div class="row">
+                <div class="col-6">
+                    <h6 class="labelText">Revenue</h6>
+                </div>
+                <div class="col-6">
+                    <h6 class="labelText">Market Cap</h6>
+                </div>
+            </div>
 
-    </body>
+            <div class="row">
+                <div class="col-6">
+                    <h5>$2.3 Billion</h5>
+                </div>
+                <div class="col-6">
+                    <h5>$28.5 Billion</h5>
+                </div>
+            </div>
 
-    </html>
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="labelText">Revenue Breakdown</h6>
+                </div>
+                <div class="col-12 treemap">
+                    <p>Treemap Viz</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="labelText">Ethnicity</h6>
+                </div>
+                <div class="col-12 ethinicity">
+                    <p>Ethnicity Viz</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="labelText">Gender</h6>
+                </div>
+                <div class="col-12 gender">
+                    <p>Gender Viz</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

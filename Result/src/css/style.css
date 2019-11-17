@@ -1,31 +1,35 @@
-.scatterplot {
-    position: absolute;
-    left: 295px;
-}
-
-.visualization {
-    position: absolute;
-    width: 1440px;
-}
-
-.scatterplot_svg {
-    background: black;
-}
-
-.axis {
-    color: white;
-}
-.scatterplot_svg .axis .domain,
-.scatterplot_svg .axis line {
-    display: none;
-
-}
-
 .sidebar {
-    height: 900px;
-    background: black;
-    width: 295px;
-    position: absolute;
-    border-right-color: white;
-    border-right: solid;
+    padding: 42px;
+    border-right: 1px solid #333333;
 }
+
+.companyDetails {
+    padding: 42px;
+    border-left: 1px solid #333333;
+
+}
+
+.labelText {
+    text-transform: uppercase;
+    color: grey;
+    margin: 8px 0px 8px 0px;
+
+}
+
+.companyName {
+    margin: 8px 0px 8px 0px;
+    border-bottom: 5px solid #0984e3;
+}
+
+.leftPanel {
+    margin: 8px 0px 24px 0px;
+}
+
+.filterGroup {
+
+}
+
+.custom-control-input:checked~.custom-control-indicator{
+    color:white;
+    background-color:red;
+    }
