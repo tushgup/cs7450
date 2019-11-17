@@ -19,7 +19,7 @@ class CompanyData {
             .filter(v => v.hq)
             .map(v => v.country)
             .countBy()
-            .pickBy(v => v > 150).value()).concat(["Other", " "])
+            .pickBy(v => v > 150).value()).concat(["Other"])
     }
 
     getHqOf(company) {
