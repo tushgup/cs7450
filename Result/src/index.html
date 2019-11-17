@@ -35,18 +35,11 @@
 <body>
     <div class="row">
         <div class="col-2 sidebar">
-            <div class="leftPanel">
-                <div class="form-inline my-2 my-lg-0" style="align-self:flex-end">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                    <span class="input-group-addon"><i class="material-icons">search</i></span>
-                </div>
-            </div>
-
             <div class="row leftPanel">
-                <div class="col-4" style="align-self:flex-end">
+                <div class="col-12 col-md-12" style="align-self:flex-end">
                     <label for="x_axis">X axis: </label>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-md-12">
                     <select class="custom-select" id="xaxis" onchange="onxaxischange()">
                         <option selected value="location">Location</option>
                         <option value="revenue">Revenue</option>
@@ -59,10 +52,10 @@
             </div>
 
             <div class="row leftPanel">
-                <div class="col-4" style="align-self:flex-end">
+                <div class="col-12 col-md-12" style="align-self:flex-end">
                     <label for="y_axis">Y axis: </label>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-md-12">
                     <select class="custom-select" id="yaxis" onchange="onyaxischange()">
                         <option value="location">Location</option>
                         <option selected value="revenue">Revenue</option>
@@ -119,9 +112,22 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="filterGroup">
+                    <label for="customRange3"><h4>Year</h4></label>
+                    <input type="range" class="custom-range" min="2014" max="2019" step="1" id="customRange3">
+            </div>
+            
         </div>
         <div class="col-7">
-                    <ul class="nav nav-pills mt-4" style="justify-content: space-evenly;" id="pills-tab" role="tablist">
+
+                    <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-self:flex-end" id="pills-tab" role="tablist">
+                        <li>
+                                <div class="form-inline">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                        <span class="input-group-addon"><i class="material-icons">search</i></span>
+                                    </div>
+                        </li>
                             <li class="nav-item">
                               <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
                             </li>
@@ -166,18 +172,19 @@
                         Clear
                     </button>
                 </div>
-            </div>
+                </div>
+
             <h3 class="companyName">The Walt Disney Company</h3>
 
             <div class="row">
-                <div class="col-6">
-                    <h6 class="labelText">Revenue</h6>
+                    <div class="col-6">
+                        <h6 class="labelText">Revenue</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="labelText">Market Cap</h6>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h6 class="labelText">Market Cap</h6>
-                </div>
-            </div>
-
+                
             <div class="row">
                 <div class="col-6">
                     <h5>$2.3 Billion</h5>
@@ -186,6 +193,18 @@
                     <h5>$28.5 Billion</h5>
                 </div>
             </div>
+
+            <ul style='list-style:  none; padding-inline-start: 0;'>
+                <li>Type: Public</li>
+                <li>Founded: 1923</li>
+                <li>HQ: Burbank, US</li>
+                <li>Website: www.thewaltdisneycompany.com</li>
+                <li>Employees: 201,000</li>
+            </ul>
+
+
+            <hr>
+
 
             <div class="row">
                 <div class="col-12">
@@ -196,6 +215,9 @@
                 </div>
             </div>
 
+            <hr>
+
+
             <div class="row">
                 <div class="col-12">
                     <h6 class="labelText">Ethnicity</h6>
@@ -204,6 +226,9 @@
                     <p>Ethnicity Viz</p>
                 </div>
             </div>
+
+            <hr>
+
 
             <div class="row">
                 <div class="col-12">
