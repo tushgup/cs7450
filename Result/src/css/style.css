@@ -1,3 +1,11 @@
+html,
+body,
+.application {
+    height: 100%;
+    min-height: 100%;
+
+}
+
 body {
     background-color: #181718;
     color: #fff;
@@ -30,7 +38,8 @@ body {
     margin: 8px 0px 24px 0px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     border: 3px solid #fff;
     background-color: #000;
 }
@@ -38,7 +47,7 @@ body {
 .nav-pills .nav-link {
     border: 1px solid rgb(206, 206, 206);
     background-color: #000;
-    color:  rgb(206, 206, 206);
+    color: rgb(206, 206, 206);
 }
 
 hr {
