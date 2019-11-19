@@ -29,6 +29,8 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" defer></script>
     <script src="js/stupidstuff.js" defer></script>
     <script src="js/scatterplot.js" defer></script>
+    <script src="js/funding.js" defer></script>
+
 </head>
 
 <body>
@@ -39,7 +41,7 @@
                     <label for="x_axis">X axis: </label>
                 </div>
                 <div class="col-12 col-md-12">
-                    <select class="custom-select" id="xaxis" onchange="onxaxischange()">
+                    <select class="custom-select" id="xaxis" onchange="ScatterPlotChart.onxaxischange()">
                         <option selected value="location">Location</option>
                         <option value="revenue">Revenue</option>
                         <option value="valuation">Valuation</option>
@@ -55,7 +57,7 @@
                     <label for="y_axis">Y axis: </label>
                 </div>
                 <div class="col-12 col-md-12">
-                    <select class="custom-select" id="yaxis" onchange="onyaxischange()">
+                    <select class="custom-select" id="yaxis" onchange="ScatterPlotChart.onyaxischange()">
                         <option value="location">Location</option>
                         <option selected value="revenue">Revenue</option>
                         <option value="valuation">Valuation</option>
@@ -113,52 +115,63 @@
             </div>
 
             <div class="filterGroup">
-                    <label for="customRange3"><h4>Year</h4></label>
-                    <input type="range" class="custom-range" min="2014" max="2019" step="1" id="customRange3">
+                <label for="customRange3">
+                    <h4>Year</h4>
+                </label>
+                <input type="range" class="custom-range" min="2014" max="2019" step="1" id="customRange3">
             </div>
-            
+
         </div>
         <div class="col-7">
 
-                    <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-self:flex-end" id="pills-tab" role="tablist">
-                        <li>
-                                <div class="form-inline">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                                        <span class="input-group-addon"><i class="material-icons">search</i></span>
-                                    </div>
-                        </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="pills-acquisition-tab" data-toggle="pill" href="#pills-acquisition" role="tab" aria-controls="pills-acquisition" aria-selected="false">Acquisition</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="pills-geo-tab" data-toggle="pill" href="#pills-geo" role="tab" aria-controls="pills-geo" aria-selected="false">Geo</a>
-                            </li>
-                            <li class="nav-item">
-                                    <a class="nav-link" id="pills-funding-tab" data-toggle="pill" href="#pills-funding" role="tab" aria-controls="pills-funding" aria-selected="false">Funding</a>
-                                  </li>
-                        </ul>
-                          
-                          
-                          
-                          <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
-                                    <div class="scatterplot">
-                                            <svg class="scatterplot_svg" viewBox="0 0 1000 700"></svg>
-                                        </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-acquisition" role="tabpanel" aria-labelledby="pills-acquisition-tab">
-                                <p> Acquisition View</p>
-                            </div>
-                            <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
-                                    <p> Geo View</p>
-                            </div>
-                            <div class="tab-pane fade" id="pills-funding" role="tabpanel" aria-labelledby="pills-funding-tab">
-                                    <p> Funding View</p>
-                            </div>
-                          </div>
+            <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-self:flex-end" id="pills-tab"
+                role="tablist">
+                <li>
+                    <div class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <span class="input-group-addon"><i class="material-icons">search</i></span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab"
+                        aria-controls="pills-overview" aria-selected="true">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-acquisition-tab" data-toggle="pill" href="#pills-acquisition"
+                        role="tab" aria-controls="pills-acquisition" aria-selected="false">Acquisition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-geo-tab" data-toggle="pill" href="#pills-geo" role="tab"
+                        aria-controls="pills-geo" aria-selected="false">Geo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-funding-tab" data-toggle="pill" href="#pills-funding"
+                        role="tab" aria-controls="pills-funding" aria-selected="false">Funding</a>
+                </li>
+            </ul>
+
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade " id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+                    <div class="scatterplot">
+                        <svg class="scatterplot_svg" viewBox="0 0 1000 700"></svg>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-acquisition" role="tabpanel"
+                    aria-labelledby="pills-acquisition-tab">
+                    <p> Acquisition View</p>
+                </div>
+                <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
+                    <p> Geo View</p>
+                </div>
+                <div class="tab-pane fade show active" id="pills-funding" role="tabpanel"
+                    aria-labelledby="pills-funding-tab">
+                    <div class="scatterplot">
+                        <svg class="funding_svg" viewBox="0 0 700 700"></svg>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="col-3 companyDetails">
@@ -171,19 +184,19 @@
                         Clear
                     </button>
                 </div>
-                </div>
+            </div>
 
             <h3 class="companyName">The Walt Disney Company</h3>
 
             <div class="row">
-                    <div class="col-6">
-                        <h6 class="labelText">Revenue</h6>
-                    </div>
-                    <div class="col-6">
-                        <h6 class="labelText">Market Cap</h6>
-                    </div>
+                <div class="col-6">
+                    <h6 class="labelText">Revenue</h6>
                 </div>
-                
+                <div class="col-6">
+                    <h6 class="labelText">Market Cap</h6>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-6">
                     <h5>$2.3 Billion</h5>

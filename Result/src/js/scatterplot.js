@@ -272,7 +272,7 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
                 scatter_state.axisLGenerator(scatter_state.chartScale.y)
                 scatter_state.axisBGenerator(scatter_state.chartScale.x)
 
-                updateCharts()
+                ScatterPlotChart.updateCharts()
             });
 
         var gStep = d3
@@ -289,76 +289,77 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
         scatter_state.nodeG = scatter_state.svg.append("g")
             .attr('transform', `translate(${scatter_state.margin.left * 2},${scatter_state.margin.top})`)
 
-        updateCharts()
+        ScatterPlotChart.updateCharts()
 
     })
+class ScatterPlotChart {
+    static onxaxischange() {
+        var select = d3.select('#xaxis').node();
+        // Get current value of select element
+        var category = select.options[select.selectedIndex].value;
+        // Update chart with the selected category of letters
+        scatter_state.chartScale.x = category;
+        scatter_state.axisLGenerator(scatter_state.chartScale.y)
+        scatter_state.axisBGenerator(scatter_state.chartScale.x)
+        ScatterPlotChart.updateCharts()
+    }
 
-function onxaxischange() {
-    var select = d3.select('#xaxis').node();
-    // Get current value of select element
-    var category = select.options[select.selectedIndex].value;
-    // Update chart with the selected category of letters
-    scatter_state.chartScale.x = category;
-    scatter_state.axisLGenerator(scatter_state.chartScale.y)
-    scatter_state.axisBGenerator(scatter_state.chartScale.x)
-    updateCharts()
-}
+    static onyaxischange() {
+        var select = d3.select('#yaxis').node();
+        // Get current value of select element
+        var category = select.options[select.selectedIndex].value;
+        // Update chart with the selected category of letters
+        scatter_state.chartScale.y = category;
+        scatter_state.axisLGenerator(scatter_state.chartScale.y)
+        scatter_state.axisBGenerator(scatter_state.chartScale.x)
+        ScatterPlotChart.updateCharts()
+    }
 
-function onyaxischange() {
-    var select = d3.select('#yaxis').node();
-    // Get current value of select element
-    var category = select.options[select.selectedIndex].value;
-    // Update chart with the selected category of letters
-    scatter_state.chartScale.y = category;
-    scatter_state.axisLGenerator(scatter_state.chartScale.y)
-    scatter_state.axisBGenerator(scatter_state.chartScale.x)
-    updateCharts()
-}
+    static updateCharts() {
+        var simulation = d3.forceSimulation(scatter_state.data.incomestatements)
+            .force("x", d3.forceX(function (d) {
+                const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
+                const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
+                return dx
+            }).strength(1))
+            .force("y", d3.forceY(function (d) {
+                const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
+                const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
 
-function updateCharts() {
-    var simulation = d3.forceSimulation(scatter_state.data.incomestatements)
-        .force("x", d3.forceX(function (d) {
-            const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
-            const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
-            return dx
-        }).strength(1))
-        .force("y", d3.forceY(function (d) {
-            const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
-            const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
-
-            return dy
-        }).strength(1))
-        .force("collide", d3.forceCollide(5))
-        .stop()
-
-
-    const t = scatter_state.svg.transition()
-        .duration(3000);
+                return dy
+            }).strength(1))
+            .force("collide", d3.forceCollide(5))
+            .stop()
 
 
+        const t = scatter_state.svg.transition()
+            .duration(3000);
 
-    for (var i = 0; i < 30; ++i) simulation.tick();
 
-    scatter_state.nodeG.selectAll(".scattter_comp")
-        .data(scatter_state.data.incomestatements)
-        .join(enter => {
-                const g = enter.append("g")
-                    .attr("class", "scattter_comp")
-                    .attr("transform", d => {
-                        const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
-                        const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
-                        const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
-                        const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
-                        return `translate(${dx}, ${dy})`
+
+        for (var i = 0; i < 30; ++i) simulation.tick();
+
+        scatter_state.nodeG.selectAll(".scattter_comp")
+            .data(scatter_state.data.incomestatements)
+            .join(enter => {
+                    const g = enter.append("g")
+                        .attr("class", "scattter_comp")
+                        .attr("transform", d => {
+                            const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
+                            const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
+                            const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
+                            const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
+                            return `translate(${dx}, ${dy})`
+                        })
+                    g.each(function (d) {
+                        return ScatterPlotUtility.shapeToFormat(d3.select(this), scatter_state.data.getShape(d.key))
                     })
-                g.each(function (d) {
-                    return ScatterPlotUtility.shapeToFormat(d3.select(this), scatter_state.data.getShape(d.key))
-                })
-                return g.call(enter => enter.transition(t)
-                    .attr("transform", d => `translate(${d.x}, ${d.y})`))
-            },
-            update => update.call(update => update.transition(t)
-                .attr("transform", d => `translate(${d.x}, ${d.y})`)),
+                    return g.call(enter => enter.transition(t)
+                        .attr("transform", d => `translate(${d.x}, ${d.y})`))
+                },
+                update => update.call(update => update.transition(t)
+                    .attr("transform", d => `translate(${d.x}, ${d.y})`)),
 
-        )
+            )
+    }
 }
