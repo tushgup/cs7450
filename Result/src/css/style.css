@@ -7,8 +7,9 @@ body,
 }
 
 body {
-    background-color: #181718;
+    background-color: #424242;
     color: #fff;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 .sidebar {
@@ -55,4 +56,20 @@ hr {
     margin-block-end: 0em;
     border-top: 1px solid white;
     margin: 0px -28px 0px -27px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+}
+
+.nav-tabs .nav-link {
+    color: rgb(255, 255, 255, 0.4);
+}
+
+li {
+    margin: 0.3em 0em 0.3em 0em;
 }
