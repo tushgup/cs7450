@@ -27,7 +27,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
         integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
@@ -40,6 +40,7 @@
     <script src="https://unpkg.com/d3-simple-slider" defer></script>
     <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" defer></script>
+    <script src="js/details.js" defer></script>
     <script src="js/stupidstuff.js" defer></script>
     <script src="js/scatterplot.js" defer></script>
     <script src="js/funding.js" defer></script>
@@ -276,7 +277,7 @@
                 </div>
             </div>
 
-            <h3 class="companyName">The Walt Disney Company</h3>
+            <h3 class="companyName" id="companyName">&nbsp;</h3>
 
             <div class="row">
                 <div class="col-6">
@@ -289,19 +290,21 @@
 
             <div class="row">
                 <div class="col-6">
-                    <h5>$2.3 Billion</h5>
+                    <h5 id="revenue">&nbsp;</h5>
                 </div>
                 <div class="col-6">
-                    <h5>$28.5 Billion</h5>
+                    <h5 id="marketcap">&nbsp;</h5>
                 </div>
             </div>
 
             <ul style='list-style:  none; padding-inline-start: 0;'>
-                <li>Type: Public</li>
-                <li>Founded: 1923</li>
-                <li>HQ: Burbank, US</li>
-                <li>Website: www.thewaltdisneycompany.com</li>
-                <li>Employees: 201,000</li>
+                <li id="companytype">Type: </li>
+                <li id="companyyear">Founded: </li>
+                <li id="companyhq">HQ: </li>
+                <li id="companywebsite">Website: </li>
+                <li id="companyemployee">Employee: </li>
+                <li id="companydescription">Description: </li>
+
             </ul>
 
 

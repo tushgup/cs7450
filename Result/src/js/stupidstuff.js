@@ -28,28 +28,28 @@ class ScatterPlotUtility {
             case "circle":
                 selection.append("circle")
                     .attr("r", 5)
-                    .attr("fill", d => scatter_state.data.getColor(d.key))
+                    .attr("fill", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             case "hollowcircle":
                 selection.append("circle")
                     .attr("r", 5)
-                    .attr("fill", "black")
+                    .attr("fill", "#424242")
                     .attr("stroke-width", 1.5)
-                    .attr("stroke", d => scatter_state.data.getColor(d.key))
+                    .attr("stroke", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             case "square":
                 selection.append("rect")
                     .attr("width", 10)
                     .attr("height", 10)
-                    .attr("fill", d => scatter_state.data.getColor(d.key))
+                    .attr("fill", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             case "hollowsquare":
                 selection.append("rect")
                     .attr("width", 10)
                     .attr("height", 10)
-                    .attr("fill", "black")
+                    .attr("fill", "#424242")
                     .attr("stroke-width", 1.5)
-                    .attr("stroke", d => scatter_state.data.getColor(d.key))
+                    .attr("stroke", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             default:
                 console.error("Something is wrong. Fucked!");

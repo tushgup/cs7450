@@ -8,6 +8,9 @@ class FundingState {
         this.outerRadius = this.innerRadius + 10
         this.color = d3.scaleOrdinal(d3.schemeCategory10)
     }
+
+    static state;
+
 }
 
 class FundingData {
@@ -111,7 +114,6 @@ class FundingData {
     }
 }
 
-let fundingstate;
 
 
 function topValues(n, data) {
@@ -125,11 +127,11 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-d3.csv('./data/consumer_g_investments.csv').then(function (dataset) {
+d3.csv('./data/investments.csv').then(function (dataset) {
 
-    fundingstate = new FundingState(dataset)
-    fundingstate.chordG = fundingstate.svg.append("g")
-        .attr("transform", `translate(${fundingstate.width / 2},${fundingstate.height / 2})`)
+    FundingState.state = new FundingState(dataset)
+    FundingState.state.chordG = FundingState.state.svg.append("g")
+        .attr("transform", `translate(${FundingState.state.width / 2},${FundingState.state.height / 2})`)
 
     ArcChart.updateCharts()
 
@@ -270,7 +272,7 @@ class ArcChart {
     }
 
     static updateCharts() {
-        const selectedInvestors = fundingstate.data.getTopInvestors(20)
+        const selectedInvestors = FundingState.state.data.getTopInvestors(20)
 
         //new Set(filtered.filter(v => top_received.has(v.displayName)).map(v => v.name))
 
@@ -291,10 +293,10 @@ class ArcChart {
             companyToGroup,
             investorsOf,
             arcMatrix
-        } = fundingstate.data.investmentToMatrix(Array.from(selectedInvestors)) // ["Index Ventures"]
+        } = FundingState.state.data.investmentToMatrix(Array.from(selectedInvestors)) // ["Index Ventures"]
 
         const groupWithTwoOrMore = Object.keys(groupToCompany).filter(v => groupToCompany[v].size >= 2)
-        const domaincolor = fundingstate.color.domain(groupWithTwoOrMore)
+        const domaincolor = FundingState.state.color.domain(groupWithTwoOrMore)
 
         // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
         var res = ArcChart.chord // padding between entities (black arc)
@@ -302,7 +304,7 @@ class ArcChart {
 
 
 
-        const group = fundingstate.chordG
+        const group = FundingState.state.chordG
             .append("g")
             .attr("class", "chord-group")
             .selectAll(".chord-group")
@@ -319,8 +321,8 @@ class ArcChart {
                 return "grey"
             })
             .attr("d", d3.arc()
-                .innerRadius(fundingstate.innerRadius)
-                .outerRadius(fundingstate.outerRadius)
+                .innerRadius(FundingState.state.innerRadius)
+                .outerRadius(FundingState.state.outerRadius)
             )
 
 
@@ -342,8 +344,8 @@ class ArcChart {
                     const element = res.groups[index]
 
                     const centroid = d3.arc()
-                        .innerRadius(fundingstate.innerRadius)
-                        .outerRadius(fundingstate.outerRadius).centroid(element)
+                        .innerRadius(FundingState.state.innerRadius)
+                        .outerRadius(FundingState.state.outerRadius).centroid(element)
                     dx += centroid[0]
                 })
                 return dx / (count + 1)
@@ -355,8 +357,8 @@ class ArcChart {
                     const index = allElements.indexOf(v)
                     const element = res.groups[index]
                     const centroid = d3.arc()
-                        .innerRadius(fundingstate.innerRadius)
-                        .outerRadius(fundingstate.outerRadius).centroid(element)
+                        .innerRadius(FundingState.state.innerRadius)
+                        .outerRadius(FundingState.state.outerRadius).centroid(element)
                     dy += centroid[1]
                 })
                 return (dy + getRandomArbitrary(0, 20)) / (count + 1)
@@ -364,7 +366,7 @@ class ArcChart {
 
         for (var i = 0; i < 30; ++i) simulation.tick();
 
-        const nodeGroup = fundingstate.chordG.append("g")
+        const nodeGroup = FundingState.state.chordG.append("g")
             .attr("class", "node-group")
             .selectAll(".node-group")
             .data(copied)
@@ -382,7 +384,7 @@ class ArcChart {
         console.log(res)
 
         // Add the links between groups
-        fundingstate.chordG
+        FundingState.state.chordG
             .append("g")
             .attr("fill-opacity", 0.67)
             .selectAll("path")
@@ -398,7 +400,7 @@ class ArcChart {
                     return ArcChart.pointToArcRibbon({
                         x: element.x,
                         y: element.y
-                    }, d, fundingstate.innerRadius)
+                    }, d, FundingState.state.innerRadius)
                 }
                 return ""
             })
@@ -419,7 +421,7 @@ class ArcChart {
             .attr("fill", "white")
             .attr("transform", d => `
         rotate(${(d.angle * 180 / Math.PI - 90)})
-        translate(${fundingstate.innerRadius + 26})
+        translate(${FundingState.state.innerRadius + 26})
         ${d.angle > Math.PI ? "rotate(180)" : ""}
 	  `)
             .attr("opacity", (d) => (d.endAngle - d.startAngle) < 0.05 ? 0 : 1)

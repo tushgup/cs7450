@@ -23,7 +23,7 @@ class CompanyData {
     }
 
     getHqOf(company) {
-        return this.location.filter(v => v.hq).find(v => v.displayName === company)
+        return this.location.filter(v => v.hq === "True").find(v => v.displayName === company)
     }
 
     getMarketCapOf(company) {
@@ -92,6 +92,7 @@ class CompanyData {
 }
 
 class ScatterplotState {
+    static state;
     constructor(dataset) {
         // dataset
 
@@ -248,13 +249,13 @@ class ScatterplotState {
     }
 
 }
-var scatter_state;
-
 
 
 Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv"), d3.csv("./data/misc.csv"), d3.csv("./data/tags_list.csv")])
     .then(function (data) {
-        scatter_state = new ScatterplotState(data)
+        DetailsState.state.data.receiveFromScatter(data)
+
+        ScatterplotState.state = new ScatterplotState(data)
 
         // ------------------- Slider --------------------------
         // Step
@@ -268,9 +269,9 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
             .step(1)
             .default(0.015)
             .on('onchange', val => {
-                scatter_state.year = val
-                scatter_state.axisLGenerator(scatter_state.chartScale.y)
-                scatter_state.axisBGenerator(scatter_state.chartScale.x)
+                ScatterplotState.state.year = val
+                ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
+                ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
 
                 ScatterPlotChart.updateCharts()
             });
@@ -286,8 +287,8 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
             .attr('transform', 'translate(30,30)');
 
         gStep.call(sliderStep);
-        scatter_state.nodeG = scatter_state.svg.append("g")
-            .attr('transform', `translate(${scatter_state.margin.left * 2},${scatter_state.margin.top})`)
+        ScatterplotState.state.nodeG = ScatterplotState.state.svg.append("g")
+            .attr('transform', `translate(${ScatterplotState.state.margin.left * 2},${ScatterplotState.state.margin.top})`)
 
         ScatterPlotChart.updateCharts()
 
@@ -298,9 +299,9 @@ class ScatterPlotChart {
         // Get current value of select element
         var category = select.options[select.selectedIndex].value;
         // Update chart with the selected category of letters
-        scatter_state.chartScale.x = category;
-        scatter_state.axisLGenerator(scatter_state.chartScale.y)
-        scatter_state.axisBGenerator(scatter_state.chartScale.x)
+        ScatterplotState.state.chartScale.x = category;
+        ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
+        ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
         ScatterPlotChart.updateCharts()
     }
 
@@ -309,22 +310,22 @@ class ScatterPlotChart {
         // Get current value of select element
         var category = select.options[select.selectedIndex].value;
         // Update chart with the selected category of letters
-        scatter_state.chartScale.y = category;
-        scatter_state.axisLGenerator(scatter_state.chartScale.y)
-        scatter_state.axisBGenerator(scatter_state.chartScale.x)
+        ScatterplotState.state.chartScale.y = category;
+        ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
+        ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
         ScatterPlotChart.updateCharts()
     }
 
     static updateCharts() {
-        var simulation = d3.forceSimulation(scatter_state.data.incomestatements)
+        var simulation = d3.forceSimulation(ScatterplotState.state.data.incomestatements)
             .force("x", d3.forceX(function (d) {
-                const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
-                const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
+                const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
+                const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
                 return dx
             }).strength(1))
             .force("y", d3.forceY(function (d) {
-                const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
-                const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
+                const yVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.y, d)
+                const dy = yVal ? ScatterplotState.state.y(yVal) : (ScatterplotState.state.svgheight + 100)
 
                 return dy
             }).strength(1))
@@ -332,27 +333,27 @@ class ScatterPlotChart {
             .stop()
 
 
-        const t = scatter_state.svg.transition()
+        const t = ScatterplotState.state.svg.transition()
             .duration(3000);
 
 
 
         for (var i = 0; i < 30; ++i) simulation.tick();
 
-        scatter_state.nodeG.selectAll(".scattter_comp")
-            .data(scatter_state.data.incomestatements)
+        ScatterplotState.state.nodeG.selectAll(".scattter_comp")
+            .data(ScatterplotState.state.data.incomestatements)
             .join(enter => {
                     const g = enter.append("g")
                         .attr("class", "scattter_comp")
                         .attr("transform", d => {
-                            const yVal = scatter_state.getValueOfField(scatter_state.chartScale.y, d)
-                            const dy = yVal ? scatter_state.y(yVal) : (scatter_state.svgheight + 100)
-                            const xVal = scatter_state.getValueOfField(scatter_state.chartScale.x, d)
-                            const dx = xVal ? scatter_state.x(xVal) : (scatter_state.svgwidth + 100)
+                            const yVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.y, d)
+                            const dy = yVal ? ScatterplotState.state.y(yVal) : (ScatterplotState.state.svgheight + 100)
+                            const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
+                            const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
                             return `translate(${dx}, ${dy})`
                         })
                     g.each(function (d) {
-                        return ScatterPlotUtility.shapeToFormat(d3.select(this), scatter_state.data.getShape(d.key))
+                        return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getShape(d.key))
                     })
                     return g.call(enter => enter.transition(t)
                         .attr("transform", d => `translate(${d.x}, ${d.y})`))
