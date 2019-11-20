@@ -10,7 +10,7 @@ var collisionForce = d3.forceCollide(12).strength(1).iterations(100);
 
 var simulation = d3.forceSimulation()
 	.force('link', d3.forceLink().id(function (d) { return d.id; }).strength(0))
-	.force('x', d3.forceX().x(function(node) {
+	.force('x', d3.forceX(function(node) {
 		let x = 0
 		let count = 0
 		node.tags.forEach((v) => {
@@ -20,7 +20,7 @@ var simulation = d3.forceSimulation()
 			count += 1
 		})
 		return x / count
-	})).force('y', d3.forceY().y(function (node) {
+	})).force('y', d3.forceY(function (node) {
 		let y = 0
 		let count = 0
 		node.tags.forEach((v) => {

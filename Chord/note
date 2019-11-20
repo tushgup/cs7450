@@ -1,0 +1,105 @@
+ function chord(matrix, m, padAngle) {
+	  const cos = Math.cos;
+	  const sin = Math.sin;
+	  const pi = Math.PI;
+	  const halfPi = pi / 2;
+	  const tau = pi * 2;
+	  const max = Math.max;
+  	var n = matrix.length,
+  		groupSums = [],
+  		groupIndex = d3.range(n),
+  		subgroupIndex = [],
+  		chords = [],
+  		groups = chords.groups = new Array(n - m),
+  		subgroups = new Array(n * n),
+  		k,
+  		x,
+  		x0,
+  		dx,
+  		i,
+  		j;
+
+  	// Compute the sum.
+  	k = 0, i = -1;
+  	while (++i < n) {
+  		x = 0, j = -1;
+  		while (++j < n) {
+  			x += matrix[i][j];
+  		}
+  		groupSums.push(x);
+  		subgroupIndex.push(d3.range(n));
+  		k += x;
+	  }
+	
+  	// Convert the sum to scaling factor for [0, 2pi].
+  	// TODO Allow start and end angle to be specified?
+  	// TODO Allow padding to be specified as percentage?
+  	k = max(0, tau - padAngle * (n - m)) / k;
+  	dx = k ? padAngle : tau / (n - m);
+
+  	// Compute the start and end angle for each group and subgroup.
+  	// Note: Opera has a bug reordering object literal properties!
+  	x = 0, i = m-1;
+  	while (++i < n) {
+  		x0 = x, j = -1;
+  		while (++j < n) {
+  			var di = groupIndex[i],
+  				dj = subgroupIndex[di][j],
+  				v = matrix[di][dj],
+  				a0 = x,
+  				a1 = x += v * k;
+  			subgroups[dj * n + di] = {
+  				index: di,
+  				subindex: dj,
+  				startAngle: a0,
+  				endAngle: a1,
+  				value: v
+  			};
+  		}
+  		groups[di] = {
+  			index: di,
+  			startAngle: x0,
+  			endAngle: x,
+  			value: groupSums[di]
+  		};
+  		x += dx;
+  	}
+
+  	// Generate chords for each (non-empty) subgroup-subgroup link.
+  	i = m - 1;
+  	while (++i < n) {
+  		j = i - 1;
+  		while (++j < n) {
+  			var source = subgroups[j * n + i],
+  				target = subgroups[i * n + j];
+  			if (source.value || target.value) {
+  				chords.push(source.value < target.value ?
+  					{
+  						source: target,
+  						target: source
+  					} :
+  					{
+  						source: source,
+  						target: target
+  					});
+  			}
+  		}
+  	}
+
+  	return chords;
+  }
+
+
+
+
+
+
+
+  // Top 10 funded companies
+  	const top_received = new Set(topValues(10, _.reduce(filtered, (result, value, key) => {
+		if (!(value.displayName in result)) result[value.displayName] = 0
+		result[value.displayName] += value.amount
+		return result
+	}, {})))
+
+	console.log(top_received)

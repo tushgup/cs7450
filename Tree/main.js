@@ -17,23 +17,11 @@ var drag = d3.drag()
 
 var tip = d3.tip().attr('class', 'd3-tip').html((d) => d.id)
 
-d3.json('clothingallnodes.json').then(function(dataset) {
-	network = dataset;
-	network["links"].forEach((item, index) => {
-		let j = network["nodes"].findIndex((v) => (v.id === item["source"]))
-		if (j != null) {
-			if (!("degree" in network["nodes"][j]))
-				network["nodes"][j]["degree"] = 0
-			network["nodes"][j]["degree"] += 1
-		}
+Promise.all([d3.json('consumer_g_network.json'), d3.csv("consumer_g_competitors.csv")]).then(function(dataset) {
+	network = dataset[0];
 
-		let x = network["nodes"].findIndex((v) => (v.id === item["target"]))
-		if (x != null) {
-			if (!("degree" in network["nodes"][x]))
-				network["nodes"][x]["degree"] = 0
-			network["nodes"][x]["degree"] += 1
-		}
-	});
+	calculateDegree(network)
+	calculateGroup(network, dataset[1])
 
     linkScale.domain(d3.extent(network.links, function(d){ return d.value;}));
 
@@ -100,12 +88,12 @@ d3.json('clothingallnodes.json').then(function(dataset) {
 	}
 
 	simulation
-	    .nodes(dataset.nodes)
+	    .nodes(network.nodes)
 	    .on('tick', onSimulationTick);
 
 	simulation
 	    .force('link')
-	    .links(dataset.links);
+	    .links(network.links);
 
 	simulation.force("charge", d3.forceManyBody().strength(-5) );
 
@@ -127,4 +115,45 @@ function dragended(d) {
     if (!d3.event.active) simulation.alphaTarget(0);
     d.fx = d.x;
     d.fy = d.y;
+}
+
+function calculateDegree(network) {
+	network["links"].forEach((item, index) => {
+		let j = network["nodes"].findIndex((v) => (v.id === item["source"]))
+		if (j != null) {
+			if (!("degree" in network["nodes"][j]))
+				network["nodes"][j]["degree"] = 0
+			network["nodes"][j]["degree"] += 1
+		}
+
+		let x = network["nodes"].findIndex((v) => (v.id === item["target"]))
+		if (x != null) {
+			if (!("degree" in network["nodes"][x]))
+				network["nodes"][x]["degree"] = 0
+			network["nodes"][x]["degree"] += 1
+		}
+	});
+}
+
+function calculateGroup(network, competitors) {
+	console.log(network)
+	const compe = {}
+	competitors.forEach((v) => {
+		if (!("displayName_parent" in compe)) compe["displayName_parent"] = new Set()
+		compe["displayName_parent"].add(v["displayName"])
+	})
+	const groups = []
+	for (const [key, value] of Object.entries(compe)) {
+		groups.push(Array.from(value) + [key])
+	}
+	console.log(groups)
+	network["nodes"].forEach((v) => {
+		groups.forEach((value, index) => {
+			if (value.includes(v.id)) {
+				v["group"] = index
+			}
+		})
+	})
+
+
 }
