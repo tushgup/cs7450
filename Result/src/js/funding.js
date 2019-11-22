@@ -6,7 +6,9 @@ class FundingState {
         this.height = 700;
         this.innerRadius = 200
         this.outerRadius = this.innerRadius + 10
-        this.color = d3.scaleOrdinal(d3.schemeCategory10)
+        this.color10 = d3.scaleOrdinal(d3.schemeCategory10)
+        this.colorStage = d3.scaleSequential(d3.interpolateReds)
+        this.selected = new Set()
     }
 
     static state;
@@ -70,14 +72,9 @@ class FundingData {
         return topValues(n, this.allInvestors)
     }
 
-    expandEdge(edgedata, allElements, x, y) {
-        const investorName = allElements[x < y ? x : y]
-        const companyName = allElements[x < y ? y : x]
-        const search = this.dataset.filter(v => v.displayName === companyName && v.name === investorName)
-            .map(v => +v.amount.split(" ")[0])
+    expandEdge(edgedata, allElements, x) {
         return edgedata.flatMap(v => {
-            if (v.source.index === x && v.source.subindex === y ||
-                v.source.index === y && v.source.subindex === x) {
+            if (x.has(allElements[v.target.index])) {
                 const original = v
                 const result = []
                 let currentSrcAngle = original.source.startAngle
@@ -85,25 +82,30 @@ class FundingData {
                 const srcAngle = original.source.endAngle - original.source.startAngle
                 const trgAngle = original.target.endAngle - original.target.startAngle
                 const sum = original.source.value
+                const search = this.dataset.filter(d => d.name === allElements[v.target.index] && d.displayName === allElements[v.target.subindex])
                 search.forEach(v => {
+                    const value = +v.amount.split(" ")[0]
                     result.push({
                         source: {
                             index: original.source.index,
                             subindex: original.source.subindex,
                             startAngle: currentSrcAngle,
-                            endAngle: currentSrcAngle + v / sum * srcAngle,
-                            value: v
+                            endAngle: currentSrcAngle + value / sum * srcAngle,
+                            value: value
                         },
                         target: {
                             index: original.target.index,
                             subindex: original.target.subindex,
                             startAngle: currentTrgAngle,
-                            endAngle: currentSrcAngle + v / sum * trgAngle,
-                            value: v
-                        }
+                            endAngle: currentSrcAngle + value / sum * trgAngle,
+                            value: value
+                        },
+                        stage: v.stage,
+                        date: v.date,
+                        value: value
                     })
-                    currentSrcAngle += v / sum * srcAngle
-                    currentTrgAngle += v / sum * trgAngle
+                    currentSrcAngle += value / sum * srcAngle
+                    currentTrgAngle += value / sum * trgAngle
 
                 })
                 return result
@@ -127,11 +129,24 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 
+function createGroup() {
+    FundingState.state.chordG = FundingState.state.svg.append("g")
+        .attr("transform", `translate(${FundingState.state.width / 2},${FundingState.state.height / 2})`)
+    FundingState.state.linkG = FundingState.state.chordG
+        .append("g")
+        .attr("fill-opacity", 0.8)
+
+    FundingState.state.outerchordsG = FundingState.state.chordG
+        .append("g")
+        .attr("class", "chord-group")
+}
+
 d3.csv('./data/investments.csv').then(function (dataset) {
 
     FundingState.state = new FundingState(dataset)
-    FundingState.state.chordG = FundingState.state.svg.append("g")
-        .attr("transform", `translate(${FundingState.state.width / 2},${FundingState.state.height / 2})`)
+
+    createGroup()
+
 
     ArcChart.updateCharts()
 
@@ -272,18 +287,30 @@ class ArcChart {
     }
 
     static updateCharts() {
-        const selectedInvestors = FundingState.state.data.getTopInvestors(20)
+        // const selectedInvestors = FundingState.state.data.getTopInvestors(20)
+
+        const tip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+            return `
+            <p>Stage: ${d.stage}</p>
+            <p> Date: ${d.date}</p>
+            <p> Value: ${d.value}</p>
+            `;
+        }).offset(function () {
+            return [this.getBBox().height / 2, 0]
+        });
+
+
+        FundingState.state.svg.call(tip)
 
         //new Set(filtered.filter(v => top_received.has(v.displayName)).map(v => v.name))
-
-        // new Set([
-        // 	"Highland Capital Partners",
-        // 	"Wayne Chang",
-        // 	"Jason Robins",
-        // 	"Niraj Shah",
-        // 	"Bob White",
-        // 	"Accel Partners"
-        // ])
+        const selectedInvestors = [
+            "Highland Capital Partners",
+            "Wayne Chang",
+            "Jason Robins",
+            "Niraj Shah",
+            "Bob White",
+            "Accel Partners"
+        ]
 
         const {
             chordMatrix,
@@ -296,17 +323,15 @@ class ArcChart {
         } = FundingState.state.data.investmentToMatrix(Array.from(selectedInvestors)) // ["Index Ventures"]
 
         const groupWithTwoOrMore = Object.keys(groupToCompany).filter(v => groupToCompany[v].size >= 2)
-        const domaincolor = FundingState.state.color.domain(groupWithTwoOrMore)
+        const domaincolor = FundingState.state.color10.domain(groupWithTwoOrMore)
 
-        // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
-        var res = ArcChart.chord // padding between entities (black arc)
+        // Calculate layout
+        let res = FundingState.state.res = ArcChart.chord // padding between entities (black arc)
         (arcMatrix, 0.01, selectedInvestors.length)
 
+        // Draw outer chords
 
-
-        const group = FundingState.state.chordG
-            .append("g")
-            .attr("class", "chord-group")
+        const group = FundingState.state.outerchordsG
             .selectAll(".chord-group")
             .data(res.groups.filter(v => v))
             .join("g")
@@ -324,6 +349,22 @@ class ArcChart {
                 .innerRadius(FundingState.state.innerRadius)
                 .outerRadius(FundingState.state.outerRadius)
             )
+
+        // Draw text
+        group.append("text")
+            .each(d => {
+                d.angle = (d.startAngle + d.endAngle) / 2;
+            })
+            .attr("dy", ".35em")
+            .attr("fill", "white")
+            .attr("transform", d => `
+        rotate(${(d.angle * 180 / Math.PI - 90)})
+        translate(${FundingState.state.innerRadius + 26})
+        ${d.angle > Math.PI ? "rotate(180)" : ""}
+	  `)
+            .attr("opacity", (d) => (d.endAngle - d.startAngle) < 0.05 ? 0 : 1)
+            .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
+            .text(d => allElements[d.index]);
 
 
         // Draw investor nodes
@@ -371,61 +412,128 @@ class ArcChart {
             .selectAll(".node-group")
             .data(copied)
             .join("g")
+            .attr("transform", d => {
+                return `translate(${d.x}, ${d.y})`
+            })
 
 
         nodeGroup.append("circle")
-            .attr("cx", d => {
-                return d.x
+            .attr("r", 6)
+            .attr("fill", "white")
+            .on("mouseover", function (d) {
+                // if (FundingState.state.selected.size > 0) return
+                FundingState.state.chordG.selectAll(".inv-links")
+                    .attr("fill-opacity", (da, i) => {
+                        if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
+                        if (d.name === allElements[da.target.index]) {
+                            return 0.8
+                        } else return 0
 
-            }).attr("cy", d => {
-                return d.y
-            }).attr("r", 6).attr("fill", "white")
+                    })
 
-        console.log(res)
+                d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                    if (FundingState.state.selected.has(v.name)) return 1
+                    if (v.name == d.name) return 1
+                    return 0.2
+                })
+
+                d3.select(this.parentNode).select("text").attr("visibility", "visible")
+            }).on("mouseout", function (d) {
+                FundingState.state.chordG.selectAll(".inv-links")
+                    .attr("fill-opacity", (da, i) => {
+                        if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
+                        return 0
+
+                    })
+
+                d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
+                    if (FundingState.state.selected.has(v.name)) return "visible"
+                    return "hidden"
+                })
+
+                if (FundingState.state.selected.size == 0)
+                    d3.select(".node-group").selectAll("g").attr("opacity", 1)
+                else d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                    if (FundingState.state.selected.has(v.name)) return 1
+                    return 0.2
+                })
+
+            }).on("click", function (d) {
+                if (!FundingState.state.selected.has(d.name))
+                    FundingState.state.selected.add(d.name)
+                else FundingState.state.selected.delete(d.name)
+                d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                    if (FundingState.state.selected.has(v.name)) return 1
+                    return 0.2
+                })
+                d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
+                    if (FundingState.state.selected.has(v.name)) return "visible"
+                    return "hidden"
+                })
+
+                const expanded = FundingState.state.data.expandEdge(res, allElements, FundingState.state.selected)
+                FundingState.state.linkG
+                    .selectAll("g")
+                    .data(expanded, d => d.source)
+                    .join(enter => {
+                        const group = enter.append("g")
+                            .attr("class", "inv-links")
+                            .attr("fill-opacity", (v) => {
+                                if (FundingState.state.selected.has(allElements[v.target.index])) return 0.8
+                                return 0
+                            })
+
+                        group.append("path")
+                            .attr("d", d => {
+                                if (selectedInvestors.includes(allElements[d.target.index])) {
+                                    const element = copied[d.target.index]
+                                    return ArcChart.pointToArcRibbon({
+                                        x: element.x,
+                                        y: element.y
+                                    }, d, FundingState.state.innerRadius)
+                                }
+                                return ""
+                            })
+                            .style("fill", (d) => {
+                                const element = allElements[d.source.index]
+                                if (groupWithTwoOrMore.includes(companyToGroup[element]))
+                                    return domaincolor(companyToGroup[element])
+                                return "#69b3a2"
+                            }).on("mouseover", tip.show).on("mouseout", tip.hide)
+                        return group
+                    });
+            })
+
+
+        nodeGroup.append("text").attr("fill", "white")
+            .attr("visibility", "hidden")
+            .attr("x", "10").text(d => d.name)
 
         // Add the links between groups
-        FundingState.state.chordG
-            .append("g")
-            .attr("fill-opacity", 0.67)
-            .selectAll("path")
-            .data(res)
-            .join("g")
-            .attr("class", "inv-links")
-            .append("path")
-            .attr("d", d => {
-                // (console.log(d), d3.ribbon()
-                // .radius(200)(d))
-                if (selectedInvestors.includes(allElements[d.target.index])) {
-                    const element = copied[d.target.index]
-                    return ArcChart.pointToArcRibbon({
-                        x: element.x,
-                        y: element.y
-                    }, d, FundingState.state.innerRadius)
-                }
-                return ""
-            })
-            .style("fill", (d) => {
-                const element = allElements[d.source.index]
-                if (groupWithTwoOrMore.includes(companyToGroup[element]))
-                    return domaincolor(companyToGroup[element])
-                return "#69b3a2"
-            })
-            .style("stroke", "white");
 
-        // Draw text
-        group.append("text")
-            .each(d => {
-                d.angle = (d.startAngle + d.endAngle) / 2;
-            })
-            .attr("dy", ".35em")
-            .attr("fill", "white")
-            .attr("transform", d => `
-        rotate(${(d.angle * 180 / Math.PI - 90)})
-        translate(${FundingState.state.innerRadius + 26})
-        ${d.angle > Math.PI ? "rotate(180)" : ""}
-	  `)
-            .attr("opacity", (d) => (d.endAngle - d.startAngle) < 0.05 ? 0 : 1)
-            .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
-            .text(d => allElements[d.index]);
+        FundingState.state.linkG
+            .selectAll("path")
+            .data(res, (d) => d.source)
+            .join(enter => enter.append("g")
+                .attr("fill-opacity", 0.5)
+                .attr("class", "inv-links")
+                .append("path")
+                .attr("d", d => {
+                    if (selectedInvestors.includes(allElements[d.target.index])) {
+                        const element = copied[d.target.index]
+                        return ArcChart.pointToArcRibbon({
+                            x: element.x,
+                            y: element.y
+                        }, d, FundingState.state.innerRadius)
+                    }
+                    return ""
+                })
+                .style("fill", (d) => {
+                    const element = allElements[d.source.index]
+                    if (groupWithTwoOrMore.includes(companyToGroup[element]))
+                        return domaincolor(companyToGroup[element])
+                    return "#69b3a2"
+                }));
+
     }
 }

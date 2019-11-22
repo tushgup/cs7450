@@ -83,6 +83,11 @@ class CompanyData {
         return this.alltags[eval(d.major_tags).length > 1 ? eval(d.major_tags)[rand] : eval(d.major_tags)[0]].color
     }
 
+    getTags(company) {
+        return eval(this.tagslist.find(v => v.displayName === company).major_tags)
+
+    }
+
     getShape(company) {
         const d = this.tagslist.find(v => v.displayName === company)
         if (!d) return "gray"
@@ -130,13 +135,29 @@ class ScatterplotState {
 
         this.axisL = this.svg.append('g')
             .attr('class', 'y axis')
-            .attr('transform', `translate(${this.margin.left},${this.margin.top})`)
+            .attr('transform', `translate(${this.margin.left * 1.8},${this.margin.top})`)
             .call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+
+        this.axisL.append("text").text("Revenue")
 
         this.axisB = this.svg.append('g')
             .attr('class', 'x axis')
             .attr('transform', `translate(${this.margin.left * 2},${700 - this.margin.bottom})`)
             .call(d3.axisBottom(this.x))
+
+        this.tagsSet = new Set(Object.keys(color_tags_mapping))
+    }
+
+    static addTag(tag) {
+        ScatterplotState.state.tagsSet.add(tag)
+        ScatterPlotChart.updateCharts()
+
+    }
+
+    static removeTag(tag) {
+        ScatterplotState.state.tagsSet.delete(tag)
+        ScatterPlotChart.updateCharts()
+
     }
 
     axisLGenerator(option) {
@@ -248,45 +269,53 @@ class ScatterplotState {
         }
     }
 
+    resetElement() {
+        d3.selectAll(".scatternode").attr("opacity", "1")
+    }
+
+    greyOutAllElement() {
+        d3.selectAll(".scatternode").attr("opacity", "0.4")
+
+    }
+
 }
 
+// ------------------- Slider --------------------------
+var sliderStep = d3
+    .sliderBottom()
+    .min(2014)
+    .max(2018)
+    .width(500)
+    .tickFormat(d3.format('d'))
+    .ticks(5)
+    .step(1)
+    .default(0.015)
+    .on('onchange', val => {
+        ScatterplotState.state.year = val
+        ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
+        ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
 
+        ScatterPlotChart.updateCharts()
+    });
+
+var gStep = d3
+    .select('div#slider-time svg')
+    .append('g')
+
+gStep.call(sliderStep);
+
+gStep.select("#slider-time svg g.parameter-value path")
+    .attr("transform", "rotate(360)")
+    .attr('d', "M10,0A10,10,0,1,1,9.999500004166652,-0.09999833334166695Z")
+
+// ======================= Draw scatterplot data ========================================
 Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv"), d3.csv("./data/misc.csv"), d3.csv("./data/tags_list.csv")])
     .then(function (data) {
         DetailsState.state.data.receiveFromScatter(data)
 
         ScatterplotState.state = new ScatterplotState(data)
 
-        // ------------------- Slider --------------------------
-        // Step
-        var sliderStep = d3
-            .sliderBottom()
-            .min(2014)
-            .max(2018)
-            .width(300)
-            .tickFormat(d3.format('d'))
-            .ticks(5)
-            .step(1)
-            .default(0.015)
-            .on('onchange', val => {
-                ScatterplotState.state.year = val
-                ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
-                ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
 
-                ScatterPlotChart.updateCharts()
-            });
-
-        var gStep = d3
-            .select('div#slider-step')
-            .append('svg')
-            .attr('width', 500)
-            .attr('height', 100)
-            .attr("style", `position: absolute;
-    left: 0px;`)
-            .append('g')
-            .attr('transform', 'translate(30,30)');
-
-        gStep.call(sliderStep);
         ScatterplotState.state.nodeG = ScatterplotState.state.svg.append("g")
             .attr('transform', `translate(${ScatterplotState.state.margin.left * 2},${ScatterplotState.state.margin.top})`)
 
@@ -319,11 +348,17 @@ class ScatterPlotChart {
     static updateCharts() {
         var simulation = d3.forceSimulation(ScatterplotState.state.data.incomestatements)
             .force("x", d3.forceX(function (d) {
+                const tags = ScatterplotState.state.data.getTags(d.key)
+                const show = tags.some(v => ScatterplotState.state.tagsSet.has(v))
+                if (!show) return (ScatterplotState.state.svgwidth + 100)
                 const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
                 const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
                 return dx
             }).strength(1))
             .force("y", d3.forceY(function (d) {
+                const tags = ScatterplotState.state.data.getTags(d.key)
+                const show = tags.some(v => ScatterplotState.state.tagsSet.has(v))
+                if (!show) return (ScatterplotState.state.svgheight + 100)
                 const yVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.y, d)
                 const dy = yVal ? ScatterplotState.state.y(yVal) : (ScatterplotState.state.svgheight + 100)
 
@@ -336,10 +371,7 @@ class ScatterPlotChart {
         const t = ScatterplotState.state.svg.transition()
             .duration(3000);
 
-
-
         for (var i = 0; i < 30; ++i) simulation.tick();
-
         ScatterplotState.state.nodeG.selectAll(".scattter_comp")
             .data(ScatterplotState.state.data.incomestatements)
             .join(enter => {
@@ -351,7 +383,16 @@ class ScatterPlotChart {
                             const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
                             const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
                             return `translate(${dx}, ${dy})`
+                        }).on("click", function (d, i) {
+                            DetailsState.reset()
+                            DetailsState.select(d.key)
+                            ScatterplotState.state.resetElement()
+                            ScatterplotState.state.selectedElement = this
+                            ScatterplotState.state.greyOutAllElement()
+                            d3.select(this).select(".scatternode").attr("opacity", 1)
+                        }).on("mouseover", function (d, i) {
                         })
+                    g.append("text").text((d) => d.displayName)
                     g.each(function (d) {
                         return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getShape(d.key))
                     })

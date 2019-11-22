@@ -16,6 +16,8 @@
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/d3tip.css">
+
     <!-- Material Icons WebFont -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -38,6 +40,7 @@
     </script>
     <script src="https://d3js.org/d3.v5.min.js" defer></script>
     <script src="https://unpkg.com/d3-simple-slider" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js" defer></script>
     <script src="https://d3js.org/d3-array.v2.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" defer></script>
     <script src="js/details.js" defer></script>
@@ -83,7 +86,30 @@
                 </div>
             </div>
 
-            <h3>Filters</h3>
+            <div class="filterGroup">
+                <h2>&nbsp;Year</h2>
+                <div class="row align-items-center">
+                    <div class="col nopadding">
+                        <div id="slider-time">
+                            <svg viewBox="-60 -10 580 100">
+                                <g transform="translate(0,7)"  fill="none" font-size="10"
+                                    font-family="sans-serif" text-anchor="middle">
+                                    <g opacity="1" transform="translate(50.5,0)">
+                                        <text fill="#aaa" y="20" dy=".71em"
+                                            text-anchor="middle" opacity="1" style="font-size: xx-large">2014</text>
+                                    </g>
+                                    <g opacity="1" transform="translate(450.5,0)">
+                                        <text fill="#aaa" y="20" dy=".71em"
+                                            text-anchor="middle" opacity="1" style="font-size: xx-large">2018</text>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>&nbsp;Filters</h3>
 
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -204,13 +230,7 @@
               </div>
 
 
-            <div class="filterGroup">
-                <h2>Year</h2>
-                <div class="row align-items-center">
-                  <div class="col-sm-2"><p id="value-time"></p></div>
-                  <div class="col-sm"><div id="slider-time"></div></div>
-                </div>
-            </div>
+            
 
         </div>
         <div class="col-7">
@@ -224,7 +244,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab"
+                    <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview"
+                        role="tab"
                         aria-controls="pills-overview" aria-selected="true">Overview</a>
                 </li>
                 <li class="nav-item">
@@ -236,7 +257,7 @@
                         aria-controls="pills-geo" aria-selected="false">Geo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-funding-tab" data-toggle="pill" href="#pills-funding"
+                    <a class="nav-link " id="pills-funding-tab" data-toggle="pill" href="#pills-funding"
                         role="tab" aria-controls="pills-funding" aria-selected="false">Funding</a>
                 </li>
             </ul>
@@ -244,7 +265,8 @@
 
 
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade " id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+                <div class="tab-pane fade show active" id="pills-overview" role="tabpanel"
+                    aria-labelledby="pills-overview-tab">
                     <div class="scatterplot">
                         <svg class="scatterplot_svg" viewBox="0 0 1000 700"></svg>
                     </div>
@@ -256,7 +278,7 @@
                 <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
                     <p> Geo View</p>
                 </div>
-                <div class="tab-pane fade show active" id="pills-funding" role="tabpanel"
+                <div class="tab-pane fade" id="pills-funding" role="tabpanel"
                     aria-labelledby="pills-funding-tab">
                     <div class="scatterplot">
                         <svg class="funding_svg" viewBox="0 0 700 700"></svg>
@@ -271,7 +293,7 @@
                     <h6 class="labelText">Company Name</h6>
                 </div>
                 <div class="col-3  offset-1">
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" onclick="DetailsState.clear()">
                         Clear
                     </button>
                 </div>
@@ -303,7 +325,7 @@
                 <li id="companyhq">HQ: </li>
                 <li id="companywebsite">Website: </li>
                 <li id="companyemployee">Employee: </li>
-                <li id="companydescription">Description: </li>
+                <li id="companydescription"></li>
 
             </ul>
 

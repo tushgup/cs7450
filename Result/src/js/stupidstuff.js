@@ -23,15 +23,18 @@ var color_tags_mapping = {
 }
 
 class ScatterPlotUtility {
+    
     static shapeToFormat(selection, shape) {
         switch (shape) {
             case "circle":
                 selection.append("circle")
+                    .attr("class", "scatternode")
                     .attr("r", 5)
                     .attr("fill", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             case "hollowcircle":
                 selection.append("circle")
+                    .attr("class", "scatternode")
                     .attr("r", 5)
                     .attr("fill", "#424242")
                     .attr("stroke-width", 1.5)
@@ -39,12 +42,14 @@ class ScatterPlotUtility {
                 break;
             case "square":
                 selection.append("rect")
+                    .attr("class", "scatternode")
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("fill", d => ScatterplotState.state.data.getColor(d.key))
                 break;
             case "hollowsquare":
                 selection.append("rect")
+                    .attr("class", "scatternode")
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("fill", "#424242")

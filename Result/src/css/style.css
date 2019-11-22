@@ -7,13 +7,13 @@ body,
 }
 
 body {
-    background-color: #424242;
+    background-color: black;
     color: #fff;
     font-family: 'Rubik', sans-serif !important;
 }
 
 .sidebar {
-    padding: 1.75rem;
+    /* padding: 1.75rem; */
     border-right: 1px solid #fff;
 }
 
@@ -73,3 +73,22 @@ ul {
 li {
     margin: 0.3em 0em 0.3em 0em;
 }
+
+.scatterplot_svg .axis .domain,
+.scatterplot_svg .axis line {
+    display: none;
+
+}
+
+.nopadding {
+    padding: 0
+}
+
+#slider-time .tick {
+    display: none;
+}
+
+.scatterplot_svg .axis text {
+    font-size: 1rem;
+}
+

@@ -1,10 +1,10 @@
 class DetailsData {
-    misc;
-    locations;
-    incomestatements;
-    details;
+    
     constructor() {
-
+        this.misc = undefined;
+        this.locations = undefined;
+        this.incomestatements = undefined;
+        this.details = undefined;
     }
 
     receiveFromScatter(data) {
@@ -26,37 +26,46 @@ class DetailsData {
     }
 
     getMarketCap(displayName) {
-        const f = this.misc.find(v => v.displayName === displayName)
+        const f = this.misc.find(v => v && v.displayName === displayName)
         if (!f) return undefined
         return f.stocksSummary
     }
 
     getCompanyType(displayName) {
-        const f = this.misc.find(v => v.displayName === displayName)
+        const f = this.misc.find(v => v && v.displayName === displayName)
         if (!f) return undefined
         return f.companyType || "N/A"
     }
 
     getCompanyYear(displayName) {
-        const f = this.misc.find(v => v.displayName === displayName)
+        const f = this.misc.find(v => v && v.displayName === displayName)
         if (!f) return "N/A"
         return f.foundedYear || "N/A"
     }
 
     getCompanyHq(displayName) {
-        const f = this.locations.find(v => v.displayName === displayName && v.hq === "True")
+        const f = this.locations.find(v => v && v.displayName === displayName && v.hq === "True")
         if (!f) return "N/A"
         return `${f.city}, ${f.state}, ${f.country}`
     }
 
     getHomepage(displayName) {
-        const f = this.details.find(v => v.displayName === displayName)
+        if (!this.details) return "Data is loading. Try again in a few seconds"
+        const f = this.details.find(v => v && v.displayName === displayName)
+        this.details.forEach((v, i) => {
+            if (!v) {
+                            console.log(this.details[i - 1])
+
+                console.log(i)
+            }
+        })
         if (!f) return "N/A"
-        return `${f.homepage || "N/A"}`
+        return `${f.homepage.replace(/\/$/, "") || "N/A"}`
     }
 
     getEmployeeNumber(displayName) {
-        const f = this.details.find(v => v.displayName === displayName)
+        if (!this.details) return "Data is loading. Try again in a few seconds"
+        const f = this.details.find(v => v && v.displayName === displayName)
         if (!f) return "N/A"
         const array = f.employees
         if (array.length == 0) return "N/A"
@@ -64,7 +73,8 @@ class DetailsData {
     }
 
     getDescription(displayName) {
-        const f = this.details.find(v => v.displayName === displayName)
+        if (!this.details) return "Data is loading. Try again in a few seconds"
+        const f = this.details.find(v => v && v.displayName === displayName)
         if (!f) return "N/A"
         return `${f.longDescription || "N/A"}`
     }
@@ -88,6 +98,12 @@ class DetailsState {
         DetailsState.state.resetDetails()
     }
 
+    static clear() {
+        DetailsState.reset()
+        ScatterplotState.state.selectedElement = undefined
+        ScatterplotState.state.resetElement()
+    }
+
     updateDetails(displayName) {
         $("#companyName").html(displayName)
         $("#revenue").html(this.format(this.data.getRevenue(displayName)))
@@ -97,8 +113,7 @@ class DetailsState {
         $("#companyhq").html(`HQ: ${this.data.getCompanyHq(displayName)}`)
         $("#companywebsite").html(`Website: <a href=${this.data.getHomepage(displayName)}>${this.data.getHomepage(displayName)}</a>`)
         $("#companyemployee").html(`Employee: ${this.data.getEmployeeNumber(displayName)}`)
-        $("#companydescription").html(`Description: <br>
-        ${this.data.getDescription(displayName)}`)
+        $("#companydescription").html(`${this.data.getDescription(displayName)}`)
 
     }
 
@@ -115,6 +130,7 @@ class DetailsState {
 
     }
     upper(str) {
+        if (!str) return ""
         return str.replace(/^\w/, function (chr) {
             return chr.toUpperCase();
         });
