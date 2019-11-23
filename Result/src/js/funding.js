@@ -73,6 +73,7 @@ class FundingData {
     }
 
     expandEdge(edgedata, allElements, x) {
+        if (x.size == 0) return edgedata
         return edgedata.flatMap(v => {
             if (x.has(allElements[v.target.index])) {
                 const original = v
@@ -139,11 +140,58 @@ function createGroup() {
     FundingState.state.outerchordsG = FundingState.state.chordG
         .append("g")
         .attr("class", "chord-group")
+
+    FundingState.state.nodeG = FundingState.state.chordG.append("g")
+        .attr("class", "node-group")
 }
+
+let selectedInvestors = [
+    "Highland Capital Partners",
+    "Wayne Chang",
+    "Jason Robins",
+    "Niraj Shah",
+    "Bob White",
+    "Accel Partners"
+]
+
+function addInvestors(investors) {
+    const s = new Set(selectedInvestors)
+    s.add(investors)
+    selectedInvestors = Array.from(s)
+    FundingState.state.svg.selectAll("*").remove();
+    createGroup()
+    ArcChart.updateCharts()
+
+}
+
+function deleteInvestors(investors) {
+    const s = new Set(selectedInvestors)
+    s.delete(investors)
+    FundingState.state.selected.delete(investors)
+    selectedInvestors = Array.from(s)
+    FundingState.state.svg.selectAll("*").remove();
+    createGroup()
+    ArcChart.updateCharts()
+
+}
+
 
 d3.csv('./data/investments.csv').then(function (dataset) {
 
     FundingState.state = new FundingState(dataset)
+    // var transform = d3.zoomIdentity.translate(FundingState.state.width / 2, FundingState.state.height / 2).scale(1);
+
+    // FundingState.state.svg.call(d3.zoom()
+    //     .extent([
+    //         [0, 0],
+    //         [FundingState.state.width, FundingState.state.height]
+    //     ])
+    //     .scaleExtent([1, 8])
+    //     .on("zoom", zoomed)).call(d3.zoom().transform, transform);
+
+    // function zoomed() {
+    //     FundingState.state.svg.select("g").attr("transform", d3.event.transform);
+    // }
 
     createGroup()
 
@@ -286,6 +334,8 @@ class ArcChart {
         return chords;
     }
 
+
+
     static updateCharts() {
         // const selectedInvestors = FundingState.state.data.getTopInvestors(20)
 
@@ -303,14 +353,14 @@ class ArcChart {
         FundingState.state.svg.call(tip)
 
         //new Set(filtered.filter(v => top_received.has(v.displayName)).map(v => v.name))
-        const selectedInvestors = [
-            "Highland Capital Partners",
-            "Wayne Chang",
-            "Jason Robins",
-            "Niraj Shah",
-            "Bob White",
-            "Accel Partners"
-        ]
+        // const selectedInvestors = [
+        //     "Highland Capital Partners",
+        //     "Wayne Chang",
+        //     "Jason Robins",
+        //     "Niraj Shah",
+        //     "Bob White",
+        //     "Accel Partners"
+        // ]
 
         const {
             chordMatrix,
@@ -331,40 +381,43 @@ class ArcChart {
 
         // Draw outer chords
 
-        const group = FundingState.state.outerchordsG
-            .selectAll(".chord-group")
-            .data(res.groups.filter(v => v))
-            .join("g")
+        FundingState.state.outerchordsG
+            .selectAll("g")
+            .data(res.groups.filter(v => v), d => d.index)
+            .join(enter => {
+                const group = enter.append("g")
+                group
+                    .append("path")
+                    .style("fill", (d) => {
+                        const element = allElements[d.index];
+                        if (selectedInvestors.includes(element)) return "blue"
+                        if (groupWithTwoOrMore.includes(companyToGroup[element]))
+                            return domaincolor(companyToGroup[element])
+                        return "grey"
+                    })
+                    .attr("d", d3.arc()
+                        .innerRadius(FundingState.state.innerRadius)
+                        .outerRadius(FundingState.state.outerRadius)
+                    )
 
-        group
-            .append("path")
-            .style("fill", (d) => {
-                const element = allElements[d.index];
-                if (selectedInvestors.includes(element)) return "blue"
-                if (groupWithTwoOrMore.includes(companyToGroup[element]))
-                    return domaincolor(companyToGroup[element])
-                return "grey"
-            })
-            .attr("d", d3.arc()
-                .innerRadius(FundingState.state.innerRadius)
-                .outerRadius(FundingState.state.outerRadius)
-            )
-
-        // Draw text
-        group.append("text")
-            .each(d => {
-                d.angle = (d.startAngle + d.endAngle) / 2;
-            })
-            .attr("dy", ".35em")
-            .attr("fill", "white")
-            .attr("transform", d => `
-        rotate(${(d.angle * 180 / Math.PI - 90)})
-        translate(${FundingState.state.innerRadius + 26})
-        ${d.angle > Math.PI ? "rotate(180)" : ""}
-	  `)
-            .attr("opacity", (d) => (d.endAngle - d.startAngle) < 0.05 ? 0 : 1)
-            .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
-            .text(d => allElements[d.index]);
+                // Draw text
+                group.append("text")
+                    .each(d => {
+                        d.angle = (d.startAngle + d.endAngle) / 2;
+                    })
+                    .attr("dy", ".35em")
+                    .attr("fill", "white")
+                    .attr("transform", d =>
+                        `
+                        rotate(${(d.angle * 180 / Math.PI - 90)})
+                        translate(${FundingState.state.innerRadius + 26})
+                        ${d.angle > Math.PI ? "rotate(180)" : ""}`)
+                    .attr("opacity", (d) => (d.endAngle - d.startAngle) < 0.05 ? 0 : 1)
+                    .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
+                    .text(d => allElements[d.index])
+                    .on('click', (d) => { DetailsState.select(allElements[d.index])});
+                return group
+            }, update => update, exit => exit.remove())
 
 
         // Draw investor nodes
@@ -407,133 +460,155 @@ class ArcChart {
 
         for (var i = 0; i < 30; ++i) simulation.tick();
 
-        const nodeGroup = FundingState.state.chordG.append("g")
-            .attr("class", "node-group")
-            .selectAll(".node-group")
-            .data(copied)
-            .join("g")
-            .attr("transform", d => {
+        FundingState.state.nodeG
+            .selectAll("g")
+            .data(copied, (d) => d.name)
+            .join(enter => {
+                const nodeGroup = enter.append("g")
+                    .attr("transform", d => {
+                        return `translate(${d.x}, ${d.y})`
+                    }).attr("opacity", function (v) {
+                        if (FundingState.state.selected.size == 0) return 1
+                        if (FundingState.state.selected.has(v.name)) return 1
+                        return 0.2
+                    })
+
+
+                nodeGroup.append("circle")
+                    .attr("r", 6)
+                    .attr("fill", "white")
+                    .on("mouseover", function (d) {
+                        // if (FundingState.state.selected.size > 0) return
+                        FundingState.state.chordG.selectAll(".inv-links")
+                            .attr("fill-opacity", (da, i) => {
+                                if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
+                                if (d.name === allElements[da.target.index]) {
+                                    return 0.8
+                                } else return 0
+
+                            })
+
+                        d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                            if (FundingState.state.selected.has(v.name)) return 1
+                            if (v.name == d.name) return 1
+                            return 0.2
+                        })
+
+                        d3.select(this.parentNode).select("text").attr("visibility", "visible")
+                    }).on("mouseout", function (d) {
+                        FundingState.state.chordG.selectAll(".inv-links")
+                            .attr("fill-opacity", (da, i) => {
+                                if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
+                                if (FundingState.state.selected.size > 0) return 0
+                                return 0.5
+
+                            })
+
+                        d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
+                            if (FundingState.state.selected.has(v.name)) return "visible"
+                            return "hidden"
+                        })
+
+                        d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                            if (FundingState.state.selected.size == 0) return 1
+                            if (FundingState.state.selected.has(v.name)) return 1
+                            return 0.2
+                        })
+
+                    }).on("click", function (d) {
+                        if (!FundingState.state.selected.has(d.name))
+                            FundingState.state.selected.add(d.name)
+                        else FundingState.state.selected.delete(d.name)
+                        d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
+                            if (FundingState.state.selected.has(v.name)) return 1
+                            return 0.2
+                        })
+                        d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
+                            if (FundingState.state.selected.has(v.name)) return "visible"
+                            return "hidden"
+                        })
+
+                        const expanded = FundingState.state.data.expandEdge(res, allElements, FundingState.state.selected)
+
+                        FundingState.state.linkG
+                            .selectAll("g")
+                            .data(expanded, d => d.source)
+                            .join(enter => {
+                                const group = enter.append("g")
+                                    .attr("class", "inv-links")
+                                    .attr("fill-opacity", (v) => {
+                                        if (FundingState.state.selected.has(allElements[v.target.index])) return 0.8
+                                        if (FundingState.state.selected.size > 0) return 0
+                                        return 0.5
+                                    })
+
+                                group.append("path")
+                                    .attr("d", d => {
+                                        if (selectedInvestors.includes(allElements[d.target.index])) {
+                                            const element = copied[d.target.index]
+                                            return ArcChart.pointToArcRibbon({
+                                                x: element.x,
+                                                y: element.y
+                                            }, d, FundingState.state.innerRadius)
+                                        }
+                                        return ""
+                                    })
+                                    .style("fill", (d) => {
+                                        const element = allElements[d.source.index]
+                                        if (groupWithTwoOrMore.includes(companyToGroup[element]))
+                                            return domaincolor(companyToGroup[element])
+                                        return "#69b3a2"
+                                    }).on("mouseover", tip.show).on("mouseout", tip.hide)
+                                return group
+                            });
+                    })
+
+
+                nodeGroup.append("text").attr("fill", "white")
+                    .attr("visibility", function (v) {
+                        if (FundingState.state.selected.has(v.name)) return "visible"
+                        return "hidden"
+                    })
+                    .attr("x", "10").text(d => d.name)
+                return nodeGroup
+            }, update => update.attr("transform", d => {
                 return `translate(${d.x}, ${d.y})`
-            })
-
-
-        nodeGroup.append("circle")
-            .attr("r", 6)
-            .attr("fill", "white")
-            .on("mouseover", function (d) {
-                // if (FundingState.state.selected.size > 0) return
-                FundingState.state.chordG.selectAll(".inv-links")
-                    .attr("fill-opacity", (da, i) => {
-                        if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
-                        if (d.name === allElements[da.target.index]) {
-                            return 0.8
-                        } else return 0
-
-                    })
-
-                d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
-                    if (FundingState.state.selected.has(v.name)) return 1
-                    if (v.name == d.name) return 1
-                    return 0.2
-                })
-
-                d3.select(this.parentNode).select("text").attr("visibility", "visible")
-            }).on("mouseout", function (d) {
-                FundingState.state.chordG.selectAll(".inv-links")
-                    .attr("fill-opacity", (da, i) => {
-                        if (FundingState.state.selected.has(allElements[da.target.index])) return 0.8
-                        return 0
-
-                    })
-
-                d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
-                    if (FundingState.state.selected.has(v.name)) return "visible"
-                    return "hidden"
-                })
-
-                if (FundingState.state.selected.size == 0)
-                    d3.select(".node-group").selectAll("g").attr("opacity", 1)
-                else d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
-                    if (FundingState.state.selected.has(v.name)) return 1
-                    return 0.2
-                })
-
-            }).on("click", function (d) {
-                if (!FundingState.state.selected.has(d.name))
-                    FundingState.state.selected.add(d.name)
-                else FundingState.state.selected.delete(d.name)
-                d3.select(".node-group").selectAll("g").attr("opacity", function (v) {
-                    if (FundingState.state.selected.has(v.name)) return 1
-                    return 0.2
-                })
-                d3.select(".node-group").selectAll("text").attr("visibility", function (v) {
-                    if (FundingState.state.selected.has(v.name)) return "visible"
-                    return "hidden"
-                })
-
-                const expanded = FundingState.state.data.expandEdge(res, allElements, FundingState.state.selected)
-                FundingState.state.linkG
-                    .selectAll("g")
-                    .data(expanded, d => d.source)
-                    .join(enter => {
-                        const group = enter.append("g")
-                            .attr("class", "inv-links")
-                            .attr("fill-opacity", (v) => {
-                                if (FundingState.state.selected.has(allElements[v.target.index])) return 0.8
-                                return 0
-                            })
-
-                        group.append("path")
-                            .attr("d", d => {
-                                if (selectedInvestors.includes(allElements[d.target.index])) {
-                                    const element = copied[d.target.index]
-                                    return ArcChart.pointToArcRibbon({
-                                        x: element.x,
-                                        y: element.y
-                                    }, d, FundingState.state.innerRadius)
-                                }
-                                return ""
-                            })
-                            .style("fill", (d) => {
-                                const element = allElements[d.source.index]
-                                if (groupWithTwoOrMore.includes(companyToGroup[element]))
-                                    return domaincolor(companyToGroup[element])
-                                return "#69b3a2"
-                            }).on("mouseover", tip.show).on("mouseout", tip.hide)
-                        return group
-                    });
-            })
-
-
-        nodeGroup.append("text").attr("fill", "white")
-            .attr("visibility", "hidden")
-            .attr("x", "10").text(d => d.name)
+            }))
 
         // Add the links between groups
+        const expanded = FundingState.state.data.expandEdge(res, allElements, FundingState.state.selected)
 
         FundingState.state.linkG
-            .selectAll("path")
-            .data(res, (d) => d.source)
-            .join(enter => enter.append("g")
-                .attr("fill-opacity", 0.5)
-                .attr("class", "inv-links")
-                .append("path")
-                .attr("d", d => {
-                    if (selectedInvestors.includes(allElements[d.target.index])) {
-                        const element = copied[d.target.index]
-                        return ArcChart.pointToArcRibbon({
-                            x: element.x,
-                            y: element.y
-                        }, d, FundingState.state.innerRadius)
-                    }
-                    return ""
-                })
-                .style("fill", (d) => {
-                    const element = allElements[d.source.index]
-                    if (groupWithTwoOrMore.includes(companyToGroup[element]))
-                        return domaincolor(companyToGroup[element])
-                    return "#69b3a2"
-                }));
+            .selectAll("g")
+            .data(expanded, d => d.source)
+            .join(enter => {
+                const group = enter.append("g")
+                    .attr("class", "inv-links")
+                    .attr("fill-opacity", (v) => {
+                        if (FundingState.state.selected.has(allElements[v.target.index])) return 0.8
+                        if (FundingState.state.selected.size > 0) return 0
+                        return 0.5
+                    })
+
+                group.append("path")
+                    .attr("d", d => {
+                        if (selectedInvestors.includes(allElements[d.target.index])) {
+                            const element = copied[d.target.index]
+                            return ArcChart.pointToArcRibbon({
+                                x: element.x,
+                                y: element.y
+                            }, d, FundingState.state.innerRadius)
+                        }
+                        return ""
+                    })
+                    .style("fill", (d) => {
+                        const element = allElements[d.source.index]
+                        if (groupWithTwoOrMore.includes(companyToGroup[element]))
+                            return domaincolor(companyToGroup[element])
+                        return "#69b3a2"
+                    }).on("mouseover", tip.show).on("mouseout", tip.hide)
+                return group
+            });
 
     }
 }
