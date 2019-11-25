@@ -48,7 +48,7 @@
     <script src="js/scatterplot.js" defer></script>
     <script src="js/funding.js" defer></script>
     <script src="js/slider.js" defer></script>
-
+    <script src="js/geomap.js" defer></script>
 </head>
 
 <body>
@@ -273,10 +273,14 @@
                 </div>
                 <div class="tab-pane fade" id="pills-acquisition" role="tabpanel"
                     aria-labelledby="pills-acquisition-tab">
-                    <p> Acquisition View</p>
+                    <div class="circlepack">
+                        <svg class="circlepack_svg" viewBox="0 0 1000 1000"></svg>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
-                    <p> Geo View</p>
+                    <div class="geomap">
+                        <svg class="geomap_svg" viewBox="0 0 1000 700"></svg>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="pills-funding" role="tabpanel"
                     aria-labelledby="pills-funding-tab">
