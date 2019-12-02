@@ -294,8 +294,13 @@ var sliderStep = d3
         ScatterplotState.state.year = val
         ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
         ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
-
         ScatterPlotChart.updateCharts()
+
+        //Remake treemap to make based on new year value
+        treemap.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
+
+        //Remake ethinicity barchart to make based on new year value
+        //ethnicity_barchart.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
     });
 
 var gStep = d3
@@ -386,10 +391,19 @@ class ScatterPlotChart {
                         }).on("click", function (d, i) {
                             DetailsState.reset()
                             DetailsState.select(d.key)
+
+                            
                             ScatterplotState.state.resetElement()
                             ScatterplotState.state.selectedElement = this
                             ScatterplotState.state.greyOutAllElement()
                             d3.select(this).select(".scatternode").attr("opacity", 1)
+
+                            //Make treemap
+                            treemap.generateChart(d.key, ScatterplotState.state.year)
+
+                            //Make barchart for ethnicity viz
+                            //ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
+
                         }).on("mouseover", function (d, i) {
                         })
                     g.append("text").text((d) => d.displayName)

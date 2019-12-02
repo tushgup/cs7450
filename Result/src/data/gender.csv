@@ -1,0 +1,94 @@
+,displayName,name,unitType,value,periodType,startDate
+0,Samsung Electronics,"Male, percent",percentage,55,year,2017-01-01
+1,Samsung Electronics,"Female, percent",percentage,45,year,2017-01-01
+2,The Walt Disney Company,"Male, percent",percentage,47,fiscal_year,2016-10-01
+3,The Walt Disney Company,"Female, percent",percentage,52,fiscal_year,2016-10-01
+4,The Walt Disney Company,"Male, percent",percentage,47,fiscal_year,2015-10-01
+5,The Walt Disney Company,"Female, percent",percentage,52,fiscal_year,2015-10-01
+6,Macy's,"Female, percent",percentage,75,year,2016-02-01
+7,Macy's,"Male, percent",percentage,25,year,2016-02-01
+8,Macy's,"Male, percent",percentage,25,year,2017-02-01
+9,Macy's,"Female, percent",percentage,75,year,2017-02-01
+10,Etsy,"Female, percent",percentage,51,year,2014-01-01
+11,Etsy,"Male, percent",percentage,49,year,2014-01-01
+12,Etsy,"Female, percent",percentage,53,year,2015-01-01
+13,Etsy,"Male, percent",percentage,45,year,2015-01-01
+14,Etsy,Other,percentage,0,year,2015-01-01
+21,Ocado,Male,units,81.4360496913821,fiscal_year,2016-10-01
+22,Ocado,Female,units,18.5639503086179,fiscal_year,2016-10-01
+23,Ocado,Male,units,82.4147202150899,fiscal_year,2015-10-01
+24,Ocado,Female,units,17.5852797849101,fiscal_year,2015-10-01
+25,Gap,"Female, percent",percentage,74,fiscal_year,2014-02-01
+26,Gap,"Female, percent",percentage,75,fiscal_year,2015-02-01
+27,Gap,"Male, percent",percentage,25,fiscal_year,2015-02-01
+28,Gap,"Male, percent",percentage,26,fiscal_year,2014-02-01
+29,Target,"Female, percent",percentage,39,fiscal_year,2017-02-01
+30,Target,"Male, percent",percentage,61,fiscal_year,2017-02-01
+31,Starbucks,"Female, percent",percentage,67,month,2018-10-01
+32,Starbucks,"Male, percent",percentage,33,month,2018-10-01
+33,Starbucks,"Female, percent",percentage,66,month,2017-10-01
+34,Starbucks,"Male, percent",percentage,34,month,2017-10-01
+35,Amazon,"Male, percent",percentage,61,year,2016-01-01
+36,Amazon,"Male, percent",percentage,63,year,2015-01-01
+37,Amazon,"Female, percent",percentage,37,year,2015-01-01
+38,Amazon,"Female, percent",percentage,39,year,2016-01-01
+39,Amazon,"Female, percent",percentage,37,year,2014-01-01
+40,Amazon,"Male, percent",percentage,63,year,2014-01-01
+41,Amazon,"Male, percent",percentage,60,month,2017-07-01
+42,Amazon,"Female, percent",percentage,40,month,2017-07-01
+43,Amazon,"Female, percent",percentage,39,month,2016-07-01
+44,Amazon,"Male, percent",percentage,61,month,2016-07-01
+45,Amazon,"Male, percent",percentage,61,month,2015-07-01
+46,Amazon,"Female, percent",percentage,39,month,2015-07-01
+47,Reckitt Benckiser,"Female, percent",percentage,44,fiscal_year,2017-01-01
+48,Reckitt Benckiser,"Male, percent",percentage,56,fiscal_year,2017-01-01
+49,Costco,Male,units,80438,month,2016-08-01
+50,Costco,Female,units,61913,month,2016-08-01
+51,Costco,Male,units,85531,month,2017-10-01
+52,Costco,Female,units,66382,month,2017-10-01
+53,Walmart,"Male, percent",percentage,44,fiscal_year,2015-02-01
+54,Walmart,"Female, percent",percentage,55,fiscal_year,2016-02-01
+55,Walmart,"Female, percent",percentage,55,fiscal_year,2015-02-01
+56,Walmart,"Male, percent",percentage,45,fiscal_year,2016-02-01
+57,Marks & Spencer,"Male, percent",percentage,28,fiscal_year,2017-04-01
+58,Marks & Spencer,"Female, percent",percentage,72,fiscal_year,2017-04-01
+59,Marks & Spencer,"Male, percent",percentage,28,fiscal_year,2016-05-01
+60,Marks & Spencer,"Female, percent",percentage,72,fiscal_year,2016-05-01
+61,Marks & Spencer,"Female, percent",percentage,72,fiscal_year,2015-05-01
+62,Marks & Spencer,"Male, percent",percentage,28,fiscal_year,2015-05-01
+63,Coca-Cola European Partners,Male,units,,fiscal_year,2016-01-01
+64,Coca-Cola European Partners,Male,units,,fiscal_year,2017-01-01
+65,Coca-Cola European Partners,Female,units,,fiscal_year,2016-01-01
+66,Coca-Cola European Partners,Female,units,,fiscal_year,2017-01-01
+73,Walgreens Boots Alliance,Male,units,34,fiscal_year,2016-09-01
+74,Walgreens Boots Alliance,"Female, percent",percentage,66,fiscal_year,2016-09-01
+75,Walgreens Boots Alliance,Male,units,34,fiscal_year,2015-09-01
+76,Walgreens Boots Alliance,"Female, percent",percentage,66,fiscal_year,2015-09-01
+77,Wish,"Male, percent",percentage,58,year,2017-01-01
+78,Wish,"Female, percent",percentage,42,year,2017-01-01
+85,Casper,"Male, percent",percentage,54,year,2017-01-01
+86,Casper,"Female, percent",percentage,46,year,2017-01-01
+87,Indiegogo,"Female, percent",percentage,45,year,2016-01-01
+88,Indiegogo,"Male, percent",percentage,55,year,2016-01-01
+89,Indiegogo,"Female, percent",percentage,45,year,2014-01-01
+90,Indiegogo,"Male, percent",percentage,55,year,2014-01-01
+91,Glossier,"Female, percent",percentage,79,year,2017-01-01
+92,Glossier,"Male, percent",percentage,21,year,2017-01-01
+93,Walgreens Boots Alliance,Male,units,34,fiscal_year,2016-09-01
+94,Walgreens Boots Alliance,"Female, percent",percentage,66,fiscal_year,2016-09-01
+95,Walgreens Boots Alliance,Male,units,34,fiscal_year,2015-09-01
+96,Walgreens Boots Alliance,"Female, percent",percentage,66,fiscal_year,2015-09-01
+97,LOLA,"Female, percent",percentage,100,q4,2016-10-01
+98,LOLA,"Male, percent",percentage,0,q4,2016-10-01
+99,EcoZoom,"Female, percent",percentage,22,q4,2016-10-01
+100,EcoZoom,"Male, percent",percentage,78,q4,2016-10-01
+101,mNectar,"Male, percent",percentage,71,q1,2017-01-01
+102,mNectar,"Female, percent",percentage,29,q1,2017-01-01
+103,Eyecam (eyeHand),"Male, percent",percentage,61,q1,2017-01-01
+104,Eyecam (eyeHand),"Female, percent",percentage,39,q1,2017-01-01
+105,Stitch Fix,"Female, percent",percentage,80,year,2017-01-01
+106,Stitch Fix,"Female, percent",percentage,87,fiscal_year,2017-08-01
+107,Stitch Fix,"Male, percent",percentage,13,fiscal_year,2017-08-01
+108,Stitch Fix,"Male, percent",percentage,20,year,2017-01-01
+109,Stitch Fix,"Female, percent",percentage,88,fiscal_year,2018-09-01
+110,Stitch Fix,"Male, percent",percentage,12,fiscal_year,2018-09-01

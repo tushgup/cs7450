@@ -48,7 +48,10 @@
     <script src="js/scatterplot.js" defer></script>
     <script src="js/funding.js" defer></script>
     <script src="js/slider.js" defer></script>
+    <script src="js/circlepack.js" defer></script>
     <script src="js/geomap.js" defer></script>
+    <script src="js/revenuebreakdown.js" defer></script>
+    <!-- <script src="js/ethnicity.js" defer></script> -->
 </head>
 
 <body>
@@ -274,7 +277,8 @@
                 <div class="tab-pane fade" id="pills-acquisition" role="tabpanel"
                     aria-labelledby="pills-acquisition-tab">
                     <div class="circlepack">
-                        <svg class="circlepack_svg" viewBox="0 0 1000 1000"></svg>
+                        <svg class="circlepack_svg" viewBox="0 0 1000 1000">
+                        </svg>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
@@ -342,7 +346,10 @@
                     <h6 class="labelText">Revenue Breakdown</h6>
                 </div>
                 <div class="col-12 treemap">
-                    <p>Treemap Viz</p>
+                    <p>Breakdown By: </p>
+                    <input type="radio" name="breakdown_segment" value="Business Segment" onchange="treemap.generateChart()" checked> Business   
+                    <input type="radio" name="breakdown_segment" value="Geographic Segment" onchange="treemap.generateChart()"> Geography
+                    <svg class="treemap_svg" viewBox="0 0 1000 1000"></svg>
                 </div>
             </div>
 
@@ -354,7 +361,7 @@
                     <h6 class="labelText">Ethnicity</h6>
                 </div>
                 <div class="col-12 ethinicity">
-                    <p>Ethnicity Viz</p>
+                    <svg class="ethnicity_svg" viewBox="0 0 1000 1000"></svg>
                 </div>
             </div>
 

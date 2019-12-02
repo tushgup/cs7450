@@ -1,0 +1,121 @@
+,displayName,name,unitType,value,periodType,startDate
+0,Macy's,Ethnically Diverse Managers,percentage,38,year,2017-02-01
+1,Macy's,Racial minorities amongst employees,percentage,61,year,2017-02-01
+2,Etsy,Multi Ethnicity,percentage,3,month,2014-07-01
+3,Etsy,White,percentage,79,month,2014-07-01
+4,Etsy,Asian,percentage,11,month,2014-07-01
+5,Etsy,Black,percentage,3,month,2014-07-01
+6,Etsy,Hispanic,percentage,4,month,2014-07-01
+7,Gap,White,percentage,48,fiscal_year,2015-02-01
+8,Gap,White,percentage,50,fiscal_year,2014-02-01
+9,Gap,Asian,units,7,fiscal_year,2014-02-01
+10,Gap,Black,percentage,19,fiscal_year,2014-02-01
+11,Gap,Asian,percentage,7,fiscal_year,2015-02-01
+12,Gap,Hispanic,percentage,20,fiscal_year,2014-02-01
+13,Gap,Hispanic,percentage,21,fiscal_year,2015-02-01
+14,Gap,Black,percentage,19,fiscal_year,2015-02-01
+17,Target,White,percentage,53,fiscal_year,2017-02-01
+18,Target,Racial minorities amongst employees,percentage,47,fiscal_year,2017-02-01
+19,Target,Ethnically Diverse Managers,percentage,33,fiscal_year,2017-02-01
+20,Starbucks,Black,percentage,9,month,2018-10-01
+21,Starbucks,Ethnically Diverse Managers,percentage,16,month,2018-10-01
+26,Starbucks,Asian,percentage,6,month,2018-10-01
+27,Starbucks,American Indian / Alaska Native,percentage,1,month,2018-10-01
+28,Starbucks,Native Hawaiian / Pacific Islander,percentage,1,month,2018-10-01
+29,Starbucks,White,percentage,57,month,2017-10-01
+30,Starbucks,Racial minorities amongst employees,percentage,43,month,2017-10-01
+31,Amazon,White,percentage,48,month,2016-07-01
+32,Amazon,Asian,percentage,13,month,2016-07-01
+33,Amazon,Hispanic,percentage,13,month,2016-07-01
+34,Amazon,Other,percentage,5,month,2016-07-01
+35,Amazon,Black,percentage,21,month,2016-07-01
+36,Amazon,White,percentage,60,year,2014-01-01
+37,Amazon,Black,percentage,15,year,2014-01-01
+38,Amazon,Hispanic,percentage,9,year,2014-01-01
+39,Amazon,Other,percentage,3,year,2014-01-01
+40,Amazon,Asian,percentage,13,year,2014-01-01
+41,Amazon,Multi Ethnicity,percentage,0,year,2014-01-01
+42,Amazon,Asian,percentage,14,month,2017-07-01
+43,Amazon,Hispanic,percentage,14,month,2017-07-01
+44,Amazon,Other,units,8,month,2017-07-01
+45,Amazon,White,percentage,42,month,2017-07-01
+46,Amazon,Black,percentage,22,month,2017-07-01
+47,Amazon,Black,percentage,21,month,2015-07-01
+48,Amazon,Hispanic,percentage,13,month,2015-07-01
+49,Amazon,Asian,percentage,11,month,2015-07-01
+50,Amazon,White,percentage,50,month,2015-07-01
+51,Amazon,Other,percentage,5,month,2015-07-01
+52,Costco,Black,units,10.1713184381469,month,2016-08-01
+53,Costco,White,units,53.2464844028839,month,2016-08-01
+54,Costco,Hispanic ,units,27.436098293102,month,2017-10-01
+55,Costco,Black,units,9.70752996781052,month,2017-10-01
+56,Costco,Multi Ethnicity,units,2.36319472329557,month,2017-10-01
+57,Costco,Asian,units,7.62870853712322,month,2017-10-01
+58,Costco,Other,units,1.5838012546655,month,2017-10-01
+59,Costco,Hispanic ,units,26.7328146191734,month,2016-08-01
+60,Costco,Asian,units,7.61938753658362,month,2016-08-01
+61,Costco,Multi Ethnicity,units,2.22999500321222,month,2016-08-01
+62,Costco,White,units,51.2806672240032,month,2017-10-01
+63,Walmart,Ethnically Diverse Managers,percentage,31,fiscal_year,2016-02-01
+64,Walmart,American Indian / Alaska Native,percentage,1,fiscal_year,2016-02-01
+65,Walmart,Multi Ethnicity,percentage,2,fiscal_year,2015-02-01
+66,Walmart,Multi Ethnicity,percentage,2,fiscal_year,2016-02-01
+67,Walmart,Hispanic,percentage,13,fiscal_year,2015-02-01
+68,Walmart,Asian,percentage,3,fiscal_year,2015-02-01
+69,Walmart,Native Hawaiian / Pacific Islander,percentage,1,fiscal_year,2016-02-01
+70,Walmart,Black,percentage,21,fiscal_year,2015-02-01
+71,Walmart,White,percentage,56,fiscal_year,2015-02-01
+72,Walmart,American Indian / Alaska Native,percentage,1,fiscal_year,2015-02-01
+73,Walmart,Asian,percentage,4,fiscal_year,2016-02-01
+74,Walmart,Black,percentage,21,fiscal_year,2016-02-01
+75,Walmart,White,percentage,57,fiscal_year,2016-02-01
+76,Walmart,Native Hawaiian / Pacific Islander,percentage,0,fiscal_year,2015-02-01
+77,Walmart,Hispanic,percentage,14,fiscal_year,2016-02-01
+78,Kroger,Ethnically Diverse Managers,percentage,18,fiscal_year,2017-03-01
+79,Walgreens Boots Alliance,"People of Color, USA",percentage,51,fiscal_year,2016-09-01
+80,Walgreens Boots Alliance,"White, USA",percentage,48,fiscal_year,2016-09-01
+81,Walgreens Boots Alliance,"Undeclared/Unidentified,USA",percentage,0,fiscal_year,2016-09-01
+82,Wish,White,percentage,32,year,2017-01-01
+83,Wish,Hispanic,percentage,8,year,2017-01-01
+84,Wish,Asian,percentage,54,year,2017-01-01
+85,Wish,Other,percentage,4,year,2017-01-01
+86,Wish,Black,percentage,2,year,2017-01-01
+87,Ikea,Multi Ethnicity,percentage,1,year,2016-01-01
+88,Ikea,American Indian / Alaska Native,percentage,1,year,2016-01-01
+89,Ikea,Native Hawaiian / Pacific Islander,percentage,1,year,2016-01-01
+90,Ikea,Asian,percentage,7,year,2016-01-01
+91,Ikea,Black,percentage,20,year,2016-01-01
+92,Ikea,Hispanic,percentage,23,year,2016-01-01
+93,Ikea,White,percentage,47,year,2016-01-01
+94,Casper,Other,percentage,5,year,2017-01-01
+95,Casper,White,percentage,64,year,2017-01-01
+96,Casper,Black,percentage,4,year,2017-01-01
+97,Casper,Hispanic,percentage,11,year,2017-01-01
+98,Casper,Asian,percentage,16,year,2017-01-01
+99,Indiegogo,White,percentage,64,year,2016-01-01
+100,Indiegogo,Asian,percentage,23,year,2016-01-01
+101,Indiegogo,Black,percentage,2,year,2016-01-01
+102,Indiegogo,Hispanic,percentage,8,year,2016-01-01
+103,Indiegogo,Other,units,3,year,2016-01-01
+104,Indiegogo,Black,percentage,2,year,2014-01-01
+105,Indiegogo,Hispanic,percentage,8,year,2014-01-01
+106,Indiegogo,White,percentage,64,year,2014-01-01
+107,Indiegogo,Asian,percentage,23,year,2014-01-01
+108,Indiegogo,Other,percentage,3,year,2014-01-01
+109,Glossier,Black,percentage,4,year,2017-01-01
+110,Glossier,White,percentage,69,year,2017-01-01
+111,Glossier,Other,percentage,3,year,2017-01-01
+112,Glossier,Hispanic,percentage,9,year,2017-01-01
+113,Glossier,Asian,percentage,14,year,2017-01-01
+114,Metro Bank,Black,percentage,10,year,2017-01-01
+115,Metro Bank,Asian,percentage,31,year,2017-01-01
+116,Metro Bank,White,percentage,49,year,2017-01-01
+117,Metro Bank,Other,percentage,8,year,2017-01-01
+118,Walgreens Boots Alliance,"People of Color, USA",percentage,51,fiscal_year,2016-09-01
+119,Walgreens Boots Alliance,"White, USA",percentage,48,fiscal_year,2016-09-01
+120,Walgreens Boots Alliance,"Undeclared/Unidentified,USA",percentage,0,fiscal_year,2016-09-01
+121,Stitch Fix,Other,percentage,4,year,2017-01-01
+122,Stitch Fix,White,percentage,74,year,2017-01-01
+123,Stitch Fix,Asian,percentage,10,year,2017-01-01
+124,Stitch Fix,Hispanic,percentage,9,year,2017-01-01
+125,Stitch Fix,Black,percentage,4,year,2017-01-01
