@@ -25,14 +25,19 @@ $("#searchbox").keypress(function (e) {
         ScatterplotState.selectNode(this.value)
         this.value = ""
 
+
     }
 })
 
 $('#searchbox-investment').keypress(function (e) {
     if (event.which == 13) {
         if (!addInvestors(this.value)) return
-        this.value = ""
         updateList()
+        $(`#chart_div [data-in='${this.value}']`)
+            .addClass("svg_selected")
+            .attr("data-selected", "1");
+        this.value = ""
+
     }
 
 })

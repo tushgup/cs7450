@@ -154,7 +154,7 @@ function createGroup() {
 }
 
 let selectedInvestors = [
-    // "Accel Partners"
+    "Accel Partners"
 ]
 let allinvestors;
 function addInvestors(investors) {
@@ -212,10 +212,17 @@ d3.csv('./data/investments.csv').then(function (dataset) {
     })).enter()
     .append("svg")
     .attr("data-in", d => d.name)
-    .attr("data-selected", 0)
+    .attr("data-selected", d => {
+        if (d.name === "Accel Partners") return 1
+        return 0
+    })
     .attr("width", "90%")
     .attr("height", "10%")
     .attr("viewBox", "0 0 18 2")
+    .attr("class", d => {
+        if (d.name === "Accel Partners") return "svg_selected"
+        return ""
+    })
 
 
     few.append("rect")
@@ -233,7 +240,15 @@ d3.csv('./data/investments.csv').then(function (dataset) {
         .attr("fill", "orange")
         .attr("font-size", "5%")
         .attr("x", 0.3)
-        .attr("y", 1)
+        .attr("y", 0.7)
+    few.append("text")
+        .text(d => d.value)
+        .attr("class", "disable-select")
+        .attr("style", "mix-blend-mode: difference;")
+        .attr("fill", "orange")
+        .attr("font-size", "5%")
+        .attr("x", 0.3)
+        .attr("y", 1.7)
     
     
 
