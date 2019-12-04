@@ -193,6 +193,10 @@ $(document).on("click", "#list-investors i", function(event)
 {
     deleteInvestors(this.parentElement.dataset.in)
     updateList()
+    $(`#chart_div [data-in='${this.parentElement.dataset.in}']`)
+    .removeClass("svg_selected")
+    .attr("data-selected", "0");
+
 })
 
 $(document).on("mouseover", "#chart_div svg", function (e) {
