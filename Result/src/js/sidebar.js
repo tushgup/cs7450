@@ -1,5 +1,6 @@
 $(document).on("click", ".nav-pills .nav-item .nav-link", function (event) // Go to story (anchor handler)
   {
+    console.log(this.getAttribute("href"))
     $(".left-sidebar").addClass("none")
     switch (this.getAttribute("href")) {
       case "#pills-overview":
@@ -13,6 +14,5 @@ $(document).on("click", ".nav-pills .nav-item .nav-link", function (event) // Go
         break;
       default:
         $("#lsidebar-overview").removeClass("none")
-
     }
   });

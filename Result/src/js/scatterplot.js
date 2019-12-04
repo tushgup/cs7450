@@ -458,7 +458,7 @@ d3.selectAll(".scatterplot_legend_shape").each(function (d) {
     ScatterPlotUtility.mapToFormat(d3.select(this), f)
 })
 
-d3.selectAll(".checkbox_svg").append("rect")
+d3.selectAll(".scatterplot_checkbox_svg").append("rect")
     .attr("width", 100)
     .attr("height", 100)
     .attr("fill", "white")
@@ -471,7 +471,7 @@ d3.selectAll(".checkbox_svg").append("rect")
 
         d3.select(this).attr("fill", selected ? "black" : "white")
         if (attribute === "All") {
-            d3.selectAll(".checkbox_svg")
+            d3.selectAll(".scatterplot_checkbox_svg")
                 .selectAll("rect")
                 .attr("fill", selected ? "black" : "white")
             if (selected)
