@@ -16,6 +16,7 @@
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/d3tip.css">
 
     <!-- Material Icons WebFont -->
@@ -47,7 +48,6 @@
     <script src="js/stupidstuff.js" defer></script>
     <script src="js/scatterplot.js" defer></script>
     <script src="js/funding.js" defer></script>
-    <script src="js/slider.js" defer></script>
     <script src="js/circlepack.js" defer></script>
     <script src="js/geomap.js" defer></script>
     <script src="js/revenuebreakdown.js" defer></script>
@@ -58,206 +58,453 @@
 <body>
     <div class="row application">
         <div class="col-2 sidebar">
-            <div class="row leftPanel">
-                <div class="col-12 col-md-12" style="align-self:flex-end">
-                    <label for="x_axis">X axis: </label>
+            <div class="left-sidebar" id="lsidebar-overview">
+                <div class="row leftPanel">
+                    <div class="col-12 col-md-12" style="align-self:flex-end">
+                        <label for="x_axis">X axis: </label>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <select class="custom-select" id="xaxis" onchange="ScatterPlotChart.onxaxischange()">
+                            <option selected value="location">Location</option>
+                            <option value="revenue">Revenue</option>
+                            <option value="valuation">Valuation</option>
+                            <option value="profitmargin">Gross Profit Margin</option>
+                            <option value="profit">Gross Profit</option>
+                            <option value="tax">Income Tax Expense</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-12 col-md-12">
-                    <select class="custom-select" id="xaxis" onchange="ScatterPlotChart.onxaxischange()">
-                        <option selected value="location">Location</option>
-                        <option value="revenue">Revenue</option>
-                        <option value="valuation">Valuation</option>
-                        <option value="profitmargin">Gross Profit Margin</option>
-                        <option value="profit">Gross Profit</option>
-                        <option value="tax">Income Tax Expense</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="row leftPanel">
-                <div class="col-12 col-md-12" style="align-self:flex-end">
-                    <label for="y_axis">Y axis: </label>
+                <div class="row leftPanel">
+                    <div class="col-12 col-md-12" style="align-self:flex-end">
+                        <label for="y_axis">Y axis: </label>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <select class="custom-select" id="yaxis" onchange="ScatterPlotChart.onyaxischange()">
+                            <option value="location">Location</option>
+                            <option selected value="revenue">Revenue</option>
+                            <option value="valuation">Valuation</option>
+                            <option value="profitmargin">Gross Profit Margin</option>
+                            <option value="profit">Gross Profit</option>
+                            <option value="tax">Income Tax Expense</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-12 col-md-12">
-                    <select class="custom-select" id="yaxis" onchange="ScatterPlotChart.onyaxischange()">
-                        <option value="location">Location</option>
-                        <option selected value="revenue">Revenue</option>
-                        <option value="valuation">Valuation</option>
-                        <option value="profitmargin">Gross Profit Margin</option>
-                        <option value="profit">Gross Profit</option>
-                        <option value="tax">Income Tax Expense</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="filterGroup">
-                <h2>&nbsp;Year</h2>
-                <div class="row align-items-center">
-                    <div class="col nopadding">
-                        <div id="slider-time">
-                            <svg viewBox="-60 -10 580 100">
-                                <g transform="translate(0,7)" fill="none" font-size="10" font-family="sans-serif"
-                                    text-anchor="middle">
-                                    <g opacity="1" transform="translate(50.5,0)">
-                                        <text fill="#aaa" y="20" dy=".71em" text-anchor="middle" opacity="1"
-                                            style="font-size: xx-large">2014</text>
+                <div class="filterGroup">
+                    <h2>&nbsp;Year</h2>
+                    <div class="row align-items-center">
+                        <div class="col nopadding">
+                            <div id="slider-time">
+                                <svg viewBox="-60 -10 580 100">
+                                    <g transform="translate(0,7)" fill="none" font-size="10" font-family="sans-serif"
+                                        text-anchor="middle">
+                                        <g opacity="1" transform="translate(50.5,0)">
+                                            <text fill="#aaa" y="20" dy=".71em" text-anchor="middle" opacity="1"
+                                                style="font-size: xx-large">2014</text>
+                                        </g>
+                                        <g opacity="1" transform="translate(450.5,0)">
+                                            <text fill="#aaa" y="20" dy=".71em" text-anchor="middle" opacity="1"
+                                                style="font-size: xx-large">2018</text>
+                                        </g>
                                     </g>
-                                    <g opacity="1" transform="translate(450.5,0)">
-                                        <text fill="#aaa" y="20" dy=".71em" text-anchor="middle" opacity="1"
-                                            style="font-size: xx-large">2018</text>
-                                    </g>
-                                </g>
-                            </svg>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <h3>&nbsp;Filters</h3>
-            <div class="filter-picker">
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                    <svg width="1rem"  height="1rem" style="background-color: black;"></svg>
-                    <span class="scatterplot_text_legend">Select All</span>
+                <h3>&nbsp;Filters</h3>
+                <div class="filter-picker">
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" height="1rem" style="background-color: black;"></svg>
+                            <span class="scatterplot_text_legend">Select All</span>
+                        </div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="All" width="1rem" height="1rem"
+                            style="background-color: white"></svg>
                     </div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox= "All" width="1rem" height="1rem"
-                        style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
+                    <div class="scatterplot_legend">
 
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Food & Beverage" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Food & Beverage</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Food & Beverage" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Food & Beverage" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Food & Beverage</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Food & Beverage" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
 
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Manufacturing & Industrial</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Investment" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Investment</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Investment" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Business Products & Services" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Business Products & Services</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Business Products & Services" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Marketing" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Marketing</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Marketing" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Healthcare" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Healthcare</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Healthcare" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Education" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Education</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Education" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Automotive & Transportation</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Travel & Leisure</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Mobile & Telecommunications</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Human Resources & Recruiting</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Real Estate & Construction</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Media & Entertainment" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Media & Entertainment</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Media & Entertainment" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Financial Services" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Financial Services</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Financial Services" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Technology" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Technology</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Technology" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Non-Profit" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Non-Profit</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Non-Profit" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Retail" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Retail</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Retail" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Agriculture" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Agriculture</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Agriculture" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Energy & Utilities</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                <div class="scatterplot_legend">
-                    <div class="legend_element">
-                        <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100" data-checkbox="Other" height="1rem" ></svg>
-                        <span class="scatterplot_text_legend">Other</span></div>
-                    <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Other" width="1rem" height="1rem" style="background-color: white"></svg>
-                </div>
-                </ul>
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Manufacturing & Industrial" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Manufacturing & Industrial</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Investment" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Investment</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Investment" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Business Products & Services" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Business Products & Services</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Business Products & Services"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Marketing" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Marketing</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Marketing" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Healthcare" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Healthcare</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Healthcare" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Education" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Education</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Education" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Automotive & Transportation" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Automotive & Transportation</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Travel & Leisure" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Travel & Leisure</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Mobile & Telecommunications" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Mobile & Telecommunications</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Human Resources & Recruiting" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Human Resources & Recruiting</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Real Estate & Construction" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Real Estate & Construction</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Media & Entertainment" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Media & Entertainment</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Media & Entertainment"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Financial Services" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Financial Services</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Financial Services" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Technology" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Technology</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Technology" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Non-Profit" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Non-Profit</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Non-Profit" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Retail" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Retail</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Retail" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Agriculture" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Agriculture</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Agriculture" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Energy & Utilities" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Energy & Utilities</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="scatterplot_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Other" height="1rem"></svg>
+                            <span class="scatterplot_text_legend">Other</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Other" width="1rem" height="1rem"
+                            style="background-color: white"></svg>
+                    </div>
+                    </ul>
 
 
+                </div>
             </div>
+            <div class="left-sidebar" id="lsidebar-acquisition">
+                <h3>&nbsp;Filters</h3>
+                <div class="filter-picker">
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" height="1rem" style="background-color: black;"></svg>
+                            <span class="acquisition_text_legend">Select All</span>
+                        </div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="All" width="1rem" height="1rem"
+                            style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Food & Beverage" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Food & Beverage</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Food & Beverage" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Manufacturing & Industrial" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Manufacturing & Industrial</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Investment" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Investment</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Investment" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Business Products & Services" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Business Products & Services</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Business Products & Services"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Marketing" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Marketing</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Marketing" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Healthcare" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Healthcare</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Healthcare" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Education" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Education</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Education" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Automotive & Transportation" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Automotive & Transportation</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Travel & Leisure" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Travel & Leisure</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Mobile & Telecommunications" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Mobile & Telecommunications</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Human Resources & Recruiting" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Human Resources & Recruiting</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Real Estate & Construction" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Real Estate & Construction</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Media & Entertainment" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Media & Entertainment</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Media & Entertainment"
+                            width="1rem" height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Financial Services" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Financial Services</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Financial Services" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Technology" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Technology</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Technology" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Non-Profit" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Non-Profit</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Non-Profit" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Retail" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Retail</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Retail" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Agriculture" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Agriculture</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Agriculture" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Energy & Utilities" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Energy & Utilities</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" width="1rem"
+                            height="1rem" style="background-color: white"></svg>
+                    </div>
+                    <div class="acquisition_legend">
+                        <div class="legend_element">
+                            <svg width="1rem" class="acquisition_legend_shape" viewBox="0 0 100 100"
+                                data-checkbox="Other" height="1rem"></svg>
+                            <span class="acquisition_text_legend">Other</span></div>
+                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Other" width="1rem" height="1rem"
+                            style="background-color: white"></svg>
+                    </div>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="left-sidebar none" id="lsidebar-funding">
+                <!-- <div class="row leftPanel">
+                    <div class="col-12 col-md-12">
+
+                        <h5>Investment Value</h3>
+                        <label class="label-investment-val" for="minval">MINIMUM</label>
+                        <input class="input-investment-val" id="minval" min="0" value="1" type="number">
+                        <label class="label-investment-val" for="maxval">MAXIMUM</label>
+                        <input class="input-investment-val" id="maxval" min="0" value="1" type="number">
+                    </div>
+                </div> -->
+                <div class="row leftPanel">
+
+                    <div class="col-12 col-md-12">
+
+                        <h5>Investors</h3>
+                        <input id="searchbox-investment">
+
+                        <ul id="list-investors" style='list-style:  none; padding-inline-start: 0;'>
+                            
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
         </div>
-        <!-- <div class="col-2 sidebar"></div> -->
         <div class="col-7">
 
             <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-self:flex-end" id="pills-tab"
                 role="tablist">
                 <li>
                     <div class="form-inline">
-                        <input class="form-control mr-sm-2" id="searchbox" type="search" placeholder="Search" aria-label="Search" />
+                        <input class="form-control mr-sm-2" id="searchbox" type="search" placeholder="Search"
+                            aria-label="Search" />
                         <span class="input-group-addon"><i class="material-icons">search</i></span>
                     </div>
                 </li>
@@ -309,87 +556,92 @@
 
         </div>
         <div class="col-3 companyDetails">
-            <div class="row">
-                <div class="col-8" style="align-self:flex-end">
-                    <h6 class="labelText">Company Name</h6>
+            <div class="right-sidebar" id="rsidebar-details">
+                <div class="row">
+                    <div class="col-8" style="align-self:flex-end">
+                        <h6 class="labelText">Company Name</h6>
+                    </div>
+                    <div class="col-3  offset-1">
+                        <button type="button" class="btn btn-primary" onclick="DetailsState.clear()">
+                            Clear
+                        </button>
+                    </div>
                 </div>
-                <div class="col-3  offset-1">
-                    <button type="button" class="btn btn-primary" onclick="DetailsState.clear()">
-                        Clear
-                    </button>
+
+                <h3 class="companyName" id="companyName">&nbsp;</h3>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="labelText">Revenue</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="labelText">Market Cap</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h5 id="revenue">&nbsp;</h5>
+                    </div>
+                    <div class="col-6">
+                        <h5 id="marketcap">&nbsp;</h5>
+                    </div>
+                </div>
+
+                <ul style='list-style:  none; padding-inline-start: 0;'>
+                    <li id="companytype">Type: </li>
+                    <li id="companyyear">Founded: </li>
+                    <li id="companyhq">HQ: </li>
+                    <li id="companywebsite">Website: </li>
+                    <li id="companyemployee">Employee: </li>
+                    <li id="companydescription"></li>
+
+                </ul>
+
+
+                <hr>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="labelText">Revenue Breakdown</h6>
+                    </div>
+                    <div class="col-12 treemap">
+                        <p>Breakdown By: </p>
+                        <input type="radio" name="breakdown_segment" value="Business Segment"
+                            onchange="treemap.generateChart()" checked> Business
+                        <input type="radio" name="breakdown_segment" value="Geographic Segment"
+                            onchange="treemap.generateChart()"> Geography
+                        <svg class="treemap_svg" viewBox="0 0 1000 1000"></svg>
+                    </div>
+                </div>
+
+                <hr>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="labelText">Ethnicity</h6>
+                    </div>
+                    <div class="col-12 ethinicity">
+                        <svg class="ethnicity_svg" viewBox="0 0 1000 1000"></svg>
+                    </div>
+                </div>
+
+                <hr>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="labelText">Gender</h6>
+                    </div>
+                    <div class="col-12 gender">
+                        <p>Gender Viz</p>
+                    </div>
                 </div>
             </div>
-
-            <h3 class="companyName" id="companyName">&nbsp;</h3>
-
-            <div class="row">
-                <div class="col-6">
-                    <h6 class="labelText">Revenue</h6>
-                </div>
-                <div class="col-6">
-                    <h6 class="labelText">Market Cap</h6>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <h5 id="revenue">&nbsp;</h5>
-                </div>
-                <div class="col-6">
-                    <h5 id="marketcap">&nbsp;</h5>
-                </div>
-            </div>
-
-            <ul style='list-style:  none; padding-inline-start: 0;'>
-                <li id="companytype">Type: </li>
-                <li id="companyyear">Founded: </li>
-                <li id="companyhq">HQ: </li>
-                <li id="companywebsite">Website: </li>
-                <li id="companyemployee">Employee: </li>
-                <li id="companydescription"></li>
-
-            </ul>
-
-
-            <hr>
-
-
-            <div class="row">
-                <div class="col-12">
-                    <h6 class="labelText">Revenue Breakdown</h6>
-                </div>
-                <div class="col-12 treemap">
-                    <p>Breakdown By: </p>
-                    <input type="radio" name="breakdown_segment" value="Business Segment"
-                        onchange="treemap.generateChart()" checked> Business
-                    <input type="radio" name="breakdown_segment" value="Geographic Segment"
-                        onchange="treemap.generateChart()"> Geography
-                    <svg class="treemap_svg" viewBox="0 0 1000 1000"></svg>
-                </div>
-            </div>
-
-            <hr>
-
-
-            <div class="row">
-                <div class="col-12">
-                    <h6 class="labelText">Ethnicity</h6>
-                </div>
-                <div class="col-12 ethinicity">
-                    <svg class="ethnicity_svg" viewBox="0 0 1000 1000"></svg>
-                </div>
-            </div>
-
-            <hr>
-
-
-            <div class="row">
-                <div class="col-12">
-                    <h6 class="labelText">Gender</h6>
-                </div>
-                <div class="col-12 gender">
-                    <p>Gender Viz</p>
-                </div>
+            <div class="right-sidebar none" id="rsidebar-funding">
+                  <div id="chart_div"></div>
             </div>
         </div>
     </div>

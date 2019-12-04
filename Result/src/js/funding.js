@@ -19,6 +19,13 @@ class FundingData {
     constructor(dataset) {
         this.dataset = dataset.filter(v => v.amount.includes("USD"))
         this.allInvestors = _(this.dataset).map(v => v.name).countBy().value()
+        this.sum = {}
+        this.dataset.forEach((v) => {
+            if (!(v.name in this.sum)) this.sum[v.name] = 0
+            if (+v.amount.split(" ")[0])
+            this.sum[v.name] += (+v.amount.split(" ")[0])
+
+        })
     }
 
     investmentToMatrix(selectedInvestors) {
@@ -92,7 +99,7 @@ class FundingData {
                             subindex: original.source.subindex,
                             startAngle: currentSrcAngle,
                             endAngle: currentSrcAngle + value / sum * srcAngle,
-                            value: value
+                            value: value,
                         },
                         target: {
                             index: original.target.index,
@@ -105,6 +112,7 @@ class FundingData {
                         date: v.date,
                         value: value
                     })
+                    console.log(v.stage)
                     currentSrcAngle += value / sum * srcAngle
                     currentTrgAngle += value / sum * trgAngle
 
@@ -146,21 +154,19 @@ function createGroup() {
 }
 
 let selectedInvestors = [
-    "Highland Capital Partners",
-    "Wayne Chang",
-    "Jason Robins",
-    "Niraj Shah",
-    "Bob White",
-    "Accel Partners"
+    // "Accel Partners"
 ]
-
+let allinvestors;
 function addInvestors(investors) {
+    if (!allinvestors.has(investors)) return false
     const s = new Set(selectedInvestors)
+    if (s.has(investors)) return false
     s.add(investors)
     selectedInvestors = Array.from(s)
     FundingState.state.svg.selectAll("*").remove();
     createGroup()
     ArcChart.updateCharts()
+    return true
 
 }
 
@@ -192,6 +198,55 @@ d3.csv('./data/investments.csv').then(function (dataset) {
     // function zoomed() {
     //     FundingState.state.svg.select("g").attr("transform", d3.event.transform);
     // }
+
+    const j = Object.keys(FundingState.state.data.allInvestors)
+    allinvestors = new Set(j)
+    let scl = d3.scaleLinear()
+    .domain(d3.extent(Object.entries(FundingState.state.data.sum).map(v => v[1])))
+    .range([0, 17])
+
+    var few = d3
+    .select("#chart_div").selectAll("svg")
+    .data(Object.entries(FundingState.state.data.sum).sort((a, b) => -a[1] + b[1]).map(v => {
+        return {name: v[0], value: v[1]}
+    })).enter()
+    .append("svg")
+    .attr("data-in", d => d.name)
+    .attr("data-selected", 0)
+    .attr("width", "90%")
+    .attr("height", "10%")
+    .attr("viewBox", "0 0 18 2")
+
+
+    few.append("rect")
+    .attr("fill", "white")
+    .attr("style", "mix-blend-mode: difference;")
+    .attr("x", d=>scl(d.value))
+    .attr("y", 0)
+    .attr("width", "0.2")
+    .attr("height", "2")
+
+    few.append("text")
+        .text(d => d.name)
+        .attr("class", "disable-select")
+        .attr("style", "mix-blend-mode: difference;")
+        .attr("fill", "orange")
+        .attr("font-size", "5%")
+        .attr("x", 0.3)
+        .attr("y", 1)
+    
+    
+
+
+
+    $('#searchbox-investment').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    }, {
+        name: 'states',
+        source: substringMatcher(j)
+    });
 
     createGroup()
 
@@ -564,7 +619,10 @@ class ArcChart {
                                     })
                                     .on("mouseout", tip.hide)
                                 return group
-                            });
+                            }, update => update.on("mouseover", function (d) {
+                                if (d.stage || d.date || d.value)
+                                    tip.show.bind(this)(d)
+                            }));
                     })
 
 

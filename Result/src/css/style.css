@@ -119,3 +119,42 @@ li {
     border: #fff;
     border: 1px;
 }
+
+.none {
+    display: none;
+}
+
+.label-investment-val {
+    padding-top: 0.3rem;
+    font-family: 'Montserrat',
+    sans-serif;
+    font-size: small;
+    font-weight: bold;
+
+}
+
+.input-investment-val {
+    border: 0.3rem solid white;
+    border-radius: 0.3rem;
+}
+
+#searchbox-investment {
+    color: white;
+    border: 0.1rem solid white;
+    background: black;
+    border-radius: 0.3rem;
+    padding-left: 0.3rem;
+}
+
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.svg_selected {
+    background-color: white
+}
+

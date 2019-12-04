@@ -432,7 +432,7 @@ class ScatterPlotChart {
 
                         }).on("mouseover", function () {
                             const j = d3.select(this).attr("transform")
-                            d3.select(this).attr("transform", `${j} scale(2, 2)`)
+                            d3.select(this).attr("transform", `${j} scale(1.3, 1.3)`)
                         }).on("mouseout", function () {
                             const j = d3.select(this).attr("transform").indexOf("scale")
                             d3.select(this).attr("transform", d3.select(this).attr("transform").substr(0, j - 1))
