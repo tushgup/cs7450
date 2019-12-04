@@ -92,14 +92,16 @@ li {
     font-size: 1rem;
 }
 
-.scatterplot_legend {
+.scatterplot_legend,
+.acquisition_legend {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0.5rem;
 }
 
-.scatterplot_text_legend {
+.scatterplot_text_legend,
+.acquisition_text_legend {
     padding-left: 0.5rem;
 }
 
@@ -109,7 +111,10 @@ li {
     justify-content: flex-end;
 }
 
-.scatterplot_legend_shape, .checkbox_svg {
+.scatterplot_legend_shape,
+.scatterplot_checkbox_svg,
+.acquisition_checkbox_svg,
+.acquisition_legend_shape {
     flex-shrink: 0;
 }
 

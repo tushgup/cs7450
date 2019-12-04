@@ -50,6 +50,7 @@
     <script src="js/funding.js" defer></script>
     <script src="js/circlepack.js" defer></script>
     <script src="js/revenuebreakdown.js" defer></script>
+    <script src="js/sidebar.js" defer></script>
     <script src="js/search.js" defer></script>
     <script src="js/ethnicity.js" defer></script>
 </head>
@@ -120,7 +121,7 @@
                             <svg width="1rem" height="1rem" style="background-color: black;"></svg>
                             <span class="scatterplot_text_legend">Select All</span>
                         </div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="All" width="1rem" height="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="All" width="1rem" height="1rem"
                             style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -129,7 +130,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Food & Beverage" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Food & Beverage</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Food & Beverage" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Food & Beverage" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -138,7 +139,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Manufacturing & Industrial" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Manufacturing & Industrial</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Manufacturing & Industrial"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -146,7 +147,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Investment" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Investment</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Investment" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Investment" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -154,7 +155,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Business Products & Services" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Business Products & Services</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Business Products & Services"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Business Products & Services"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -162,7 +163,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Marketing" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Marketing</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Marketing" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Marketing" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -170,7 +171,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Healthcare" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Healthcare</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Healthcare" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Healthcare" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -178,7 +179,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Education" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Education</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Education" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Education" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -186,7 +187,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Automotive & Transportation" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Automotive & Transportation</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Automotive & Transportation"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -194,7 +195,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Travel & Leisure" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Travel & Leisure</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Travel & Leisure" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -202,7 +203,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Mobile & Telecommunications" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Mobile & Telecommunications</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Mobile & Telecommunications"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -210,7 +211,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Human Resources & Recruiting" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Human Resources & Recruiting</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Human Resources & Recruiting"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -218,7 +219,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Real Estate & Construction" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Real Estate & Construction</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Real Estate & Construction"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -226,7 +227,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Media & Entertainment" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Media & Entertainment</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Media & Entertainment"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Media & Entertainment"
                             width="1rem" height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -234,7 +235,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Financial Services" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Financial Services</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Financial Services" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Financial Services" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -242,7 +243,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Technology" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Technology</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Technology" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Technology" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -250,7 +251,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Non-Profit" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Non-Profit</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Non-Profit" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Non-Profit" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -258,7 +259,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Retail" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Retail</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Retail" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Retail" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -266,7 +267,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Agriculture" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Agriculture</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Agriculture" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Agriculture" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -274,7 +275,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Energy & Utilities" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Energy & Utilities</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" width="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Energy & Utilities" width="1rem"
                             height="1rem" style="background-color: white"></svg>
                     </div>
                     <div class="scatterplot_legend">
@@ -282,7 +283,7 @@
                             <svg width="1rem" class="scatterplot_legend_shape" viewBox="0 0 100 100"
                                 data-checkbox="Other" height="1rem"></svg>
                             <span class="scatterplot_text_legend">Other</span></div>
-                        <svg class="checkbox_svg" viewBox="0 0 100 100" data-checkbox="Other" width="1rem" height="1rem"
+                        <svg class="scatterplot_checkbox_svg" viewBox="0 0 100 100" data-checkbox="Other" width="1rem" height="1rem"
                             style="background-color: white"></svg>
                     </div>
                     </ul>
@@ -290,7 +291,7 @@
 
                 </div>
             </div>
-            <div class="left-sidebar" id="lsidebar-acquisition">
+            <div class="left-sidebar none" id="lsidebar-acquisition">
                 <h3>&nbsp;Filters</h3>
                 <div class="filter-picker">
                     <div class="acquisition_legend">

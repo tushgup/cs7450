@@ -83,4 +83,40 @@ Promise.all([d3.json("./data/parentchildcompanies.json")]).then(function(data){
   }
 });
 
+d3.selectAll(".acquisition_legend_shape").each(function (d) {
+  const attribute = this.getAttribute("data-checkbox")
+  const f = color_tags_mapping[attribute]
+  ScatterPlotUtility.mapToFormat(d3.select(this), f)
+})
+
+d3.selectAll(".acquisition_checkbox_svg").append("rect")
+  .attr("width", 100)
+  .attr("height", 100)
+  .attr("fill", "white")
+  .attr("stroke-width", 25)
+  .attr("stroke", "white")
+  .on("click", function (d) {
+    const attribute = this.parentElement.dataset.checkbox
+
+    const selected = d3.select(this).attr("fill") === "white"
+
+    d3.select(this).attr("fill", selected ? "black" : "white")
+    if (attribute === "All") {
+      d3.selectAll(".acquisition_checkbox_svg")
+        .selectAll("rect")
+        .attr("fill", selected ? "black" : "white")
+      // if (selected)
+      //   ScatterplotState.clearTag()
+      // else
+      //   ScatterplotState.resetTag()
+      return
+    }
+
+
+    // if (selected)
+    //   ScatterplotState.removeTag(attribute)
+    // else
+    //   ScatterplotState.addTag(attribute)
+
+  })
 
