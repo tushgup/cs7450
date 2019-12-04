@@ -558,7 +558,11 @@ class ArcChart {
                                         if (groupWithTwoOrMore.includes(companyToGroup[element]))
                                             return domaincolor(companyToGroup[element])
                                         return "#69b3a2"
-                                    }).on("mouseover", tip.show).on("mouseout", tip.hide)
+                                    }).on("mouseover", function (d) {
+                                        if (d.stage || d.date || d.value)
+                                            tip.show.bind(this)(d)
+                                    })
+                                    .on("mouseout", tip.hide)
                                 return group
                             });
                     })
@@ -606,7 +610,10 @@ class ArcChart {
                         if (groupWithTwoOrMore.includes(companyToGroup[element]))
                             return domaincolor(companyToGroup[element])
                         return "#69b3a2"
-                    }).on("mouseover", tip.show).on("mouseout", tip.hide)
+                    }).on("mouseover", function (d) {
+                        if (d.stage || d.date || d.value)
+                        tip.show.bind(this)(d)
+                    }).on("mouseout", tip.hide)
                 return group
             });
 

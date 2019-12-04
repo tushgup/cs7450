@@ -52,15 +52,8 @@ class DetailsData {
     getHomepage(displayName) {
         if (!this.details) return "Data is loading. Try again in a few seconds"
         const f = this.details.find(v => v && v.displayName === displayName)
-        this.details.forEach((v, i) => {
-            if (!v) {
-                            console.log(this.details[i - 1])
-
-                console.log(i)
-            }
-        })
         if (!f) return "N/A"
-        return `${f.homepage.replace(/\/$/, "") || "N/A"}`
+        return `${f.homepage ? f.homepage.replace(/\/$/, "") : "N/A"}`
     }
 
     getEmployeeNumber(displayName) {

@@ -76,23 +76,18 @@ class CompanyData {
     }
 
 
-    getColor(company) {
-        const d = this.tagslist.find(v => v.displayName === company)
-        if (!d) return "gray"
-        let rand = Math.round(Math.random())
-        return this.alltags[eval(d.major_tags).length > 1 ? eval(d.major_tags)[rand] : eval(d.major_tags)[0]].color
-    }
+    
 
     getTags(company) {
         return eval(this.tagslist.find(v => v.displayName === company).major_tags)
 
     }
 
-    getShape(company) {
+    getRandTags(company) {
         const d = this.tagslist.find(v => v.displayName === company)
         if (!d) return "gray"
         let rand = Math.round(Math.random())
-        return this.alltags[eval(d.major_tags).length > 1 ? eval(d.major_tags)[rand] : eval(d.major_tags)[0]].shape
+        return this.alltags[eval(d.major_tags).length > 1 ? eval(d.major_tags)[rand] : eval(d.major_tags)[0]]
     }
 }
 
@@ -146,18 +141,42 @@ class ScatterplotState {
             .call(d3.axisBottom(this.x))
 
         this.tagsSet = new Set(Object.keys(color_tags_mapping))
+        this.tagsSetAll = new Set(this.tagsSet)
     }
 
     static addTag(tag) {
         ScatterplotState.state.tagsSet.add(tag)
         ScatterPlotChart.updateCharts()
+    }
 
+    static resetTag() {
+        ScatterplotState.state.tagsSet = new Set(ScatterplotState.state.tagsSetAll)
+        ScatterPlotChart.updateCharts()
+    }
+
+    static clearTag() {
+        ScatterplotState.state.tagsSet = new Set()
+        ScatterPlotChart.updateCharts()
     }
 
     static removeTag(tag) {
         ScatterplotState.state.tagsSet.delete(tag)
         ScatterPlotChart.updateCharts()
 
+    }
+
+    static selectNode(company) {
+        ScatterplotState.state.nodeG
+            .selectAll(".scattter_comp")
+            .each(function (d) {
+                if (d.key !== company) return
+                DetailsState.reset()
+                DetailsState.select(d.key)
+                ScatterplotState.state.resetElement()
+                ScatterplotState.state.selectedElement = this
+                ScatterplotState.state.greyOutAllElement()
+                d3.select(this).select(".scatternode").attr("opacity", 1)
+            })
     }
 
     axisLGenerator(option) {
@@ -319,6 +338,14 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
         DetailsState.state.data.receiveFromScatter(data)
 
         ScatterplotState.state = new ScatterplotState(data)
+        $('#searchbox').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'states',
+            source: substringMatcher(ScatterplotState.state.data.list_companies)
+        });
 
 
         ScatterplotState.state.nodeG = ScatterplotState.state.svg.append("g")
@@ -354,7 +381,7 @@ class ScatterPlotChart {
         var simulation = d3.forceSimulation(ScatterplotState.state.data.incomestatements)
             .force("x", d3.forceX(function (d) {
                 const tags = ScatterplotState.state.data.getTags(d.key)
-                const show = tags.some(v => ScatterplotState.state.tagsSet.has(v))
+                const show = tags.every(v => ScatterplotState.state.tagsSet.has(v))
                 if (!show) return (ScatterplotState.state.svgwidth + 100)
                 const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
                 const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
@@ -362,14 +389,14 @@ class ScatterPlotChart {
             }).strength(1))
             .force("y", d3.forceY(function (d) {
                 const tags = ScatterplotState.state.data.getTags(d.key)
-                const show = tags.some(v => ScatterplotState.state.tagsSet.has(v))
+                const show = tags.every(v => ScatterplotState.state.tagsSet.has(v))
                 if (!show) return (ScatterplotState.state.svgheight + 100)
                 const yVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.y, d)
                 const dy = yVal ? ScatterplotState.state.y(yVal) : (ScatterplotState.state.svgheight + 100)
 
                 return dy
             }).strength(1))
-            .force("collide", d3.forceCollide(5))
+            .force("collide", d3.forceCollide(10))
             .stop()
 
 
@@ -377,6 +404,7 @@ class ScatterPlotChart {
             .duration(3000);
 
         for (var i = 0; i < 30; ++i) simulation.tick();
+
         ScatterplotState.state.nodeG.selectAll(".scattter_comp")
             .data(ScatterplotState.state.data.incomestatements)
             .join(enter => {
@@ -391,8 +419,6 @@ class ScatterPlotChart {
                         }).on("click", function (d, i) {
                             DetailsState.reset()
                             DetailsState.select(d.key)
-
-                            
                             ScatterplotState.state.resetElement()
                             ScatterplotState.state.selectedElement = this
                             ScatterplotState.state.greyOutAllElement()
@@ -404,11 +430,16 @@ class ScatterPlotChart {
                             //Make barchart for ethnicity viz
                             //ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
 
-                        }).on("mouseover", function (d, i) {
+                        }).on("mouseover", function () {
+                            const j = d3.select(this).attr("transform")
+                            d3.select(this).attr("transform", `${j} scale(2, 2)`)
+                        }).on("mouseout", function () {
+                            const j = d3.select(this).attr("transform").indexOf("scale")
+                            d3.select(this).attr("transform", d3.select(this).attr("transform").substr(0, j - 1))
                         })
                     g.append("text").text((d) => d.displayName)
                     g.each(function (d) {
-                        return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getShape(d.key))
+                        return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getRandTags(d.key))
                     })
                     return g.call(enter => enter.transition(t)
                         .attr("transform", d => `translate(${d.x}, ${d.y})`))
@@ -419,3 +450,43 @@ class ScatterPlotChart {
             )
     }
 }
+
+// ==================== Legend ====================================
+d3.selectAll(".scatterplot_legend_shape").each(function (d) {
+    const attribute = this.getAttribute("data-checkbox")
+    const f = color_tags_mapping[attribute]
+    ScatterPlotUtility.mapToFormat(d3.select(this), f)
+})
+
+d3.selectAll(".checkbox_svg").append("rect")
+    .attr("width", 100)
+    .attr("height", 100)
+    .attr("fill", "white")
+    .attr("stroke-width", 25)
+    .attr("stroke", "white")
+    .on("click", function (d) {
+        const attribute = this.parentElement.dataset.checkbox
+
+        const selected = d3.select(this).attr("fill") === "white"
+
+        d3.select(this).attr("fill", selected ? "black" : "white")
+        if (attribute === "All") {
+            d3.selectAll(".checkbox_svg")
+                .selectAll("rect")
+                .attr("fill", selected ? "black" : "white")
+            if (selected)
+                ScatterplotState.clearTag()
+            else
+                ScatterplotState.resetTag()
+            return
+        }
+
+
+        if (selected)
+            ScatterplotState.removeTag(attribute)
+        else
+            ScatterplotState.addTag(attribute)
+
+    })
+
+

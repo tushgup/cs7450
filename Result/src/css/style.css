@@ -92,3 +92,30 @@ li {
     font-size: 1rem;
 }
 
+.scatterplot_legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.scatterplot_text_legend {
+    padding-left: 0.5rem;
+}
+
+.legend_element {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.scatterplot_legend_shape, .checkbox_svg {
+    flex-shrink: 0;
+}
+
+.tt-open {
+    background-color: black;
+    padding-left: 0.2rem;
+    border: #fff;
+    border: 1px;
+}
