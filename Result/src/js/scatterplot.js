@@ -319,7 +319,7 @@ var sliderStep = d3
         treemap.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
 
         //Remake ethinicity barchart to make based on new year value
-        //ethnicity_barchart.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
+        ethnicity_barchart.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
     });
 
 var gStep = d3
@@ -428,7 +428,7 @@ class ScatterPlotChart {
                             treemap.generateChart(d.key, ScatterplotState.state.year)
 
                             //Make barchart for ethnicity viz
-                            //ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
+                            ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
 
                         }).on("mouseover", function () {
                             const j = d3.select(this).attr("transform")

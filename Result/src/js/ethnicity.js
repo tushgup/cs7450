@@ -1,5 +1,5 @@
-var width = 932;
-var height = 932;
+var width = 1000;
+var height = 950;
 
 var svg = d3.select('svg.ethnicity_svg')
 
@@ -19,40 +19,56 @@ class ethnicity_barchart{
 	}
 
 	static updateChart(data){
-		const x = d3.scaleLinear()
-        .domain([0, d3.max(data, d=> d['value'])])
-        .range([0, width]);
+		//Scale for width of bars
+		var x_scale = d3.scaleLinear()
+			        .domain([0, d3.max(data, d=> d['value'])])
+			        .range([0, width]);
 
-	    const rects = svg.selectAll(".bar")
-	      				.data(data.sort( (a,b) => d3.descending(a['value'], b['value'])) ); 
+	    var rects = svg.selectAll(".bar")
+	      			  .data(data.sort( (a,b) => d3.descending(a['value'], b['value'])) ); 
 
+	    //Adapt height of bars to be based on number of data and height of svg
+	    var height_of_bar = height / data.length;
+
+	    //Exit part
+		rects.exit().remove();
+
+	    //Enter & update part
 	    rects.enter()
-	      	.append("rect")
-	        .attr("class", "bar")
-	        .attr("x", 0)
-	        .attr("y", (d,i, ds) => i*50)
-	        .style('width', function(d){
-            	return 'calc(' + d['value'] + '% - 3px)';
-        	})
-	        .attr("height", 50)
-	        .style("fill", "steelblue");
+	      	 .append("rect")
+	      	 .merge(rects)
+	         .attr("class", "bar")
+	         .attr("x", 0)
+	         .attr("y", (d,i, ds) => i*height_of_bar)
+	         .style('width', function(d){
+            	 return x_scale(d['value']);
+        	 })
+	         .attr("height", height_of_bar - 1)
+	         .style("fill", "steelblue");
+
+	    // //Update part
+	    // rects.transition()
+	    // 	 .duration(200)
+	    // 	 .attr("x", 0)
+	    // 	 .style('width', function(d){
+     //        	 return x_scale(d['value']);
+     //    	 })
+     //    	 .attr("y", (d,i, ds) => i*height_of_bar)
+     //    	 .attr("height", height_of_bar - 1)
+	    //      .style("fill", "steelblue");
 	      
-	    const texts = svg.selectAll(".label")
-	    .data(data);
+	    //Labels to show percentage of bars
+	    var texts = svg.selectAll(".label")
+	    			   .data(data);
 	  
 	    rects.enter()
-	      .append("text")
-	        .attr("class", "label")
-	        .attr("x", 0)
-	        .attr("y", (d,i, ds) => i*10)
-	    
-	       // .attr("x", d => x(d.censo))
-	        //.attr("y", (d) => y(d.municipio))
-	        .text( d=> d['value'] + "%")
-	        // .attr("width", d => x(d.censo))
-	        // .attr("height", 9)
-	        .style("fill", "#333")
-	        .style("font-size", "6pt")
-	        .style("font-family", "sans-serif");  
-		}
+	         .append("text")
+	         .attr("class", "label")
+	         .attr("x", 0)
+	         .attr("y", (d,i, ds) => i*height_of_bar)
+	         .text( d=> d['value'] + "%")
+	         .style("fill", "#000")
+	         .style("font-size", "40pt")
+	         .style("font-family", "sans-serif");  
+	}
 }
