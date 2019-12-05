@@ -13,12 +13,12 @@ body {
 }
 
 .sidebar {
-    height: 120%;
+    height: 100%;
     border-right: 1px solid #fff;
 }
 
 .companyDetails {
-    height: 120%;
+    height: 100%;
     padding: 1.75rem;
     border-left: 1px solid #fff;
 
@@ -162,5 +162,16 @@ li {
 
 .svg_selected {
     background-color: white
+}
+
+.left-sidebar,
+.right-sidebar,
+.main {
+    height: 100%;
+    overflow: auto
+}
+
+.mainbar {
+    height: 100%;
 }
 
