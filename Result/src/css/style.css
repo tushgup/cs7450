@@ -13,11 +13,12 @@ body {
 }
 
 .sidebar {
-    /* padding: 1.75rem; */
+    height: 120%;
     border-right: 1px solid #fff;
 }
 
 .companyDetails {
+    height: 120%;
     padding: 1.75rem;
     border-left: 1px solid #fff;
 
