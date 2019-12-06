@@ -95,6 +95,9 @@ class DetailsState {
         DetailsState.reset()
         ScatterplotState.state.selectedElement = undefined
         ScatterplotState.state.resetElement()
+        treemap.clear()
+        gender_piechart.clear()
+        ethnicity_barchart.clear()
     }
 
     updateDetails(displayName) {

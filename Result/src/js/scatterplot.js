@@ -176,6 +176,15 @@ class ScatterplotState {
                 ScatterplotState.state.selectedElement = this
                 ScatterplotState.state.greyOutAllElement()
                 d3.select(this).select(".scatternode").attr("opacity", 1)
+
+                 //Make treemap
+                treemap.generateChart(d.key, ScatterplotState.state.year)
+
+                //Make barchart for ethnicity viz
+                ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
+
+                //Make piechart for gender viz
+                gender_piechart.generateChart(d.key, ScatterplotState.state.year)
             })
     }
 
@@ -320,6 +329,9 @@ var sliderStep = d3
 
         //Remake ethinicity barchart to make based on new year value
         ethnicity_barchart.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
+
+        //Remake gender piechart to make based on new year value
+        gender_piechart.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
     });
 
 var gStep = d3
@@ -429,6 +441,9 @@ class ScatterPlotChart {
 
                             //Make barchart for ethnicity viz
                             ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
+
+                            //Make piechart for gender viz
+                            gender_piechart.generateChart(d.key, ScatterplotState.state.year)
 
                         }).on("mouseover", function () {
                             const j = d3.select(this).attr("transform")

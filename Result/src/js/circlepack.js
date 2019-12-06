@@ -1,15 +1,17 @@
 var width = 932;
 var height = 932;
+var all_tags = [];
 
 var color = d3.scaleLinear()
     .domain([0, 5])
     .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl)
 
-Promise.all([d3.json("./data/parentchildcompanies.json")]).then(function(data){
+Promise.all([d3.json("./data/parentchildcompanies.json"),  d3.csv("./data/tags_list.csv") ]).then(function(dataset){
   var format = d3.format(",d");
 
-  var data = data[0];
+  var data = dataset[0];
+  all_tags = dataset[1];
 
 	var root = d3.pack()
               .size([width, height])

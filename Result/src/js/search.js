@@ -15,7 +15,6 @@ var substringMatcher = function (strs) {
                 matches.push(str);
             }
         });
-
         cb(matches);
     };
 };
@@ -24,8 +23,6 @@ $("#searchbox").keypress(function (e) {
     if (event.which == 13) {
         ScatterplotState.selectNode(this.value)
         this.value = ""
-
-
     }
 })
 
@@ -37,8 +34,6 @@ $('#searchbox-investment').keypress(function (e) {
             .addClass("svg_selected")
             .attr("data-selected", "1");
         this.value = ""
-
     }
-
 })
 

@@ -53,6 +53,7 @@
     <script src="js/sidebar.js" defer></script>
     <script src="js/search.js" defer></script>
     <script src="js/ethnicity.js" defer></script>
+    <script src="js/gender.js" defer></script>
 </head>
 
 <body>
@@ -531,10 +532,10 @@
                         <a class="nav-link" id="pills-acquisition-tab" data-toggle="pill" href="#pills-acquisition"
                             role="tab" aria-controls="pills-acquisition" aria-selected="false">Acquisition</a>
                     </li>
-                    <li class="nav-item">
+<!--                     <li class="nav-item">
                         <a class="nav-link" id="pills-geo-tab" data-toggle="pill" href="#pills-geo" role="tab"
                             aria-controls="pills-geo" aria-selected="false">Geo</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link " id="pills-funding-tab" data-toggle="pill" href="#pills-funding" role="tab"
                             aria-controls="pills-funding" aria-selected="false">Funding</a>
@@ -557,11 +558,11 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
+<!--                     <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
                         <div class="geomap">
                             <svg class="geomap_svg" viewBox="0 0 1000 700"></svg>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="tab-pane fade" id="pills-funding" role="tabpanel" aria-labelledby="pills-funding-tab">
                         <div class="scatterplot">
                             <svg class="funding_svg" viewBox="0 0 700 700"></svg>
@@ -621,14 +622,16 @@
                 <div class="row">
                     <div class="col-12">
                         <h6 class="labelText">Revenue Breakdown</h6>
+
                     </div>
-                    <div class="col-12 treemap">
-                        <p>Breakdown By: </p>
-                        <input type="radio" name="breakdown_segment" value="Business Segment"
-                            onchange="treemap.generateChart()" checked> Business
-                        <input type="radio" name="breakdown_segment" value="Geographic Segment"
-                            onchange="treemap.generateChart()"> Geography
-                        <svg class="treemap_svg" viewBox="0 0 1000 1000"></svg>
+                    <div class="col-12" id = "breakdown_segment_buttons" style="display:none;">
+                            <p>Breakdown By: </p>
+                            <input type="radio" name="breakdown_segment" value="Business Segment"
+                                onchange="treemap.onUpdateBreakdownSegment()"  checked> Business
+                            <input type="radio" name="breakdown_segment" value="Geographic Segment"
+                             onchange="treemap.onUpdateBreakdownSegment()"> Geography
+                    </div>
+                    <div class="col-12 treemap" id="revenueBreakdown_viz">
                     </div>
                 </div>
 
@@ -639,8 +642,7 @@
                     <div class="col-12">
                         <h6 class="labelText">Ethnicity</h6>
                     </div>
-                    <div class="col-12 ethinicity">
-                        <svg class="ethnicity_svg" viewBox="0 0 1000 1000"></svg>
+                    <div class="col-12 ethinicity" id="ethnicity_viz">
                     </div>
                 </div>
 
@@ -651,8 +653,7 @@
                     <div class="col-12">
                         <h6 class="labelText">Gender</h6>
                     </div>
-                    <div class="col-12 gender">
-                        <p>Gender Viz</p>
+                    <div class="col-12 gender" id="gender_viz">
                     </div>
                 </div>
             </div>
