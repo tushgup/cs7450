@@ -82,8 +82,8 @@ class gender_piechart{
 					.innerRadius(0);
 
 		var labelArc = d3.arc()
-						 .outerRadius(radius - 40)
-						 .innerRadius(radius - 40);
+						 .outerRadius(radius - 30)
+						 .innerRadius(radius - 30);
 
 		var g = svg.selectAll("arc")
 				   .data(pie)
@@ -93,12 +93,24 @@ class gender_piechart{
 
 		g.append("path")
 		 .attr("d", arc)
-		 .style("fill", function(d) { return color(d.data.gender);});
+		 .style("fill", function(d) { 
+		 	if(d.data.gender == "male"){
+		 		return "red";
+		 	} else {
+		 		return "blue";
+		 	}
+		 });
 
 		g.append("text")
-		 .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+		 .attr("transform", function(d){
+	      d.innerRadius = 0;
+	      d.outerRadius = radius;
+	      return "translate(" + arc.centroid(d) + ")";
+	     })
 		 .text(function(d) { return d.data.gender;})
-		 .style("fill", "#fff");
+		 .style("fill", "#fff")
+		 .attr("text-anchor", "middle")
+		 .style("font-size", "40pt");
  
 	}
 }
