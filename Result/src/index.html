@@ -495,7 +495,7 @@
                         <input class="input-investment-val" id="maxval" min="0" value="1" type="number">
                     </div>
                 </div> -->
-                <div class="row leftPanel">
+                <div class="row leftPanel search-investors">
 
                     <div class="col-12 col-md-12">
 
@@ -506,6 +506,15 @@
                                 <li><span style="display: flex;" data-in="Accel Partners"><i
                                             class="material-icons">highlight_off</i>&nbspAccel Partners</span></li>
                             </ul>
+                    </div>
+
+                </div>
+                <div class="row leftPanel legends">
+                    <div class="col-12 col-md-12">
+                        <hr>
+
+                        <h5 style="padding-top: 1rem;">Competitor groups</h3>
+                        <svg id="legend-funding" viewBox="0 0 100 100"></svg>
                     </div>
 
 
@@ -532,7 +541,7 @@
                         <a class="nav-link" id="pills-acquisition-tab" data-toggle="pill" href="#pills-acquisition"
                             role="tab" aria-controls="pills-acquisition" aria-selected="false">Acquisition</a>
                     </li>
-<!--                     <li class="nav-item">
+                    <!--                     <li class="nav-item">
                         <a class="nav-link" id="pills-geo-tab" data-toggle="pill" href="#pills-geo" role="tab"
                             aria-controls="pills-geo" aria-selected="false">Geo</a>
                     </li> -->
@@ -558,7 +567,7 @@
                             </svg>
                         </div>
                     </div>
-<!--                     <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
+                    <!--                     <div class="tab-pane fade" id="pills-geo" role="tabpanel" aria-labelledby="pills-geo-tab">
                         <div class="geomap">
                             <svg class="geomap_svg" viewBox="0 0 1000 700"></svg>
                         </div>
@@ -624,12 +633,12 @@
                         <h6 class="labelText">Revenue Breakdown</h6>
 
                     </div>
-                    <div class="col-12" id = "breakdown_segment_buttons" style="display:none;">
-                            <p>Breakdown By: </p>
-                            <input type="radio" name="breakdown_segment" value="Business Segment"
-                                onchange="treemap.onUpdateBreakdownSegment()"  checked> Business
-                            <input type="radio" name="breakdown_segment" value="Geographic Segment"
-                             onchange="treemap.onUpdateBreakdownSegment()"> Geography
+                    <div class="col-12" id="breakdown_segment_buttons" style="display:none;">
+                        <p>Breakdown By: </p>
+                        <input type="radio" name="breakdown_segment" value="Business Segment"
+                            onchange="treemap.onUpdateBreakdownSegment()" checked> Business
+                        <input type="radio" name="breakdown_segment" value="Geographic Segment"
+                            onchange="treemap.onUpdateBreakdownSegment()"> Geography
                     </div>
                     <div class="col-12 treemap" id="revenueBreakdown_viz">
                     </div>
