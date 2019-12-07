@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Multinational Coorporation Visualization</title>
+    <title>Company Viz</title>
 
     <!-- Bootstrap
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -524,11 +524,13 @@
         </div>
         <div class="col-7 mainbar">
             <div class="main">
-                <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-self:flex-end" id="pills-tab"
+                <ul class="nav nav-pills mt-4" style="justify-content: space-evenly; align-items:center" id="pills-tab"
                     role="tablist">
                     <li>
-                        <div class="form-inline">
-                            <input class="form-control mr-sm-2" id="searchbox" type="search" placeholder="Search"
+                        <div class="form-inline" style="   border: 1px solid;
+                        border-radius: 6px;
+                        padding: 8px;">
+                            <input class="form-control mr-sm-2" id="searchbox" type="search" placeholder="Search a company"
                                 aria-label="Search" />
                             <span class="input-group-addon"><i class="material-icons">search</i></span>
                         </div>
@@ -582,9 +584,9 @@
 
         </div>
         <div class="col-3 companyDetails">
-            <div class="right-sidebar" id="rsidebar-details">
-                <div class="row">
-                    <div class="col-8" style="align-self:flex-end">
+            <div class="right-sidebar" id="rsidebar-details" style="margin-left: 8px;">
+                <div class="row mt-4">
+                    <div class="col-8">
                         <h6 class="labelText">Company Name</h6>
                     </div>
                     <div class="col-3  offset-1">
@@ -596,7 +598,7 @@
 
                 <h3 class="companyName" id="companyName">&nbsp;</h3>
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-6">
                         <h6 class="labelText">Revenue</h6>
                     </div>
@@ -628,7 +630,7 @@
                 <hr>
 
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-12">
                         <h6 class="labelText">Revenue Breakdown</h6>
 
@@ -640,29 +642,29 @@
                         <input type="radio" name="breakdown_segment" value="Geographic Segment"
                             onchange="treemap.onUpdateBreakdownSegment()"> Geography
                     </div>
-                    <div class="col-12 treemap" id="revenueBreakdown_viz">
+                    <div class="col-12 treemap mb-2" id="revenueBreakdown_viz">
                     </div>
                 </div>
 
                 <hr>
 
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-12">
                         <h6 class="labelText">Ethnicity</h6>
                     </div>
-                    <div class="col-12 ethinicity" id="ethnicity_viz">
+                    <div class="col-12 ethinicity mb-2" id="ethnicity_viz">
                     </div>
                 </div>
 
                 <hr>
 
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-12">
                         <h6 class="labelText">Gender</h6>
                     </div>
-                    <div class="col-12 gender" id="gender_viz">
+                    <div class="col-12 gender mb-2" id="gender_viz">
                     </div>
                 </div>
             </div>

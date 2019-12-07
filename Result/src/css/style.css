@@ -3,13 +3,15 @@ body,
 .application {
     height: 100%;
     min-height: 100%;
-
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: black;
     color: #fff;
     font-family: 'Rubik', sans-serif !important;
+    font-weight: 400;
 }
 
 .sidebar {
@@ -19,9 +21,8 @@ body {
 
 .companyDetails {
     height: 100%;
-    padding: 1.75rem;
     border-left: 1px solid #fff;
-
+    overflow-x: hidden;
 }
 
 .labelText {
@@ -40,10 +41,10 @@ body {
     margin: 8px 0px 24px 0px;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    border: 3px solid #fff;
-    background-color: #000;
+.nav-pills .nav-link.active {
+    /* border: 3px solid #fff; */
+    background-color: white;
+    color: black;
 }
 
 .nav-pills .nav-link {
@@ -52,11 +53,12 @@ body {
     color: rgb(206, 206, 206);
 }
 
+
 hr {
     margin-block-start: 0em;
     margin-block-end: 0em;
     border-top: 1px solid white;
-    margin: 0px -28px 0px -27px;
+    /* margin: 0px -28px 0px -27px; */
 }
 
 ul {
@@ -191,6 +193,51 @@ li {
 }
 
 .slice text {
+            font-size: 16pt;
+            font-family: Arial;
+} 
+
+.custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control {
+    background-image: linear-gradient(0deg,#f0f0f0 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+.custom-file-control, .form-control {
+    color: white;
+}
+.custom-file-control, .form-control:focus {
+    color: white;
+}
+.form-control::placeholder { color: rgb(165, 165, 165);} /* Chrome, Firefox, Opera*/
+:-ms-input-placeholder.form-control { color: rgb(165, 165, 165); }  /* Internet Explorer*/
+.form-control::-ms-input-placeholder { color: rgb(165, 165, 165); }  /* Microsoft Edge*/
+
+.nav-pills .nav-link, .nav-tabs .nav-link {
+    padding: 0.75rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .btn-primary.custom-file-control:before, .btn.btn-primary {
+    color: #0984e3;
+  }
     font-size: 16pt;
     font-family: Arial;
 }
