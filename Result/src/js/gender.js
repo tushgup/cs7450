@@ -21,7 +21,6 @@ class gender_piechart{
 					return d;
 				}
 			});
-			console.log(filteredData);
 
 			//If filtered data is 0, generate message to show no data available
 			if(filteredData.length == 0){
