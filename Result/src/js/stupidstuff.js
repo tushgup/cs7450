@@ -173,7 +173,6 @@ $(document).on("click", ".nav-pills .nav-item .nav-link", function (event) // Go
                 break;
             default:
                 $("#lsidebar-overview").removeClass("none")
-
         }
         $(".right-sidebar").addClass("none")
         switch (this.getAttribute("href")) {
@@ -183,9 +182,11 @@ $(document).on("click", ".nav-pills .nav-item .nav-link", function (event) // Go
             case "#pills-funding":
                 $("#rsidebar-funding").removeClass("none")
                 break;
+            case "#pills-acquisition":
+                $("#rsidebar-acquisition").removeClass("none")
+                break;
             default:
                 $("#rsidebar-details").removeClass("none")
-
         }
     });
 

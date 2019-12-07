@@ -3,6 +3,7 @@ var height = 1000;
 var current_dataset = [];
 var tagsSet = new Set(Object.keys(color_tags_mapping));
 var tagsSetAll = new Set(tagsSet);
+var details_companies;
 
 var packLayout = d3.pack()
   .size([width, height]);
@@ -12,12 +13,18 @@ var color = d3.scaleLinear()
     .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl)
 
-Promise.all([d3.csv("./data/date_notnull_circle_pack.csv"),  d3.csv("./data/tags_list.csv") ]).then(function(dataset){
+Promise.all([d3.csv("./data/date_notnull_circle_pack.csv"),  d3.json("./data/details.json") ]).then(function(dataset){
   current_dataset.push(dataset[0]);
+  details_companies = dataset[1];
   circlepack.generateCirclePack(current_dataset[0]);
 });
 
 class circlepack{
+    static clearDetails(){
+      $("#companyName-acquisition").html("&nbsp;");
+      $("#companydescription-acquisition").html("&nbsp;");
+    }
+
     static addTag(tag) {
         tagsSet.add(tag)
         circlepack.clear();
@@ -89,7 +96,7 @@ class circlepack{
 
       var root = d3.pack()
                    .size([width, height])
-                   .padding(3)
+                   .padding(5)
                    (d3.hierarchy(nest, function(d) {
                         return d.values;
                       }).sum(function(d) {
@@ -116,20 +123,29 @@ class circlepack{
                       .join("circle")
                       .attr("fill", d => d.children ? color(d.depth) : "white")
                       .on("mouseover", function(d) { 
-                        DetailsState.reset()
+                        //Search initial data in details.json for parent companies
                         if(d.parent === root){
-                          DetailsState.select(d.data.key)
-                        } else {
-                          DetailsState.select(d.data.name)
+                          $("#companyName-acquisition").html(d.data.key);
+                          const f = details_companies.find(v => v && v.displayName === d.data.key)
+                          if (f) {
+                            $("#companydescription-acquisition").html(f.longDescription);
+                          } else {
+                            $("#companydescription-acquisition").html(`N/A`);
+                          }
+                        } 
+                        //Check in dataset for circle packing
+                        else {
+                          $("#companyName-acquisition").html(d.data.name);
+                          //const f = current_dataset[0];
+                          const f = current_dataset[0].find(v => v && v.name === d.data.name)
+                          if (f) {
+                            if (f.description === "") {
+                              $("#companydescription-acquisition").html(`N/A`);
+                            } else {$("#companydescription-acquisition").html(f.description);}
+                          } else {
+                            $("#companydescription-acquisition").html(`N/A`);
+                          }
                         }
-                        // //Make treemap
-                        // treemap.generateChart(d.data.key, ScatterplotState.state.year)
-
-                        // //Make barchart for ethnicity viz
-                        // ethnicity_barchart.generateChart(d.data.key, ScatterplotState.state.year)
-
-                        // //Make piechart for gender viz
-                        // gender_piechart.generateChart(d.data.key, ScatterplotState.state.year)
                         d3.select(this).attr("stroke", "red").attr("stroke-width",3); 
                       })
                       .on("mouseout", function() { d3.select(this).attr("stroke", null); })
@@ -186,7 +202,7 @@ class circlepack{
 d3.selectAll(".acquisition_legend_shape").each(function (d) {
   const attribute = this.getAttribute("data-checkbox")
   const f = color_tags_mapping[attribute]
-  ScatterPlotUtility.mapToFormat(d3.select(this), f)
+  //ScatterPlotUtility.mapToFormat(d3.select(this), f)
 })
 
 d3.selectAll(".acquisition_checkbox_svg").append("rect")
