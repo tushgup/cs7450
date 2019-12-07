@@ -102,8 +102,8 @@ class DetailsState {
 
     updateDetails(displayName) {
         $("#companyName").html(displayName)
-        $("#revenue").html(this.format(this.data.getRevenue(displayName)))
-        $("#marketcap").html(this.format(this.data.getMarketCap(displayName)))
+        $("#revenue").html(DetailsState.format(this.data.getRevenue(displayName)))
+        $("#marketcap").html(DetailsState.format(this.data.getMarketCap(displayName)))
         $("#companytype").html(`Founded: ${this.upper(this.data.getCompanyType(displayName))}`)
         $("#companyyear").html(`Type: ${this.data.getCompanyYear(displayName)}`)
         $("#companyhq").html(`HQ: ${this.data.getCompanyHq(displayName)}`)
@@ -132,7 +132,7 @@ class DetailsState {
         });
     }
 
-    format(number) {
+    static format(number) {
         if (!number) return "N/A"
         let n = number
         let str = ""
