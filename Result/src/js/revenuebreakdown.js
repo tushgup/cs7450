@@ -72,7 +72,9 @@ class treemap{
 				if(new_filteredData.length == 0){
 					$("#revenueBreakdown_viz").empty();
 					var theDiv = document.getElementById("revenueBreakdown_viz");
+					var br = document.createElement("br");
 					var content = document.createTextNode("Data not available for this segment");
+					theDiv.appendChild(br);
 					theDiv.appendChild(content);
 				} else {
 					treemap.updateChart(new_filteredData);
@@ -101,8 +103,9 @@ class treemap{
 		//Check segment filtering
 		if(new_filteredData.length == 0){
 			var theDiv = document.getElementById("revenueBreakdown_viz");
+			var br = document.createElement("br");
 			var content = document.createTextNode("Data not available for this segment");
-			theDiv.appendChild("br");
+			theDiv.appendChild(br);
 			theDiv.appendChild(content);
 		} else {
 			treemap.updateChart(new_filteredData);

@@ -34,6 +34,7 @@ class ethnicity_barchart{
 
 		//Remove all 0 values from data
 		console.log(data);
+		// for(var i = 0; i)
 
 		//Make svg for the ethnicity bar chart
 		var svg = d3.select("#ethnicity_viz")
