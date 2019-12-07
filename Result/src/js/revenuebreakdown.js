@@ -102,6 +102,7 @@ class treemap{
 		if(new_filteredData.length == 0){
 			var theDiv = document.getElementById("revenueBreakdown_viz");
 			var content = document.createTextNode("Data not available for this segment");
+			theDiv.appendChild("br");
 			theDiv.appendChild(content);
 		} else {
 			treemap.updateChart(new_filteredData);
@@ -168,7 +169,7 @@ class treemap{
 				.attr('width', function(d) {
 					return d.x1 - d.x0;
 				})
-				.style("fill", function(d){ return color(d.name);})
+				.style("fill", function(d){ return color(d.data.segmentName);})
 				.attr("stroke", "black")
 				.attr("stroke-width",3)
 				.attr('height', function(d) {
