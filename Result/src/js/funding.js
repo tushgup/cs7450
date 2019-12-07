@@ -164,6 +164,7 @@ function addInvestors(investors) {
     s.add(investors)
     selectedInvestors = Array.from(s)
     FundingState.state.svg.selectAll("*").remove();
+    d3.select("#legend-funding").selectAll("*").remove();
     createGroup()
     ArcChart.updateCharts()
     return true
@@ -176,6 +177,7 @@ function deleteInvestors(investors) {
     FundingState.state.selected.delete(investors)
     selectedInvestors = Array.from(s)
     FundingState.state.svg.selectAll("*").remove();
+    d3.select("#legend-funding").selectAll("*").remove();
     createGroup()
     ArcChart.updateCharts()
 
@@ -237,7 +239,7 @@ d3.csv('./data/investments.csv').then(function (dataset) {
         .text(d => d.name)
         .attr("class", "disable-select")
         .attr("style", "mix-blend-mode: difference;")
-        .attr("fill", "orange")
+        .attr("fill", "white")
         .attr("font-size", "5%")
         .attr("x", 0.3)
         .attr("y", 0.7)
@@ -245,7 +247,7 @@ d3.csv('./data/investments.csv').then(function (dataset) {
         .text(d => DetailsState.format(d.value))
         .attr("class", "disable-select")
         .attr("style", "mix-blend-mode: difference;")
-        .attr("fill", "orange")
+        .attr("fill", "white")
         .attr("font-size", "5%")
         .attr("x", 0.3)
         .attr("y", 1.7)
@@ -413,7 +415,7 @@ class ArcChart {
             return `
             <p>Stage: ${d.stage}</p>
             <p> Date: ${d.date}</p>
-            <p> Value: ${d.value}</p>
+            <p> Value: ${DetailsState.format(d.value)}</p>
             `;
         }).offset(function () {
             return [this.getBBox().height / 2, 0]
@@ -444,6 +446,22 @@ class ArcChart {
 
         const groupWithTwoOrMore = Object.keys(groupToCompany).filter(v => groupToCompany[v].size >= 2)
         const domaincolor = FundingState.state.color10.domain(groupWithTwoOrMore)
+
+        const lengendg = d3.select("#legend-funding").selectAll("rect")
+        .data(groupWithTwoOrMore).enter()
+        .append("g")
+        .attr("transform", (d,i) => `translate(${100 * i / groupWithTwoOrMore.length}, 0)`)
+
+        lengendg.append("rect")
+        .attr("width", (d, i) => 100 / groupWithTwoOrMore.length)
+        .attr("height", 10)
+        .attr("fill", domaincolor)
+
+        lengendg.append("text")
+            .attr("y", 8)
+            .text(d => d)
+            .attr("fill", "white")
+            .attr("font-size", "0.5rem")
 
         // Calculate layout
         let res = FundingState.state.res = ArcChart.chord // padding between entities (black arc)

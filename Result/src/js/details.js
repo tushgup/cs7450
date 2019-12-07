@@ -157,6 +157,31 @@ class DetailsState {
         return `$${n.toFixed(1)} ${str}`
     }
 
+    static formatAxis(number) {
+        if (!number) return "0"
+        let n = number
+        let str = ""
+        while (true) {
+            if (n / 1000 >= 1) {
+                n = n / 1000
+                switch (str) {
+                    case "":
+                        str = "T"
+                        break;
+                    case "T":
+                        str = "M"
+                        break
+                    case "M":
+                        str = "B"
+                        break
+                    default:
+                        break;
+                }
+            } else break
+        }
+        return `$${n.toFixed(1)}${str}`
+    }
+
     static state = new DetailsState()
 }
 

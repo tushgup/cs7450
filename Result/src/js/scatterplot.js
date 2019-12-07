@@ -131,7 +131,7 @@ class ScatterplotState {
         this.axisL = this.svg.append('g')
             .attr('class', 'y axis')
             .attr('transform', `translate(${this.margin.left * 1.8},${this.margin.top})`)
-            .call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+            .call(d3.axisLeft(this.y).tickFormat(DetailsState.formatAxis))
 
         this.axisL.append("text").text("Revenue")
 
@@ -198,27 +198,27 @@ class ScatterplotState {
             case "revenue":
                 this.yScale = d3.scaleSqrt().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfRevenue(this.year)).nice()
-                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(DetailsState.formatAxis))
                 break;
             case "valuation":
                 this.yScale = d3.scaleSqrt().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfValuation()).nice()
-                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(DetailsState.formatAxis))
                 break;
             case "profit":
                 this.yScale = d3.scaleLinear().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfProfit(this.year)).nice()
-                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(DetailsState.formatAxis))
                 break;
             case "profitmargin":
                 this.yScale = d3.scaleLinear().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfProfitMargin(this.year)).nice()
-                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2")))
                 break;
             case "tax":
                 this.yScale = d3.scaleLinear().range([this.height, 0])
                 this.y = this.yScale.domain(this.data.getExtentOfTax(this.year)).nice()
-                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(d3.format(".2s")))
+                this.axisL.transition().duration(1500).call(d3.axisLeft(this.y).tickFormat(DetailsState.formatAxis))
                 break;
             default:
                 console.log("Something is wrong. Fucked!")
@@ -235,27 +235,27 @@ class ScatterplotState {
             case "revenue":
                 this.xScale = d3.scaleSqrt().range([this.margin.left * 2, this.width]);
                 this.x = this.xScale.domain(this.data.getExtentOfRevenue(this.year)).nice()
-                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(DetailsState.formatAxis))
                 break;
             case "valuation":
                 this.xScale = d3.scaleSqrt().range([this.margin.left * 2, this.width]);
                 this.x = this.xScale.domain(this.data.getExtentOfValuation()).nice()
-                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(DetailsState.formatAxis))
                 break;
             case "profit":
                 this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
                 this.x = this.xScale.domain(this.data.getExtentOfProfit(this.year)).nice()
-                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(DetailsState.formatAxis))
                 break;
             case "profitmargin":
                 this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
                 this.x = this.xScale.domain(this.data.getExtentOfProfitMargin(this.year)).nice()
-                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2")))
                 break;
             case "tax":
                 this.xScale = d3.scaleLinear().range([this.margin.left * 2, this.width]);
                 this.x = this.xScale.domain(this.data.getExtentOfTax(this.year)).nice()
-                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(d3.format(".2s")))
+                this.axisB.transition().duration(1500).call(d3.axisBottom(this.x).tickFormat(DetailsState.formatAxis))
                 break;
             default:
                 console.log("Something is wrong. Fucked!")

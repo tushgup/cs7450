@@ -135,7 +135,7 @@ li {
 .label-investment-val {
     padding-top: 0.3rem;
     font-family: 'Montserrat',
-    sans-serif;
+        sans-serif;
     font-size: small;
     font-weight: bold;
 
@@ -178,18 +178,18 @@ li {
 }
 
 .toolTip {
-        position: absolute;
-        display: none;
-        width: auto;
-        height: auto;
-        background: none repeat scroll 0 0 white;
-        border: 0 none;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: -3px 3px 15px #888888;
-        color: black;
-        font: 12px sans-serif;
-        padding: 5px;
-        text-align: center;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
 }
 
 .slice text {
@@ -238,3 +238,16 @@ li {
   .btn-primary.custom-file-control:before, .btn.btn-primary {
     color: #0984e3;
   }
+    font-size: 16pt;
+    font-family: Arial;
+}
+
+.search-investors {
+    height: 70%;
+    overflow: auto
+}
+
+.legends {
+    height: 20%;
+    overflow: auto
+}
