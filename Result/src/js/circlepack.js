@@ -18,6 +18,26 @@ var color = d3.scaleLinear()
 Promise.all([d3.csv("./data/date_notnull_circle_pack.csv"),  d3.json("./data/details.json") ]).then(function(dataset){
   current_dataset.push(dataset[0]);
   details_companies = dataset[1];
+
+  var list_of_companies = [];
+  //Get list of all big and small companies to be put into search box
+  for (var i = 0; i < current_dataset[0].length ; i++){
+    if(!(list_of_companies.includes(current_dataset[0][i].displayName))){
+        list_of_companies.push(current_dataset[0][i].displayName);
+    } else if (!(list_of_companies.includes(current_dataset[0][i].name))){
+        list_of_companies.push(current_dataset[0][i].name);
+    }
+  }
+
+  $('#searchbox').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'states',
+            source: substringMatcher(list_of_companies)
+  });
+
   circlepack.generateCirclePack(current_dataset[0]);
 });
 

@@ -349,6 +349,7 @@ Promise.all([d3.csv("./data/incomestatements.csv"), d3.csv("./data/locations.csv
     .then(function (data) {
         DetailsState.state.data.receiveFromScatter(data)
 
+
         ScatterplotState.state = new ScatterplotState(data)
         $('#searchbox').typeahead({
             hint: true,
