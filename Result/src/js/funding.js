@@ -454,7 +454,7 @@ class ArcChart {
 
         lengendg.append("rect")
         .attr("width", (d, i) => 100 / groupWithTwoOrMore.length)
-        .attr("height", 10)
+        .attr("height", 30)
         .attr("fill", domaincolor)
 
         lengendg.append("text")
