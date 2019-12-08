@@ -448,11 +448,23 @@ class ScatterPlotChart {
                         }).on("mouseover", function () {
                             const j = d3.select(this).attr("transform")
                             d3.select(this).attr("transform", `${j} scale(1.3, 1.3)`)
+                            d3.select(this).select("text").attr("opacity", 1)
+                            
                         }).on("mouseout", function () {
                             const j = d3.select(this).attr("transform").indexOf("scale")
                             d3.select(this).attr("transform", d3.select(this).attr("transform").substr(0, j - 1))
+                            d3.select(this).select("text").attr("opacity", 0)
+
                         })
-                    g.append("text").text((d) => d.displayName)
+                    g.append("text")
+                    .attr("fill", "white")
+                    .attr("y", -10)
+                    .attr("text-anchor", "middle")
+                    .attr("opacity", 0)
+                    .text((d) => {
+                        console.log(d)
+                        return d.key
+                    })
                     g.each(function (d) {
                         return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getRandTags(d.key))
                     })
