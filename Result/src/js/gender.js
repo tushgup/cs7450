@@ -95,9 +95,9 @@ class gender_piechart{
 		 .attr("d", arc)
 		 .style("fill", function(d) { 
 		 	if(d.data.gender == "Male"){
-		 		return "red";
+		 		return "#355A24";
 		 	} else {
-		 		return "blue";
+		 		return "#FDC04E";
 		 	}
 		 });
 

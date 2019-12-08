@@ -126,7 +126,7 @@ class circlepack{
                       .selectAll("circle")
                       .data(root.descendants().slice(1))
                       .join("circle")
-                      .attr("fill", d => d.children ? color(d.depth) : "white")
+                      .attr("fill", d => d.children ? "#384883" : "#ADD8E6")
                       .attr("stroke", function(d){
                         if(searched == d.data.key){
                           //PUT SEARCHED COMPANY INTO RIGHT SIDE BAR
@@ -181,13 +181,13 @@ class circlepack{
                           }
                           return "yellow";
                         } else {
-                          return "none";
+                          return "black";
                         }
                       })
                       .attr("stroke-width",3)
                       .on("mouseover", function(d) { 
                         //Remove strokes of searched company
-                        d3.selectAll("circle").attr("stroke", "none")
+                        d3.selectAll("circle").attr("stroke", "black")
                         //Search initial data in details.json for parent companies
                         if(d.parent === root){
                           $("#companyName-acquisition").html(d.data.key);
@@ -211,7 +211,7 @@ class circlepack{
                             $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
                           }
                         }
-                        d3.select(this).attr("stroke", "red").attr("stroke-width",3); 
+                        d3.select(this).attr("stroke", "#FDC04E").attr("stroke-width",3); 
                       })
                       .on("mouseout", function() { d3.select(this).attr("stroke", null); })
                       .on("click", d => focus !== d && d.parent === root && (zoom(d), d3.event.stopPropagation()));
@@ -221,8 +221,10 @@ class circlepack{
 
       const label = svg.append("g")
                       .style("font", "10px sans-serif")
+                      .style("font-size", "16px")
                       .attr("pointer-events", "none")
                       .attr("text-anchor", "middle")
+                      .attr("fill", "white")
                       .selectAll("text")
                       .data(root.descendants())
                       .join("text")

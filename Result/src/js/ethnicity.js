@@ -127,9 +127,9 @@ class ethnicity_barchart{
 	         	return y_scale(d['name']) + y_scale.bandwidth()/2; 
 	         })
 	         .attr("dy", ".75em")
-	         .text( d=> d['name'])
+	         .text( d=> d['name'] + " " + d['value'] + "%")
 	         .style("fill", "#FFFFFF")
-	         .style("font-size", "20pt")
+	         .style("font-size", "25pt")
 	         .style("font-family", "sans-serif");  
 	}
 }

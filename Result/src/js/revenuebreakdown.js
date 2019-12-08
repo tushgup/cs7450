@@ -128,7 +128,7 @@ class treemap{
 
       	var color = d3.scaleOrdinal()
       		.domain(filteredData)
-            .range(["#8CBAD1","#70D64E","#EF7087","#DDA335","#D981D5", "#C3B66B","D1A7CC","#70D3C5","#DD9692"]);
+            .range(["#384883", "#E45D50", "#F9F6E7", "#355A24", "#FDC04E", "#7E2242", "#6980C5", "#70DFDF", "#3DBD86", "#D7F0BC"]);
 
 		var nest = d3.nest()
 				  .key(function(d) { return d['segmentName']; })
@@ -185,6 +185,20 @@ class treemap{
                 }).on("mouseout", function (d) {
                     tool.style("display", "none");
                 });
+
+            nodes.append('text')
+			     .attr('x', function(d) {
+					return d.x0 + 10;
+				 })
+			     .attr('y', function(d) {
+					return d.y0 + 50;
+				 })
+			     .text(function(d) {
+			       return d.data.segmentName;
+			     })
+			     .attr("fill", "black")
+			     .attr("font-weight", "bold")
+			     .style("font-size", "25pt");
 
 			u.exit().remove();
 		}
