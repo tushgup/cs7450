@@ -22,8 +22,10 @@ var substringMatcher = function (strs) {
 $("#searchbox").keypress(function (e) {
     if (event.which == 13) {
         ScatterplotState.selectNode(this.value)
+        circlepack.setSearch(this.value)
+        circlepack.generateCirclePack(circlepack.getDataset()[0])
         this.value = ""
-    }
+    } 
 })
 
 $('#searchbox-investment').keypress(function (e) {

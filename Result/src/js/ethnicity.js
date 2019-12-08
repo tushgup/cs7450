@@ -33,27 +33,67 @@ class ethnicity_barchart{
 		ethnicity_barchart.clear();
 
 		//Remove all 0 values from data
-		console.log(data);
-		// for(var i = 0; i)
+		var newdata = [];
+		for(var i = 0; i < data.length; i++){
+			if(data[i]['value'] > 0){
+				newdata.push(data[i]);
+			}
+		}
+
+		//Sort the data into descending order
+		newdata = newdata.sort(function(a,b) { return b.value - a.value; })
+
+		var margin = {
+	        top: 50,
+	        right: 50,
+	        bottom: 50,
+	        left: 10
+	    };
 
 		//Make svg for the ethnicity bar chart
 		var svg = d3.select("#ethnicity_viz")
 					.append("svg")
-      				.attr("viewBox", [0, 0, width, height]);
+      				.attr("viewBox", [0, 0, width, height])
+      				.append("g")
+			        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");;
 
-		//Scale for width of bars
-		var x_scale = d3.scaleLinear()
-			        .domain([0, d3.max(data, d=> d['value'])])
-			        .range([0, 900]);
+	    var chart_width = width - margin.left - margin.right;
+    	var chart_height = height - margin.top - margin.bottom;
+
+      	var x_scale = d3.scaleLinear()
+      					.domain([0, d3.max(newdata, d=> +d['value'])])
+          				.range([0, chart_width]);
+
+	    var y_scale = d3.scaleBand()
+	    				.domain(newdata.map(function(d) { 
+	    					return d.name; 
+	    				}))
+	        			.range([0, chart_height])
+	        			.paddingInner(0.1);
+
+	    var yAxis = d3.axisLeft(y_scale)
+	    			  .tickSize(0);
+
+	    var axis_left = svg.append("g")
+          .attr("class", "y axis")
+          .call(yAxis);
+
+        axis_left.selectAll("text")
+    		.style("fill", "none")
+
+    	axis_left.selectAll("path")
+    		.style("stroke", "none");
 
 	    var rects = svg.selectAll(".bar")
-	      			  .data(data.sort( (a,b) => d3.descending(a['value'], b['value'])) ); 
-
-	    //Adapt height of bars to be based on number of data and height of svg
-	    var height_of_bar = 900 / data.length;
+	      			  .data(newdata); 
 
 	    //Exit part
 		rects.exit().remove();
+
+		newdata = newdata.sort(function(a,b) { return b.value - a.value; })
+
+		//Tooltip
+		var tool = d3.select("body").append("div").attr("class", "toolTip");
 
 	    //Enter & update part
 	    rects.enter()
@@ -61,25 +101,35 @@ class ethnicity_barchart{
 	      	 .merge(rects)
 	         .attr("class", "bar")
 	         .attr("x", 0)
-	         .attr("y", (d,i, ds) => i*height_of_bar)
+	         .attr("y", d => y_scale(d['name']))
 	         .style('width', function(d){
             	 return x_scale(d['value']);
         	 })
-	         .attr("height", height_of_bar - 3)
-	         .style("fill", "steelblue");
+	         .attr("height", y_scale.bandwidth())
+	         .style("fill", "steelblue")
+	         .on("mousemove", function (d) {
+                tool.style("left", d3.event.pageX + 10 + "px");
+                tool.style("top", d3.event.pageY - 20 + "px");
+                tool.style("display", "inline-block");
+                tool.html(d['name'] + "<br>" + d['value'] + "%");
+            }).on("mouseout", function (d) {
+                tool.style("display", "none");
+            });               
 	      
 	    //Labels to show percentage of bars
 	    var texts = svg.selectAll(".label")
-	    			   .data(data);
-	  
-	    rects.enter()
-	         .append("text")
+	    			   .data(newdata);  	
+
+	    texts.enter().append("text")
 	         .attr("class", "label")
-	         .attr("x", 0)
-	         .attr("y", (d,i, ds) => i*height_of_bar)
-	         .text( d=> d['value'] + "%")
-	         .style("fill", "#000")
-	         .style("font-size", "40pt")
+	         .attr("x", 5)
+	         .attr("y", function(d) { 
+	         	return y_scale(d['name']) + y_scale.bandwidth()/2; 
+	         })
+	         .attr("dy", ".75em")
+	         .text( d=> d['name'])
+	         .style("fill", "#FFFFFF")
+	         .style("font-size", "20pt")
 	         .style("font-family", "sans-serif");  
 	}
 }

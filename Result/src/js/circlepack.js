@@ -4,6 +4,8 @@ var current_dataset = [];
 var tagsSet = new Set(Object.keys(color_tags_mapping));
 var tagsSetAll = new Set(tagsSet);
 var details_companies;
+var searched = ""
+var cur_node;
 
 var packLayout = d3.pack()
   .size([width, height]);
@@ -20,6 +22,14 @@ Promise.all([d3.csv("./data/date_notnull_circle_pack.csv"),  d3.json("./data/det
 });
 
 class circlepack{
+    static getDataset(){
+      return current_dataset;
+    }
+
+    static setSearch(searchvalue){
+      searched = searchvalue;
+    }
+
     static clearDetails(){
       $("#companyName-acquisition").html("&nbsp;");
       $("#companydescription-acquisition").html("&nbsp;");
@@ -56,6 +66,8 @@ class circlepack{
 
     static generateCirclePack(dataset){
 
+      circlepack.clear();
+
       var format = d3.format(",d");
 
       var data = dataset;
@@ -74,19 +86,12 @@ class circlepack{
             return d;
           }
         }
-
-        //return d;
-        // var year_string = year.toString();
-        // var sub_year_string = year_string.substring(2,4);
-        // if(d['displayName'] == companyName && d['startDate'].includes(sub_year_string)){
-        //   return d;
-        // }
       });
 
-      console.log(data);
 
       var nest = d3.nest()
                    .key(function(d) { return d.displayName; })
+                   .sortKeys(d3.ascending)
                    .entries(data);
 
       nest = {
@@ -122,15 +127,75 @@ class circlepack{
                       .data(root.descendants().slice(1))
                       .join("circle")
                       .attr("fill", d => d.children ? color(d.depth) : "white")
+                      .attr("stroke", function(d){
+                        if(searched == d.data.key){
+                          //PUT SEARCHED COMPANY INTO RIGHT SIDE BAR
+                          //Search initial data in details.json for parent companies
+                          if(d.parent === root){
+                            $("#companyName-acquisition").html(d.data.key);
+                            const f = details_companies.find(v => v && v.displayName === d.data.key)
+                            if (f) {
+                              $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + f.longDescription);
+                            } else {
+                              $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + 'N/A');
+                            }
+                          } 
+                          //Check in dataset for circle packing
+                          else {
+                            $("#companyName-acquisition").html(d.data.name);
+                            //const f = current_dataset[0];
+                            const f = current_dataset[0].find(v => v && v.name === d.data.name)
+                            if (f) {
+                              if (f.description === "") {
+                                $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
+                              } else {$("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  f.description);}
+                            } else {
+                              $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
+                            }
+                          }
+                          return "yellow";
+                        } else if (searched == d.data.name){
+                          //PUT SEARCHED COMPANY INTO RIGHT SIDE BAR
+                          //Search initial data in details.json for parent companies
+                          if(d.parent === root){
+                            $("#companyName-acquisition").html(d.data.key);
+                            const f = details_companies.find(v => v && v.displayName === d.data.key)
+                            if (f) {
+                              $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + f.longDescription);
+                            } else {
+                              $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + 'N/A');
+                            }
+                          } 
+                          //Check in dataset for circle packing
+                          else {
+                            $("#companyName-acquisition").html(d.data.name);
+                            //const f = current_dataset[0];
+                            const f = current_dataset[0].find(v => v && v.name === d.data.name)
+                            if (f) {
+                              if (f.description === "") {
+                                $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
+                              } else {$("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  f.description);}
+                            } else {
+                              $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
+                            }
+                          }
+                          return "yellow";
+                        } else {
+                          return "none";
+                        }
+                      })
+                      .attr("stroke-width",3)
                       .on("mouseover", function(d) { 
+                        //Remove strokes of searched company
+                        d3.selectAll("circle").attr("stroke", "none")
                         //Search initial data in details.json for parent companies
                         if(d.parent === root){
                           $("#companyName-acquisition").html(d.data.key);
                           const f = details_companies.find(v => v && v.displayName === d.data.key)
                           if (f) {
-                            $("#companydescription-acquisition").html(f.longDescription);
+                            $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + f.longDescription);
                           } else {
-                            $("#companydescription-acquisition").html(`N/A`);
+                            $("#companydescription-acquisition").html('# of children companies: ' + d.children.length + '<br/>'  + '<br/>' + 'N/A');
                           }
                         } 
                         //Check in dataset for circle packing
@@ -140,16 +205,19 @@ class circlepack{
                           const f = current_dataset[0].find(v => v && v.name === d.data.name)
                           if (f) {
                             if (f.description === "") {
-                              $("#companydescription-acquisition").html(`N/A`);
-                            } else {$("#companydescription-acquisition").html(f.description);}
+                              $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
+                            } else {$("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  f.description);}
                           } else {
-                            $("#companydescription-acquisition").html(`N/A`);
+                            $("#companydescription-acquisition").html('Parent company: ' + d.parent.data.key + '<br/>'  + '<br/>'  +  'N/A');
                           }
                         }
                         d3.select(this).attr("stroke", "red").attr("stroke-width",3); 
                       })
                       .on("mouseout", function() { d3.select(this).attr("stroke", null); })
                       .on("click", d => focus !== d && d.parent === root && (zoom(d), d3.event.stopPropagation()));
+
+      cur_node = node;
+      console.log(cur_node);
 
       const label = svg.append("g")
                       .style("font", "10px sans-serif")

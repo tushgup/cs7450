@@ -132,6 +132,11 @@ li {
     display: none;
 }
 
+.label {
+      fill: white;
+      font: 10px sans-serif;
+}
+
 .label-investment-val {
     padding-top: 0.3rem;
     font-family: 'Montserrat',
