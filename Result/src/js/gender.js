@@ -107,7 +107,9 @@ class gender_piechart{
 	      d.outerRadius = radius;
 	      return "translate(" + arc.centroid(d) + ")";
 	     })
-		 .text(function(d) { return d.data.gender;})
+		 .text(function(d) { 
+		 	return  d.data.gender + " " + d.value + "%";
+		 })
 		 .style("fill", "#fff")
 		 .attr("text-anchor", "middle")
 		 .style("font-size", "40pt");
