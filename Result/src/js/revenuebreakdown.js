@@ -186,27 +186,6 @@ class treemap{
                     tool.style("display", "none");
                 });
 
-			// nodes.append('text')
-			// 	.attr('x', function(d) {
-			// 		return d.depth === 3 ? 0.5 * (d.x0 + d.x1) : d.x0 + 3;
-			// 	})
-			// 	.attr('y', function(d) {
-			// 		return d.depth === 3 ? 0.5 * (d.y0 + d.y1) : d.y0 + 6;
-			// 	})
-			// 	.each(function(d) {
-			// 		var label = d.depth === 0 ? '' : d.depth === 2 ? format(d.data.value) : d.data.key;
-			// 		if(typeof label !== 'undefined'){
-			// 			d3.select(this)
-			// 		    .text(label)
-			// 			.style('font-size', d3.min([1.4 * (d.x1 - d.x0) / label.length, 11]))
-			// 			.style('display', (d.x1 - d.x0) < 10 || (d.y0 - d.y1) < 10);
-			// 		}
-			// 	})
-			// 	.style('text-anchor', function(d) {
-			// 		return d.depth === 3 ? 'middle' : 'start';
-			// 	})
-			// 	.attr('dy', '0.3em');
-
 			u.exit().remove();
 		}
 

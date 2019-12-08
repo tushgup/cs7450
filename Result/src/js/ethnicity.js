@@ -61,7 +61,7 @@ class ethnicity_barchart{
     	var chart_height = height - margin.top - margin.bottom;
 
       	var x_scale = d3.scaleLinear()
-      					.domain([0, d3.max(newdata, d=> d['value'])])
+      					.domain([0, d3.max(newdata, d=> +d['value'])])
           				.range([0, chart_width]);
 
 	    var y_scale = d3.scaleBand()
@@ -103,7 +103,6 @@ class ethnicity_barchart{
 	         .attr("x", 0)
 	         .attr("y", d => y_scale(d['name']))
 	         .style('width', function(d){
-	         	console.log(d);
             	 return x_scale(d['value']);
         	 })
 	         .attr("height", y_scale.bandwidth())
@@ -125,7 +124,6 @@ class ethnicity_barchart{
 	         .attr("class", "label")
 	         .attr("x", 5)
 	         .attr("y", function(d) { 
-	         	console.log(d);
 	         	return y_scale(d['name']) + y_scale.bandwidth()/2; 
 	         })
 	         .attr("dy", ".75em")
