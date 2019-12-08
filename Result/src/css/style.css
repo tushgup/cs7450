@@ -241,7 +241,7 @@ li {
 }
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 8px;
 }
 
@@ -253,7 +253,7 @@ li {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
-}
+} */
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -263,9 +263,7 @@ li {
 .btn-primary.custom-file-control:before,
 .btn.btn-primary {
     color: #0984e3;
-
-
-    font-size: 16pt;
+    font-size: 1rem;
     font-family: Arial;
 }
 
@@ -274,6 +272,6 @@ li {
     overflow: auto
 }
 
-.legends {
+/* .legends {
     height: 20%;
-}
+} */

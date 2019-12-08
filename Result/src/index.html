@@ -499,7 +499,8 @@
                     <div class="col-12 col-md-12">
 
                         <h5>Competitor groups</h3>
-                            <svg id="legend-funding" viewBox="0 0 100 100"></svg>
+                        <svg id="legend-funding" viewBox="0 0 100 30"></svg>
+                        Companies with the same color margin are in the same competitor group
                     </div>
                 </div>
                 <div class="row leftPanel search-investors">
@@ -584,15 +585,11 @@
         </div>
         <div class="col-3 companyDetails">
             <div class="right-sidebar" id="rsidebar-details" style="margin-left: 8px;">
-                <div class="row mt-4">
-                    <div class="col-8">
-                        <h6 class="labelText">Company Name</h6>
-                    </div>
-                    <div class="col-3  offset-1">
-                        <button type="button" class="btn btn-primary" onclick="DetailsState.clear()">
-                            Clear
-                        </button>
-                    </div>
+                <div class="mt-4" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h6 class="labelText">Company Name</h6>
+                    <button type="button" class="btn btn-primary" onclick="DetailsState.clear()">
+                        Clear
+                    </button>
                 </div>
 
                 <h3 class="companyName" id="companyName">&nbsp;</h3>
