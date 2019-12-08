@@ -121,7 +121,7 @@ class circlepack{
 
       var root = d3.pack()
                    .size([width, height])
-                   .padding(5)
+                   .padding(15)
                    (d3.hierarchy(nest, function(d) {
                         return d.values;
                       }).sum(function(d) {
@@ -201,13 +201,13 @@ class circlepack{
                           }
                           return "yellow";
                         } else {
-                          return "black";
+                          return "none";
                         }
                       })
                       .attr("stroke-width",3)
                       .on("mouseover", function(d) { 
                         //Remove strokes of searched company
-                        d3.selectAll("circle").attr("stroke", "black")
+                        d3.selectAll("circle").attr("stroke", "none")
                         //Search initial data in details.json for parent companies
                         if(d.parent === root){
                           $("#companyName-acquisition").html(d.data.key);
@@ -245,6 +245,7 @@ class circlepack{
                       .attr("pointer-events", "none")
                       .attr("text-anchor", "middle")
                       .attr("fill", "white")
+                      .style("text-decoration", "underline")
                       .selectAll("text")
                       .data(root.descendants())
                       .join("text")
