@@ -49,19 +49,19 @@ class gender_piechart{
       	//Filter the data to make it 100%
       	var filteredData = [];
       	for(var i = 0; i < data.length; i++){
-      		if(data[i].name.toLowerCase().includes("male") && !(_isContains(filteredData,"male"))){
+      		if(data[i].name.toLowerCase().includes("male") && !(_isContains(filteredData,"Male"))){
 
-      			filteredData.push({"gender":"male","value": data[i].value});
+      			filteredData.push({"gender":"Male","value": data[i].value});
       			var female_value = 100 - data[i].value;
       			if(female_value > 0){
-      				filteredData.push({"gender":"female","value": female_value});
+      				filteredData.push({"gender":"Female","value": female_value});
       			}
       		} else {
-      			if(!(_isContains(filteredData,"female"))){
-      				filteredData.push({"gender":"female","value": data[i].value});
+      			if(!(_isContains(filteredData,"Female"))){
+      				filteredData.push({"gender":"Female","value": data[i].value});
 	      			var male_value = 100 - data[i].value;
 	      			if(male_value > 0){
-	      				filteredData.push({"gender":"male","value": male_value});
+	      				filteredData.push({"gender":"Male","value": male_value});
 	      			}
       			}
       		}
@@ -94,7 +94,7 @@ class gender_piechart{
 		g.append("path")
 		 .attr("d", arc)
 		 .style("fill", function(d) { 
-		 	if(d.data.gender == "male"){
+		 	if(d.data.gender == "Male"){
 		 		return "red";
 		 	} else {
 		 		return "blue";

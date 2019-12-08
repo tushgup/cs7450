@@ -47,7 +47,7 @@ class ethnicity_barchart{
 	        top: 50,
 	        right: 50,
 	        bottom: 50,
-	        left: 20
+	        left: 10
 	    };
 
 		//Make svg for the ethnicity bar chart
@@ -80,8 +80,6 @@ class ethnicity_barchart{
 
         axis_left.selectAll("text")
     		.style("fill", "none")
-    		// .style("text-anchor","end")
-    		// .style("font-size", "20pt");
 
     	axis_left.selectAll("path")
     		.style("stroke", "none");
@@ -93,6 +91,9 @@ class ethnicity_barchart{
 		rects.exit().remove();
 
 		newdata = newdata.sort(function(a,b) { return b.value - a.value; })
+
+		//Tooltip
+		var tool = d3.select("body").append("div").attr("class", "toolTip");
 
 	    //Enter & update part
 	    rects.enter()
@@ -106,21 +107,19 @@ class ethnicity_barchart{
             	 return x_scale(d['value']);
         	 })
 	         .attr("height", y_scale.bandwidth())
-	         .style("fill", "steelblue");               
+	         .style("fill", "steelblue")
+	         .on("mousemove", function (d) {
+                tool.style("left", d3.event.pageX + 10 + "px");
+                tool.style("top", d3.event.pageY - 20 + "px");
+                tool.style("display", "inline-block");
+                tool.html(d['name'] + "<br>" + d['value'] + "%");
+            }).on("mouseout", function (d) {
+                tool.style("display", "none");
+            });               
 	      
 	    //Labels to show percentage of bars
 	    var texts = svg.selectAll(".label")
-	    			   .data(newdata);
-	  
-	  	// svgContainer.selectAll(".text")  		
-				//     .data(data)
-				//     .enter()
-				//     .append("text")
-				//     .attr("class","label")
-				//     .attr("x", (function(d) { return xScale(d.food) + xScale.rangeBand() / 2 ; }  ))
-				//   .attr("y", function(d) { return yScale(d.quantity) + 1; })
-				//   .attr("dy", ".75em")
-				//   .text(function(d) { return d.quantity; });   	
+	    			   .data(newdata);  	
 
 	    texts.enter().append("text")
 	         .attr("class", "label")
