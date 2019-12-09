@@ -112,7 +112,6 @@ class FundingData {
                         date: v.date,
                         value: value
                     })
-                    console.log(v.stage)
                     currentSrcAngle += value / sum * srcAngle
                     currentTrgAngle += value / sum * trgAngle
 
@@ -227,13 +226,13 @@ d3.csv('./data/investments.csv').then(function (dataset) {
     })
 
 
-    // few.append("rect")
-    // .attr("fill", "white")
-    // .attr("style", "mix-blend-mode: difference;")
-    // .attr("x", d=>scl(d.value))
-    // .attr("y", 0)
-    // .attr("width", "0.2")
-    // .attr("height", "2")
+    few.append("rect")
+    .attr("fill", "white")
+    .attr("style", "mix-blend-mode: difference;")
+    .attr("x", d=> 0)
+    .attr("y", 0)
+    .attr("width", d => scl(d.value))
+    .attr("height", "2")
 
     few.append("text")
         .text(d => d.name)
@@ -269,6 +268,7 @@ d3.csv('./data/investments.csv').then(function (dataset) {
 
 
     ArcChart.updateCharts()
+    
 
 })
 
@@ -444,6 +444,24 @@ class ArcChart {
             arcMatrix
         } = FundingState.state.data.investmentToMatrix(Array.from(selectedInvestors)) // ["Index Ventures"]
 
+        // Populate the src at runtime.
+        $("#template_holder_investor").empty()
+        Object.entries(dictionary).forEach(v => {
+            var t = document.querySelector('#investor_template');
+            var clone = document.importNode(t.content, true);
+
+            clone.querySelector('#investorname').innerHTML = v[0];
+            Object.entries(v[1]).forEach(v => {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(`${v[0]}: ${DetailsState.format(v[1])}`));
+                clone.querySelector("#investor_list").appendChild(li)
+            })
+
+            document.querySelector("#template_holder_investor").appendChild(clone);
+        })
+
+
+
         const groupWithTwoOrMore = Object.keys(groupToCompany).filter(v => groupToCompany[v].size >= 2)
         const domaincolor = FundingState.state.color10.domain(groupWithTwoOrMore)
 
@@ -454,14 +472,14 @@ class ArcChart {
 
         lengendg.append("rect")
         .attr("width", (d, i) => 100 / groupWithTwoOrMore.length)
-        .attr("height", 30)
+        .attr("height", 10)
         .attr("fill", domaincolor)
 
-        lengendg.append("text")
-            .attr("y", 8)
-            .text(d => d)
-            .attr("fill", "white")
-            .attr("font-size", "0.5rem")
+        // lengendg.append("text")
+        //     .attr("y", 8)
+        //     .text(d => d)
+        //     .attr("fill", "white")
+        //     .attr("font-size", "0.5rem")
 
         // Calculate layout
         let res = FundingState.state.res = ArcChart.chord // padding between entities (black arc)

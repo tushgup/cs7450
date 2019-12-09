@@ -1,0 +1,10 @@
+* Make sure your computer is connected to the Internet
+* Run
+```
+python3 -m http.server
+```
+or
+```
+python -m SimpleHTTPServer 8080
+```
+to serve index.html

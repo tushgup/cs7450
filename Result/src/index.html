@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/d3tip.css">
 
     <!-- Material Icons WebFont -->
@@ -499,7 +500,7 @@
                     <div class="col-12 col-md-12">
 
                         <h5>Competitor groups</h3>
-                        <svg id="legend-funding" viewBox="0 0 100 30"></svg>
+                        <svg id="legend-funding" viewBox="0 0 100 10"></svg>
                         Companies with the same color margin are in the same competitor group
                     </div>
                 </div>
@@ -578,6 +579,17 @@
                         <div class="scatterplot">
                             <svg class="funding_svg" viewBox="0 0 700 700"></svg>
                         </div>
+                        Instruction:
+                        <ul style="list-style-type: disc;">
+                        <li>The dots in the middle indicates the venture capital investors.
+                        The dot is layouted according to its investments, where the dot will be closer to the companies
+                        it invested.</li>
+
+                        <li>Each arc indicates a company and the arc length represents the amount of money the company
+                            receive.</li>
+                        <li>The colored (not black) ribbons coming from each dot indicate a funding stage from the
+                            investors to the company</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -664,8 +676,24 @@
                     </div>
                 </div>
             </div>
+            <template id="investor_template">
+                <span id="investorname">Investor 1</span>
+                <ul id="investor_list" style="list-style:  none; padding-inline-start: 0; color: gray">
+                </ul>
+                <br>
+            </template>
             <div class="right-sidebar none" id="rsidebar-funding">
-                <div id="chart_div"></div>
+                <div id="investor_listing">
+                    <h5 style="text-align: center;">Investment details</h5>
+                    <div id="template_holder_investor"></div>
+
+                    
+                </div>
+                <hr>
+                <h5 style="text-align: center;">All investors</h5>
+                <div id="chart_div">
+                    
+                </div>
             </div>
             <div class="right-sidebar none" id="rsidebar-acquisition">
                 <div class="row">

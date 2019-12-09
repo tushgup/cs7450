@@ -463,7 +463,6 @@ class ScatterPlotChart {
                     .attr("text-anchor", "middle")
                     .attr("opacity", 0)
                     .text((d) => {
-                        console.log(d)
                         return d.key
                     })
                     g.each(function (d) {

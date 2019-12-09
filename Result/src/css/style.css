@@ -168,14 +168,16 @@ li {
 }
 
 .svg_selected {
-    background-color: white
+    /* bor-color: white */
+    border-width: 1px;
+    border-style: solid;
 }
 
 .left-sidebar,
 .right-sidebar,
 .main {
     height: 100%;
-    overflow: auto
+    overflow: auto;
 }
 
 .mainbar {
@@ -275,3 +277,15 @@ li {
 /* .legends {
     height: 20%;
 } */
+
+#chart_div {
+    padding-top: 1rem;
+    height: 50%;
+    overflow: auto
+}
+
+#investor_listing {
+    padding-top: 1rem;
+    height: 50%;
+    overflow: auto
+}
