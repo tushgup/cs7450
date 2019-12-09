@@ -147,6 +147,7 @@ class circlepack{
                       .data(root.descendants().slice(1))
                       .join("circle")
                       .attr("fill", d => d.children ? "#384883" : "#ADD8E6")
+                      .attr("fill-opacity", d => d.children ? 1 : 0.5)
                       .attr("stroke", function(d){
                         if(searched == d.data.key){
                           //PUT SEARCHED COMPANY INTO RIGHT SIDE BAR
@@ -238,16 +239,58 @@ class circlepack{
 
       cur_node = node;
 
+      // node.append("g")
+      //     .attr("class", "labels")
+      //     .selectAll(".mytext")
+      //     .data(nest)
+      //     .enter()
+      //     .attr("fill", "white")
+      //     .append("text")
+      //     .text(d =>  d.parent === root ? d.data.key : d.data.name) // Here label text is the text that you want to show in the node
+      //     .style("font-size", "1px")
+      //     .attr("dy", ".35em") // You can adjust it
+      //     .each(function (d) {
+      //         var r = Number(d.Size), a = this.getComputedTextLength(),
+      //             c=0.35, // Same as dy attribute value
+      //             b = 2*Math.sqrt(r*r-c*c), s = Math.min(r, b/a);
+      //         d.fs = s;
+      //     })
+      //     .style("font-size", function (d) {
+      //        return d.fs + "px";
+      //     });
+      console.log("hello ")
+
       const label = svg.append("g")
                       .style("font", "10px sans-serif")
-                      .style("font-size", "16px")
+                      // .style("font-size", "1px")
                       .attr("pointer-events", "none")
                       .attr("text-anchor", "middle")
                       .attr("fill", "white")
                       .style("text-decoration", "underline")
                       .selectAll("text")
                       .data(root.descendants())
-                      .join("text")
+                      .enter()
+                      .append("text")
+                      .attr("dy", ".35em") // You can adjust it
+                      .each(function (d) {
+                          var r = Number(d.r)/4;
+                          var a = this.getComputedTextLength();
+                          var c = 0.80; // Same as dy attribute value
+                          var b = 2*Math.sqrt(r*r-c*c);
+                          var s = Math.min(r, b/a);
+                          if(d.parent === root){
+                            d.fs = s;
+                          }
+                          
+                      })
+                      .style("font-size", function (d) {
+                         if(d.parent === root){
+                            return d.fs + "px";
+                         } else {
+                            return "10px";
+                         }
+                         
+                      })
                       .style("fill-opacity", d => d.parent === root ? 1 : 0)
                       .style("display", d => d.parent === root ? "inline" : "none")
                       .text(d =>  d.parent === root ? d.data.key : d.data.name);
