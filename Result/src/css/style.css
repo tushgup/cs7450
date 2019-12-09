@@ -289,3 +289,7 @@ li {
     height: 50%;
     overflow: auto
 }
+
+.leftHeading {
+    font-size: 1.5rem;
+}
