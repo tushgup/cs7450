@@ -124,13 +124,13 @@ class ScatterPlotUtility {
     static shapeToFormat(selection, map) {
         switch (map.shape) {
             case "circle":
-                selection.append("circle")
+                return selection.append("circle")
                     .attr("class", "scatternode")
                     .attr("r", 8)
                     .attr("fill", d => map.color)
                 break;
             case "hollowcircle":
-                selection.append("circle")
+                return selection.append("circle")
                     .attr("class", "scatternode")
                     .attr("r", 8)
                     .attr("fill", "black")
@@ -138,14 +138,14 @@ class ScatterPlotUtility {
                     .attr("stroke", d => map.color)
                 break;
             case "square":
-                selection.append("rect")
+                return selection.append("rect")
                     .attr("class", "scatternode")
                     .attr("width", 16)
                     .attr("height", 16)
                     .attr("fill", d => map.color)
                 break;
             case "hollowsquare":
-                selection.append("rect")
+                return selection.append("rect")
                     .attr("class", "scatternode")
                     .attr("width", 16)
                     .attr("height", 16)

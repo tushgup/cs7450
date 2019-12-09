@@ -429,34 +429,8 @@ class ScatterPlotChart {
                             const xVal = ScatterplotState.state.getValueOfField(ScatterplotState.state.chartScale.x, d)
                             const dx = xVal ? ScatterplotState.state.x(xVal) : (ScatterplotState.state.svgwidth + 100)
                             return `translate(${dx}, ${dy})`
-                        }).on("click", function (d, i) {
-                            DetailsState.reset()
-                            DetailsState.select(d.key)
-                            ScatterplotState.state.resetElement()
-                            ScatterplotState.state.selectedElement = this
-                            ScatterplotState.state.greyOutAllElement()
-                            d3.select(this).select(".scatternode").attr("opacity", 1)
-
-                            //Make treemap
-                            treemap.generateChart(d.key, ScatterplotState.state.year)
-
-                            //Make barchart for ethnicity viz
-                            ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
-
-                            //Make piechart for gender viz
-                            gender_piechart.generateChart(d.key, ScatterplotState.state.year)
-
-                        }).on("mouseover", function () {
-                            const j = d3.select(this).attr("transform")
-                            d3.select(this).attr("transform", `${j} scale(1.3, 1.3)`)
-                            d3.select(this).select("text").attr("opacity", 1)
-                            
-                        }).on("mouseout", function () {
-                            const j = d3.select(this).attr("transform").indexOf("scale")
-                            d3.select(this).attr("transform", d3.select(this).attr("transform").substr(0, j - 1))
-                            d3.select(this).select("text").attr("opacity", 0)
-
                         })
+
                     g.append("text")
                     .attr("fill", "white")
                     .attr("y", -10)
@@ -465,9 +439,38 @@ class ScatterPlotChart {
                     .text((d) => {
                         return d.key
                     })
+
                     g.each(function (d) {
                         return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getRandTags(d.key))
+                    }).on("mouseover", function () {
+                        const j = d3.select(this.parentNode).attr("transform")
+                        d3.select(this.parentNode).attr("transform", `${j} scale(1.3, 1.3)`)
+                        d3.select(this.parentNode).select("text").attr("opacity", 1)
+                    }).on("mouseout", function () {
+                        const j = d3.select(this.parentNode).attr("transform").indexOf("scale")
+                        d3.select(this.parentNode).attr("transform", d3.select(this.parentNode).attr("transform").substr(0, j - 1))
+                        d3.select(this.parentNode).select("text").attr("opacity", 0)
+
+                    }).on("click", function (d, i) {
+                        DetailsState.reset()
+                        DetailsState.select(d.key)
+                        ScatterplotState.state.resetElement()
+                        ScatterplotState.state.selectedElement = this.parentNode
+                        ScatterplotState.state.greyOutAllElement()
+                        d3.select(this.parentNode).select(".scatternode").attr("opacity", 1)
+
+                        //Make treemap
+                        treemap.generateChart(d.key, ScatterplotState.state.year)
+
+                        //Make barchart for ethnicity viz
+                        ethnicity_barchart.generateChart(d.key, ScatterplotState.state.year)
+
+                        //Make piechart for gender viz
+                        gender_piechart.generateChart(d.key, ScatterplotState.state.year)
                     })
+
+
+
                     return g.call(enter => enter.transition(t)
                         .attr("transform", d => `translate(${d.x}, ${d.y})`))
                 },
