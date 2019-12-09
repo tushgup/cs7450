@@ -237,7 +237,6 @@ class circlepack{
                       .on("click", d => focus !== d && d.parent === root && (zoom(d), d3.event.stopPropagation()));
 
       cur_node = node;
-      console.log(cur_node);
 
       const label = svg.append("g")
                       .style("font", "10px sans-serif")

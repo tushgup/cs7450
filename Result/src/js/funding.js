@@ -268,8 +268,6 @@ d3.csv('./data/investments.csv').then(function (dataset) {
 
 
     ArcChart.updateCharts()
-    
-
 })
 
 class ArcChart {

@@ -162,7 +162,7 @@ class DetailsState {
         let n = number
         let str = ""
         while (true) {
-            if (n / 1000 >= 1) {
+            if (n / 1000 >= 1 || n / 1000 <= -1) {
                 n = n / 1000
                 switch (str) {
                     case "":
