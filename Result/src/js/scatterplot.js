@@ -439,10 +439,11 @@ class ScatterPlotChart {
                     .text((d) => {
                         return d.key
                     })
-
                     g.each(function (d) {
                         return ScatterPlotUtility.shapeToFormat(d3.select(this), ScatterplotState.state.data.getRandTags(d.key))
-                    }).on("mouseover", function () {
+                    })
+                    
+                    g.selectAll(".scatternode").on("mouseover", function () {
                         const j = d3.select(this.parentNode).attr("transform")
                         d3.select(this.parentNode).attr("transform", `${j} scale(1.3, 1.3)`)
                         d3.select(this.parentNode).select("text").attr("opacity", 1)
