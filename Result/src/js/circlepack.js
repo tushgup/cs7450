@@ -99,6 +99,10 @@ class circlepack{
         tags = tags.replace(']','');
         tags = tags.replace(/'/g,'');
         tags = tags.split(',');
+        
+        for (var i = 0; i < tags.length; i++){
+          tags[i] = tags[i].trim();
+        }
 
         //Check if tags set has that value
         for (var i = 0; i < tags.length; i++){
